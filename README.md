@@ -10,7 +10,7 @@ futuros Biomonitores. Dicha capacitación tiene el propósito de explicar los di
 # Integrantes del equipo:
 
 - [Erick Segura Sánchez](https://github.com/ErickinSegura)
-- [Saul Emilio Delgado Garza]()
+- [Saúl Emilio Delgado Garza]()
 - [Adolfo Humberto González González]()
 - [Santiago Miguel Lozano Cedillo]()
 - [Hervey Navarro Olazarán]()
