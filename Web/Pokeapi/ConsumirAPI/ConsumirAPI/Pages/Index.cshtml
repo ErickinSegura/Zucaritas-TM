@@ -1,0 +1,23 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+@using ConsumirAPI.Model;
+
+<div class="text-center">
+    <h1 class="display-4">Resultados</h1>
+    @foreach (WeatherForecast element in Model.climaList)
+    {
+        <div class="row">
+            <div class="col">
+                <h2>Día: @element.Date</h2>
+            </div>
+            <div class="col">
+                <p>Temperatura: @element.TemperatureC</p>
+            </div>
+        </div>
+    }
+
+</div>

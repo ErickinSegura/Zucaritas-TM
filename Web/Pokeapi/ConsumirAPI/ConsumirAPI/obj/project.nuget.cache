@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "CWVE9lvMIgWr3h1nAkqCr7xeLclCri9oJ+nzU/o0yLWn6DOVeDvH5V+sLJZCxM3pE72jSn9LZHW9+LSFRpMFsw==",
+  "success": true,
+  "projectFilePath": "D:\\Users\\conta\\Documents\\Tec\\Cuarto Semestre\\Construcción de Software y Toma de Decisiones\\Github\\Web\\Pokeapi\\ConsumirAPI\\ConsumirAPI\\ConsumirAPI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\conta\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
