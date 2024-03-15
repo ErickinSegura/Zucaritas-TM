@@ -11,4 +11,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Lobby.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Lobby Noche.unity
+    guid: eb83cbab9bebfb94886a8062b56629ab
+  - enabled: 1
+    path: Assets/Scenes/Reptiles.unity
+    guid: 6b95e5b8aa01cef4a981cbeebd728fb9
+  - enabled: 1
+    path: Assets/Scenes/Rastros.unity
+    guid: d55ff731aa9b61a4387f1732b3bfaf80
+  - enabled: 1
+    path: Assets/Scenes/Arbol Cam.unity
+    guid: 1b259f3242320a94193238aeee058db5
+  - enabled: 1
+    path: "Assets/Scenes/Vegetaci\xF3n.unity"
+    guid: c3e98b288fc92b84aa7c2c59079e6481
   m_configObjects: {}

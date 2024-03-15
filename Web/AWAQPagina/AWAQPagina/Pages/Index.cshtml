@@ -6,27 +6,35 @@
 
 @*Redirect a UserInfo*@
 @*<meta http-equiv="Refresh" content="0; url='https://localhost:7026/UserInfo'" />*@
-<div>
-    <div>
+@**<meta http-equiv="Refresh" content="0; url='https://localhost:7026/UserInfo'" />*@
+ <div>
         <div class="row">
             <div class="col-md-5">
-                <img src="~/images/awaq.png" alt="img" height="860" style="background-color: #202714;">
+                <img src="~/images/awaq.png" alt="img" height="850" style="background-color: #202714;">
             </div>
             <div class="col-md-7 height-100 LogIn p-5" style="background-color: #202714;">
                 <h1 class="display-5 p-5" style="color: white;"><strong>Log In</strong></h1>
                 <div class="p-5">
-                    <form>
+                    <form method="post">
                         <div class="form-group">
                             <label for="usuario"></label>
-                            <input type="text" class="form-control mb-5 pt-4 pb-4" aria-describedby="emailHelp" placeholder="Usuario"
+                            <input name="usuario" type="text" class="form-control mb-5 pt-4 pb-4" aria-describedby="emailHelp" placeholder="Usuario"
                                    style="border: 1px solid #ccc;
                            background-color: rgba(0, 0, 0, 0);
                            color: white;">
                         </div>
                         <div class="form-group">
                             <label for="contraseña"></label>
+<<<<<<< HEAD
                             <input type="text" class="form-control mb-5 pt-4 pb-4" placeholder="Contraseña"
                                    style="border: 1px solid #ccc; background-color: rgba(0, 0, 0, 0); color: white;">
+=======
+                            <input name="contraseña" type="text" class="form-control mb-5 pt-4 pb-4" placeholder="Contraseña"
+                                   style="border: 1px solid #ccc; background-color: rgba(0, 0, 0, 0);
+                          color: white;">
+
+
+>>>>>>> bd4692fd456565a7b456f5b35ebf8e89392fc331
                             <input type="password" class="form-control mb-5 pt-4 pb-4" placeholder="Contraseña oculta"
                                    style="border: none; background-color: rgba(0, 0, 0, 0);
                                     position: absolute; top: 0; left: 0; opacity: 0; display: none;">
@@ -41,4 +49,8 @@
                 </div>
             </div>
         </div>
-    </div>
+
+
+
+ </div>
+       
