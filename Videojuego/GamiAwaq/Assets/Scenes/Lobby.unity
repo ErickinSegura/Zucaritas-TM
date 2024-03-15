@@ -7500,7 +7500,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 6
-      m_TileSpriteIndex: 6
+      m_TileSpriteIndex: 15
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -7780,7 +7780,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 5
-      m_TileSpriteIndex: 5
+      m_TileSpriteIndex: 14
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -10131,10 +10131,10 @@ Tilemap:
     m_Data: {fileID: -1345271930, guid: d59f2cfab3ee31c4bb49a209167d5c00, type: 3}
   - m_RefCount: 26
     m_Data: {fileID: -2022387423, guid: d59f2cfab3ee31c4bb49a209167d5c00, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -859867664, guid: d59f2cfab3ee31c4bb49a209167d5c00, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -1500935590, guid: d59f2cfab3ee31c4bb49a209167d5c00, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 18
     m_Data: {fileID: 2006790085, guid: d59f2cfab3ee31c4bb49a209167d5c00, type: 3}
   - m_RefCount: 27
@@ -10149,10 +10149,10 @@ Tilemap:
     m_Data: {fileID: 1335452483, guid: d59f2cfab3ee31c4bb49a209167d5c00, type: 3}
   - m_RefCount: 3
     m_Data: {fileID: 286871226, guid: d59f2cfab3ee31c4bb49a209167d5c00, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -859867664, guid: d59f2cfab3ee31c4bb49a209167d5c00, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: -1500935590, guid: d59f2cfab3ee31c4bb49a209167d5c00, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 259
     m_Data:
@@ -13312,7 +13312,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31f0b48ae770b444cbdd38bc5b394ca9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Vegetacion
+  sceneName: "Vegetaci\xF3n"
 --- !u!61 &2133058833
 BoxCollider2D:
   m_ObjectHideFlags: 0
