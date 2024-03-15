@@ -9,41 +9,41 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = AWAQPagina
 build_property.RootNamespace = AWAQPagina
-build_property.ProjectDir = /Users/adolfogonzalez/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/
+build_property.ProjectDir = /Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /Users/adolfogonzalez/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina
+build_property.MSBuildProjectDirectory = /Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina
 build_property._RazorSourceGeneratorDebug = 
 
-[/Users/adolfogonzalez/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/Pages/Error.cshtml]
+[/Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/adolfogonzalez/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/Pages/Index.cshtml]
+[/Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/adolfogonzalez/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/Pages/Privacy.cshtml]
+[/Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/adolfogonzalez/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[/Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/adolfogonzalez/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/Pages/UserInfo.cshtml]
+[/Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/Pages/UserInfo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVXNlckluZm8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/adolfogonzalez/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/Pages/_ViewImports.cshtml]
+[/Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/adolfogonzalez/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/Pages/_ViewStart.cshtml]
+[/Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/adolfogonzalez/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/Pages/Shared/_Layout.cshtml]
+[/Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-5ou9whk7bl
