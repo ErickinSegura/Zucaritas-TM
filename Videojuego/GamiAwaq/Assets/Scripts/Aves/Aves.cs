@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Aves : MonoBehaviour
 {
-    public void returnToMenu()
+    public void returnToTree()
     {
-        SceneManager.LoadScene("RecapMoni");
+        SceneManager.LoadScene("Arbol Cam");
     }
 }
