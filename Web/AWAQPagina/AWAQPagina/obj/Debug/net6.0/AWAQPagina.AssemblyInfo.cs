@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AWAQPagina")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+692d862c2d696afcd7f8a3b1469b0b54ce18fdb0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1a3fba4a88c243c0e55b545c6d7405780e2dbfea")]
 [assembly: System.Reflection.AssemblyProductAttribute("AWAQPagina")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AWAQPagina")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
