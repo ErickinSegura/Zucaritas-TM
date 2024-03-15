@@ -39,16 +39,16 @@
     background-color: #F5F5F5;
     padding: 5%;
     width: 80%;
-    gap: 10vw;
+    gap: 10%;
     min-width:400px;
 }
 
 .imgContainer {
     border: solid 2px black;
     border-radius: 50%;
-    height: 30%;
     width: 30%;
-    object-fit: cover;
+    aspect-ratio: 1/1;
+    object-fit: cover
 }
 
 .userBioClass {
