@@ -25,6 +25,10 @@
       "PackagePath": "staticwebassets/images/1.jpg"
     },
     {
+      "Id": "/Users/adolfogonzalez/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/wwwroot/images/awaq.png",
+      "PackagePath": "staticwebassets/images/awaq.png"
+    },
+    {
       "Id": "/Users/adolfogonzalez/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/wwwroot/images/logoBlanco.png",
       "PackagePath": "staticwebassets/images/logoBlanco.png"
     },

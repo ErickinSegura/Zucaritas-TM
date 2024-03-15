@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "QjRbGiWgG4Xdyxs4VPtGIinSwatD4hBBYRkyeYYKORw=",
+  "Hash": "WS3nAs2bl856w2i5xP0kfuGXnAmx7oGq0Uquphv8Lc4=",
   "Source": "AWAQPagina",
   "BasePath": "_content/AWAQPagina",
   "Mode": "Default",
@@ -134,6 +134,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/images/1.jpg"
+    },
+    {
+      "Identity": "/Users/adolfogonzalez/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/wwwroot/images/awaq.png",
+      "SourceId": "AWAQPagina",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/adolfogonzalez/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/wwwroot/",
+      "BasePath": "_content/AWAQPagina",
+      "RelativePath": "images/awaq.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/awaq.png"
     },
     {
       "Identity": "/Users/adolfogonzalez/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/wwwroot/images/logoBlanco.png",
