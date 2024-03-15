@@ -936,7 +936,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: ef871d9c21ed2df40b029eed4fb75229, type: 3}
+    m_Font: {fileID: 12800000, guid: 4cdd0799c3a74874e95332bc94740d3f, type: 3}
     m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
@@ -948,7 +948,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Capacitaci\xF3n de Biomonitoreo"
+  m_Text: Capacitacion de Biomonitoreo
 --- !u!222 &2067745288
 CanvasRenderer:
   m_ObjectHideFlags: 0
