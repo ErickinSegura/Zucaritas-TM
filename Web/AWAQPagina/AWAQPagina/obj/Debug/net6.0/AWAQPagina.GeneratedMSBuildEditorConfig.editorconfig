@@ -9,47 +9,47 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = AWAQPagina
 build_property.RootNamespace = AWAQPagina
-build_property.ProjectDir = C:\Users\Santiago Lozano\source\repos\Zucaritas-TM\Web\AWAQPagina\AWAQPagina\
+build_property.ProjectDir = D:\Users\conta\Documents\Tec\Cuarto Semestre\Construcción de Software y Toma de Decisiones\Github\Web\AWAQPagina\AWAQPagina\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Santiago Lozano\source\repos\Zucaritas-TM\Web\AWAQPagina\AWAQPagina
+build_property.MSBuildProjectDirectory = D:\Users\conta\Documents\Tec\Cuarto Semestre\Construcción de Software y Toma de Decisiones\Github\Web\AWAQPagina\AWAQPagina
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Santiago Lozano/source/repos/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/Pages/Error.cshtml]
+[D:/Users/conta/Documents/Tec/Cuarto Semestre/Construcción de Software y Toma de Decisiones/Github/Web/AWAQPagina/AWAQPagina/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Santiago Lozano/source/repos/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/Pages/Index.cshtml]
+[D:/Users/conta/Documents/Tec/Cuarto Semestre/Construcción de Software y Toma de Decisiones/Github/Web/AWAQPagina/AWAQPagina/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Santiago Lozano/source/repos/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/Pages/Privacy.cshtml]
+[D:/Users/conta/Documents/Tec/Cuarto Semestre/Construcción de Software y Toma de Decisiones/Github/Web/AWAQPagina/AWAQPagina/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Santiago Lozano/source/repos/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[D:/Users/conta/Documents/Tec/Cuarto Semestre/Construcción de Software y Toma de Decisiones/Github/Web/AWAQPagina/AWAQPagina/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Santiago Lozano/source/repos/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/Pages/studentView.cshtml]
+[D:/Users/conta/Documents/Tec/Cuarto Semestre/Construcción de Software y Toma de Decisiones/Github/Web/AWAQPagina/AWAQPagina/Pages/studentView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcc3R1ZGVudFZpZXcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Santiago Lozano/source/repos/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/Pages/UserInfo.cshtml]
+[D:/Users/conta/Documents/Tec/Cuarto Semestre/Construcción de Software y Toma de Decisiones/Github/Web/AWAQPagina/AWAQPagina/Pages/UserInfo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlckluZm8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Santiago Lozano/source/repos/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/Pages/_ViewImports.cshtml]
+[D:/Users/conta/Documents/Tec/Cuarto Semestre/Construcción de Software y Toma de Decisiones/Github/Web/AWAQPagina/AWAQPagina/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Santiago Lozano/source/repos/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/Pages/_ViewStart.cshtml]
+[D:/Users/conta/Documents/Tec/Cuarto Semestre/Construcción de Software y Toma de Decisiones/Github/Web/AWAQPagina/AWAQPagina/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Santiago Lozano/source/repos/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/Pages/Shared/_Layout.cshtml]
+[D:/Users/conta/Documents/Tec/Cuarto Semestre/Construcción de Software y Toma de Decisiones/Github/Web/AWAQPagina/AWAQPagina/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-d4lg2o9tcd

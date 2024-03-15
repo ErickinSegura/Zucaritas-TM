@@ -7,6 +7,6 @@ public class TreeController : MonoBehaviour
 {
     public void MamiferosLoad()
     {
-        SceneManager.LoadScene("Lobby");
+        SceneManager.LoadScene("Mamiferos");
     }
 }
