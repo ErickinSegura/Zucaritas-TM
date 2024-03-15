@@ -1793,19 +1793,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\conta\\.nuget\\packages\\": {}
+    "C:\\Users\\Santiago Lozano\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Users\\conta\\Documents\\Tec\\Cuarto Semestre\\Construcción de Software y Toma de Decisiones\\Github\\Web\\AWAQPagina\\AWAQPagina\\AWAQPagina.csproj",
+      "projectUniqueName": "C:\\Users\\Santiago Lozano\\source\\repos\\Zucaritas-TM\\Web\\AWAQPagina\\AWAQPagina\\AWAQPagina.csproj",
       "projectName": "AWAQPagina",
-      "projectPath": "D:\\Users\\conta\\Documents\\Tec\\Cuarto Semestre\\Construcción de Software y Toma de Decisiones\\Github\\Web\\AWAQPagina\\AWAQPagina\\AWAQPagina.csproj",
-      "packagesPath": "C:\\Users\\conta\\.nuget\\packages\\",
-      "outputPath": "D:\\Users\\conta\\Documents\\Tec\\Cuarto Semestre\\Construcción de Software y Toma de Decisiones\\Github\\Web\\AWAQPagina\\AWAQPagina\\obj\\",
+      "projectPath": "C:\\Users\\Santiago Lozano\\source\\repos\\Zucaritas-TM\\Web\\AWAQPagina\\AWAQPagina\\AWAQPagina.csproj",
+      "packagesPath": "C:\\Users\\Santiago Lozano\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Santiago Lozano\\source\\repos\\Zucaritas-TM\\Web\\AWAQPagina\\AWAQPagina\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\conta\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Santiago Lozano\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1863,13 +1863,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file D:\\Users\\conta\\Documents\\Tec\\Cuarto Semestre\\Construcción de Software y Toma de Decisiones\\Github\\Web\\AWAQPagina\\AWAQPagina\\obj\\project.nuget.cache : Unexpected character encountered while parsing value: <. Path '', line 0, position 0."
-    }
-  ]
+  }
 }
