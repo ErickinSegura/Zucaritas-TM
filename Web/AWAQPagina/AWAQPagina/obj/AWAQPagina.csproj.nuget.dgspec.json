@@ -1,27 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Users\\conta\\Documents\\Tec\\Cuarto Semestre\\Construcción de Software y Toma de Decisiones\\Github\\Web\\AWAQPagina\\AWAQPagina\\AWAQPagina.csproj": {}
+    "/Users/adolfogonzalez/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/AWAQPagina.csproj": {}
   },
   "projects": {
-    "D:\\Users\\conta\\Documents\\Tec\\Cuarto Semestre\\Construcción de Software y Toma de Decisiones\\Github\\Web\\AWAQPagina\\AWAQPagina\\AWAQPagina.csproj": {
+    "/Users/adolfogonzalez/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/AWAQPagina.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Users\\conta\\Documents\\Tec\\Cuarto Semestre\\Construcción de Software y Toma de Decisiones\\Github\\Web\\AWAQPagina\\AWAQPagina\\AWAQPagina.csproj",
+        "projectUniqueName": "/Users/adolfogonzalez/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/AWAQPagina.csproj",
         "projectName": "AWAQPagina",
-        "projectPath": "D:\\Users\\conta\\Documents\\Tec\\Cuarto Semestre\\Construcción de Software y Toma de Decisiones\\Github\\Web\\AWAQPagina\\AWAQPagina\\AWAQPagina.csproj",
-        "packagesPath": "C:\\Users\\conta\\.nuget\\packages\\",
-        "outputPath": "D:\\Users\\conta\\Documents\\Tec\\Cuarto Semestre\\Construcción de Software y Toma de Decisiones\\Github\\Web\\AWAQPagina\\AWAQPagina\\obj\\",
+        "projectPath": "/Users/adolfogonzalez/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/AWAQPagina.csproj",
+        "packagesPath": "/Users/adolfogonzalez/.nuget/packages/",
+        "outputPath": "/Users/adolfogonzalez/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\conta\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/adolfogonzalez/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "/usr/local/share/dotnet/sdk/7.0.313/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -34,11 +33,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -69,7 +63,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.313/RuntimeIdentifierGraph.json"
         }
       }
     }

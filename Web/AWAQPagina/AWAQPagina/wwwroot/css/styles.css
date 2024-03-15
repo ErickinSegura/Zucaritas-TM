@@ -1,9 +1,10 @@
 ﻿body {
-    min-width: 1000px
+    min-width: 1000px;
+    margin: 0;
 }
 
 .headerClass {
-    height: 15vh;
+    height: 12vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -36,11 +37,10 @@
 
 .containerUserClass{
     border-radius: 50px;
-    background-color: #F5F5F5;
-    padding: 5%;
+    padding: 4% 10%;
     width: 80%;
-    gap: 10%;
-    min-width:400px;
+    gap: 16px;
+    flex-direction: column;
 }
 
 .imgContainer {
@@ -48,13 +48,21 @@
     border-radius: 50%;
     width: 30%;
     aspect-ratio: 1/1;
-    object-fit: cover
+    object-fit: cover;
+    min-width: 300px
 }
 
 .userBioClass {
     font-size: 16px;
+    min-width: 270px;
 }
 
-.mainBody{
+.inputClass::placeholder{
+    color: #F5F5F5;
+}
 
+.mainImage {
+    min-height: 100vh;
+    min-width: 100%;
+    object-fit: cover;
 }
