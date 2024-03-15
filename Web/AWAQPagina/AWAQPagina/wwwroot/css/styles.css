@@ -1,8 +1,60 @@
 ﻿body {
+    min-width: 1000px
 }
 
 .headerClass {
-    background-color: #202714;
-    height: 150px;
-    width: 100%
+    height: 15vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vh 4vw;
+}
+
+.bgGreen {
+    background-color: #2C5629
+}
+
+.buttonClass {
+    border: solid 1px white;
+    color: white;
+    padding: 1.5vh 2vw;
+    border-radius: 10px;
+    font-size: 2vh;
+}
+
+.buttonClass:hover {
+    border: solid 1px lightgray;
+    color: lightgray
+}
+
+.centerClass{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerUserClass{
+    border-radius: 50px;
+    background-color: #F5F5F5;
+    padding: 5%;
+    width: 80%;
+    gap: 10vw;
+    min-width:400px;
+}
+
+.imgContainer {
+    border: solid 2px black;
+    border-radius: 50%;
+    height: 30%;
+    width: 30%;
+    object-fit: cover;
+}
+
+.userBioClass {
+    font-size: 16px;
+}
+
+.mainBody{
+
 }

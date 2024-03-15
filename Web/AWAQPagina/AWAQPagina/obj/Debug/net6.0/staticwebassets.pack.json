@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets/AWAQPagina.bundle.scp.css"
     },
     {
+      "Id": "/Users/adolfogonzalez/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/wwwroot/.DS_Store",
+      "PackagePath": "staticwebassets/.DS_Store"
+    },
+    {
       "Id": "/Users/adolfogonzalez/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/wwwroot/css/site.css",
       "PackagePath": "staticwebassets/css/site.css"
     },
@@ -21,8 +25,8 @@
       "PackagePath": "staticwebassets/images/1.jpg"
     },
     {
-      "Id": "/Users/adolfogonzalez/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/wwwroot/images/AWAQ-Hblanco ESP.png",
-      "PackagePath": "staticwebassets/images/AWAQ-Hblanco ESP.png"
+      "Id": "/Users/adolfogonzalez/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/wwwroot/images/logoBlanco.png",
+      "PackagePath": "staticwebassets/images/logoBlanco.png"
     },
     {
       "Id": "/Users/adolfogonzalez/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/wwwroot/js/site.js",

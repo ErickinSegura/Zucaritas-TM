@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Ie/mcEUx6CFLHFsHJhHvUm22R54QJ2tcUGDn3GxvEBI=",
+  "Hash": "QjRbGiWgG4Xdyxs4VPtGIinSwatD4hBBYRkyeYYKORw=",
   "Source": "AWAQPagina",
   "BasePath": "_content/AWAQPagina",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/adolfogonzalez/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/obj/Debug/net6.0/scopedcss/projectbundle/AWAQPagina.bundle.scp.css"
+    },
+    {
+      "Identity": "/Users/adolfogonzalez/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/wwwroot/.DS_Store",
+      "SourceId": "AWAQPagina",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/adolfogonzalez/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/wwwroot/",
+      "BasePath": "_content/AWAQPagina",
+      "RelativePath": ".DS_Store",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/.DS_Store"
     },
     {
       "Identity": "/Users/adolfogonzalez/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/wwwroot/css/site.css",
@@ -119,12 +136,12 @@
       "OriginalItemSpec": "wwwroot/images/1.jpg"
     },
     {
-      "Identity": "/Users/adolfogonzalez/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/wwwroot/images/AWAQ-Hblanco ESP.png",
+      "Identity": "/Users/adolfogonzalez/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/wwwroot/images/logoBlanco.png",
       "SourceId": "AWAQPagina",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/adolfogonzalez/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/wwwroot/",
       "BasePath": "_content/AWAQPagina",
-      "RelativePath": "images/AWAQ-Hblanco ESP.png",
+      "RelativePath": "images/logoBlanco.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -133,7 +150,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/images/AWAQ-Hblanco ESP.png"
+      "OriginalItemSpec": "wwwroot/images/logoBlanco.png"
     },
     {
       "Identity": "/Users/adolfogonzalez/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/wwwroot/js/site.js",
