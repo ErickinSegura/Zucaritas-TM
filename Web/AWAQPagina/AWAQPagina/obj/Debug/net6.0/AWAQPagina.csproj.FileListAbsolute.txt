@@ -29,3 +29,34 @@
 /Users/adolfogonzalez/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/obj/Debug/net6.0/AWAQPagina.pdb
 /Users/adolfogonzalez/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/obj/Debug/net6.0/AWAQPagina.genruntimeconfig.cache
 /Users/adolfogonzalez/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/obj/Debug/net6.0/ref/AWAQPagina.dll
+D:\Users\conta\Documents\Tec\Cuarto Semestre\Construcción de Software y Toma de Decisiones\Github\Web\AWAQPagina\AWAQPagina\bin\Debug\net6.0\appsettings.Development.json
+D:\Users\conta\Documents\Tec\Cuarto Semestre\Construcción de Software y Toma de Decisiones\Github\Web\AWAQPagina\AWAQPagina\bin\Debug\net6.0\appsettings.json
+D:\Users\conta\Documents\Tec\Cuarto Semestre\Construcción de Software y Toma de Decisiones\Github\Web\AWAQPagina\AWAQPagina\bin\Debug\net6.0\AWAQPagina.staticwebassets.runtime.json
+D:\Users\conta\Documents\Tec\Cuarto Semestre\Construcción de Software y Toma de Decisiones\Github\Web\AWAQPagina\AWAQPagina\bin\Debug\net6.0\AWAQPagina.exe
+D:\Users\conta\Documents\Tec\Cuarto Semestre\Construcción de Software y Toma de Decisiones\Github\Web\AWAQPagina\AWAQPagina\bin\Debug\net6.0\AWAQPagina.deps.json
+D:\Users\conta\Documents\Tec\Cuarto Semestre\Construcción de Software y Toma de Decisiones\Github\Web\AWAQPagina\AWAQPagina\bin\Debug\net6.0\AWAQPagina.runtimeconfig.json
+D:\Users\conta\Documents\Tec\Cuarto Semestre\Construcción de Software y Toma de Decisiones\Github\Web\AWAQPagina\AWAQPagina\bin\Debug\net6.0\AWAQPagina.dll
+D:\Users\conta\Documents\Tec\Cuarto Semestre\Construcción de Software y Toma de Decisiones\Github\Web\AWAQPagina\AWAQPagina\bin\Debug\net6.0\AWAQPagina.pdb
+D:\Users\conta\Documents\Tec\Cuarto Semestre\Construcción de Software y Toma de Decisiones\Github\Web\AWAQPagina\AWAQPagina\obj\Debug\net6.0\AWAQPagina.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\conta\Documents\Tec\Cuarto Semestre\Construcción de Software y Toma de Decisiones\Github\Web\AWAQPagina\AWAQPagina\obj\Debug\net6.0\AWAQPagina.AssemblyInfoInputs.cache
+D:\Users\conta\Documents\Tec\Cuarto Semestre\Construcción de Software y Toma de Decisiones\Github\Web\AWAQPagina\AWAQPagina\obj\Debug\net6.0\AWAQPagina.AssemblyInfo.cs
+D:\Users\conta\Documents\Tec\Cuarto Semestre\Construcción de Software y Toma de Decisiones\Github\Web\AWAQPagina\AWAQPagina\obj\Debug\net6.0\AWAQPagina.csproj.CoreCompileInputs.cache
+D:\Users\conta\Documents\Tec\Cuarto Semestre\Construcción de Software y Toma de Decisiones\Github\Web\AWAQPagina\AWAQPagina\obj\Debug\net6.0\AWAQPagina.MvcApplicationPartsAssemblyInfo.cache
+D:\Users\conta\Documents\Tec\Cuarto Semestre\Construcción de Software y Toma de Decisiones\Github\Web\AWAQPagina\AWAQPagina\obj\Debug\net6.0\AWAQPagina.RazorAssemblyInfo.cache
+D:\Users\conta\Documents\Tec\Cuarto Semestre\Construcción de Software y Toma de Decisiones\Github\Web\AWAQPagina\AWAQPagina\obj\Debug\net6.0\AWAQPagina.RazorAssemblyInfo.cs
+D:\Users\conta\Documents\Tec\Cuarto Semestre\Construcción de Software y Toma de Decisiones\Github\Web\AWAQPagina\AWAQPagina\obj\Debug\net6.0\AWAQPagina.sourcelink.json
+D:\Users\conta\Documents\Tec\Cuarto Semestre\Construcción de Software y Toma de Decisiones\Github\Web\AWAQPagina\AWAQPagina\obj\Debug\net6.0\staticwebassets.build.json
+D:\Users\conta\Documents\Tec\Cuarto Semestre\Construcción de Software y Toma de Decisiones\Github\Web\AWAQPagina\AWAQPagina\obj\Debug\net6.0\staticwebassets.development.json
+D:\Users\conta\Documents\Tec\Cuarto Semestre\Construcción de Software y Toma de Decisiones\Github\Web\AWAQPagina\AWAQPagina\obj\Debug\net6.0\staticwebassets\msbuild.AWAQPagina.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Users\conta\Documents\Tec\Cuarto Semestre\Construcción de Software y Toma de Decisiones\Github\Web\AWAQPagina\AWAQPagina\obj\Debug\net6.0\staticwebassets\msbuild.build.AWAQPagina.props
+D:\Users\conta\Documents\Tec\Cuarto Semestre\Construcción de Software y Toma de Decisiones\Github\Web\AWAQPagina\AWAQPagina\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.AWAQPagina.props
+D:\Users\conta\Documents\Tec\Cuarto Semestre\Construcción de Software y Toma de Decisiones\Github\Web\AWAQPagina\AWAQPagina\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.AWAQPagina.props
+D:\Users\conta\Documents\Tec\Cuarto Semestre\Construcción de Software y Toma de Decisiones\Github\Web\AWAQPagina\AWAQPagina\obj\Debug\net6.0\staticwebassets.pack.json
+D:\Users\conta\Documents\Tec\Cuarto Semestre\Construcción de Software y Toma de Decisiones\Github\Web\AWAQPagina\AWAQPagina\obj\Debug\net6.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
+D:\Users\conta\Documents\Tec\Cuarto Semestre\Construcción de Software y Toma de Decisiones\Github\Web\AWAQPagina\AWAQPagina\obj\Debug\net6.0\scopedcss\bundle\AWAQPagina.styles.css
+D:\Users\conta\Documents\Tec\Cuarto Semestre\Construcción de Software y Toma de Decisiones\Github\Web\AWAQPagina\AWAQPagina\obj\Debug\net6.0\scopedcss\projectbundle\AWAQPagina.bundle.scp.css
+D:\Users\conta\Documents\Tec\Cuarto Semestre\Construcción de Software y Toma de Decisiones\Github\Web\AWAQPagina\AWAQPagina\obj\Debug\net6.0\AWAQPagina.dll
+D:\Users\conta\Documents\Tec\Cuarto Semestre\Construcción de Software y Toma de Decisiones\Github\Web\AWAQPagina\AWAQPagina\obj\Debug\net6.0\refint\AWAQPagina.dll
+D:\Users\conta\Documents\Tec\Cuarto Semestre\Construcción de Software y Toma de Decisiones\Github\Web\AWAQPagina\AWAQPagina\obj\Debug\net6.0\AWAQPagina.pdb
+D:\Users\conta\Documents\Tec\Cuarto Semestre\Construcción de Software y Toma de Decisiones\Github\Web\AWAQPagina\AWAQPagina\obj\Debug\net6.0\AWAQPagina.genruntimeconfig.cache
+D:\Users\conta\Documents\Tec\Cuarto Semestre\Construcción de Software y Toma de Decisiones\Github\Web\AWAQPagina\AWAQPagina\obj\Debug\net6.0\ref\AWAQPagina.dll
