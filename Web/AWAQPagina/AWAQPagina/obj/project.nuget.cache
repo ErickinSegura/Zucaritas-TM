@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ySrTAOf4WhXzUTJFPAmLatJvzbw4nNT4VLNIsGKiFf6TabceUS/slJw0qz3sP/ANmFoH8WBw9DvYAKMJHh2JDg==",
+  "dgSpecHash": "5EVSqL6TzM9QG58Fl9rk08YsDGpXUNgrGKqaGXe5yrWcXpbn4Ou/+i+hJ6p6pVd2QBQpGZXlFdPdmnJm1JuVQQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Santiago Lozano\\Source\\Repos\\Zucaritas-TM\\Web\\AWAQPagina\\AWAQPagina\\AWAQPagina.csproj",
+  "projectFilePath": "C:\\Users\\Santiago Lozano\\source\\repos\\Zucaritas-TM\\Web\\AWAQPagina\\AWAQPagina\\AWAQPagina.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Santiago Lozano\\.nuget\\packages\\bouncycastle.cryptography\\2.2.1\\bouncycastle.cryptography.2.2.1.nupkg.sha512",
     "C:\\Users\\Santiago Lozano\\.nuget\\packages\\google.protobuf\\3.25.1\\google.protobuf.3.25.1.nupkg.sha512",

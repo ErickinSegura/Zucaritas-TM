@@ -1798,11 +1798,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Santiago Lozano\\Source\\Repos\\Zucaritas-TM\\Web\\AWAQPagina\\AWAQPagina\\AWAQPagina.csproj",
+      "projectUniqueName": "C:\\Users\\Santiago Lozano\\source\\repos\\Zucaritas-TM\\Web\\AWAQPagina\\AWAQPagina\\AWAQPagina.csproj",
       "projectName": "AWAQPagina",
-      "projectPath": "C:\\Users\\Santiago Lozano\\Source\\Repos\\Zucaritas-TM\\Web\\AWAQPagina\\AWAQPagina\\AWAQPagina.csproj",
+      "projectPath": "C:\\Users\\Santiago Lozano\\source\\repos\\Zucaritas-TM\\Web\\AWAQPagina\\AWAQPagina\\AWAQPagina.csproj",
       "packagesPath": "C:\\Users\\Santiago Lozano\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Santiago Lozano\\Source\\Repos\\Zucaritas-TM\\Web\\AWAQPagina\\AWAQPagina\\obj\\",
+      "outputPath": "C:\\Users\\Santiago Lozano\\source\\repos\\Zucaritas-TM\\Web\\AWAQPagina\\AWAQPagina\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Santiago Lozano\\AppData\\Roaming\\NuGet\\NuGet.Config",

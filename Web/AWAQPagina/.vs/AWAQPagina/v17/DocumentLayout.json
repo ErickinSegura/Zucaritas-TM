@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Santiago Lozano\\source\\repos\\Zucaritas-TM\\Web\\AWAQPagina\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{65F54CFA-1526-497B-8D21-9B6426FF991C}|AWAQPagina\\AWAQPagina.csproj|c:\\users\\santiago lozano\\source\\repos\\zucaritas-tm\\web\\awaqpagina\\awaqpagina\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{65F54CFA-1526-497B-8D21-9B6426FF991C}|AWAQPagina\\AWAQPagina.csproj|solutionrelative:awaqpagina\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{65F54CFA-1526-497B-8D21-9B6426FF991C}|AWAQPagina\\AWAQPagina.csproj|c:\\users\\santiago lozano\\source\\repos\\zucaritas-tm\\web\\awaqpagina\\awaqpagina\\pages\\studentview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{65F54CFA-1526-497B-8D21-9B6426FF991C}|AWAQPagina\\AWAQPagina.csproj|solutionrelative:awaqpagina\\pages\\studentview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -22,47 +26,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "studentView.cshtml",
-              "DocumentMoniker": "C:\\Users\\Santiago Lozano\\source\\repos\\Zucaritas-TM\\Web\\AWAQPagina\\AWAQPagina\\Pages\\studentView.cshtml",
-              "RelativeDocumentMoniker": "AWAQPagina\\Pages\\studentView.cshtml",
-              "ToolTip": "C:\\Users\\Santiago Lozano\\source\\repos\\Zucaritas-TM\\Web\\AWAQPagina\\AWAQPagina\\Pages\\studentView.cshtml",
-              "RelativeToolTip": "AWAQPagina\\Pages\\studentView.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAALAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-15T02:59:52.715Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "studentView.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\Santiago Lozano\\source\\repos\\Zucaritas-TM\\Web\\AWAQPagina\\AWAQPagina\\Pages\\studentView.cshtml.cs",
-              "RelativeDocumentMoniker": "AWAQPagina\\Pages\\studentView.cshtml.cs",
-              "ToolTip": "C:\\Users\\Santiago Lozano\\source\\repos\\Zucaritas-TM\\Web\\AWAQPagina\\AWAQPagina\\Pages\\studentView.cshtml.cs",
-              "RelativeToolTip": "AWAQPagina\\Pages\\studentView.cshtml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-15T03:00:13.312Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "studentView.css",
-              "DocumentMoniker": "C:\\Users\\Santiago Lozano\\Source\\Repos\\Zucaritas-TM\\Web\\AWAQPagina\\AWAQPagina\\wwwroot\\css\\studentView.css",
-              "RelativeDocumentMoniker": "AWAQPagina\\wwwroot\\css\\studentView.css",
-              "ToolTip": "C:\\Users\\Santiago Lozano\\Source\\Repos\\Zucaritas-TM\\Web\\AWAQPagina\\AWAQPagina\\wwwroot\\css\\studentView.css",
-              "RelativeToolTip": "AWAQPagina\\wwwroot\\css\\studentView.css",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAJIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-03-15T03:20:23.738Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -70,6 +35,57 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Santiago Lozano\\source\\repos\\Zucaritas-TM\\Web\\AWAQPagina\\AWAQPagina\\Pages\\Index.cshtml",
+              "RelativeDocumentMoniker": "AWAQPagina\\Pages\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Santiago Lozano\\source\\repos\\Zucaritas-TM\\Web\\AWAQPagina\\AWAQPagina\\Pages\\Index.cshtml*",
+              "RelativeToolTip": "AWAQPagina\\Pages\\Index.cshtml*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-15T04:21:27.574Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "studentView.cshtml",
+              "DocumentMoniker": "C:\\Users\\Santiago Lozano\\source\\repos\\Zucaritas-TM\\Web\\AWAQPagina\\AWAQPagina\\Pages\\studentView.cshtml",
+              "RelativeDocumentMoniker": "AWAQPagina\\Pages\\studentView.cshtml",
+              "ToolTip": "C:\\Users\\Santiago Lozano\\source\\repos\\Zucaritas-TM\\Web\\AWAQPagina\\AWAQPagina\\Pages\\studentView.cshtml",
+              "RelativeToolTip": "AWAQPagina\\Pages\\studentView.cshtml",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABIAAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-15T02:59:52.715Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "studentView.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\Santiago Lozano\\source\\repos\\Zucaritas-TM\\Web\\AWAQPagina\\AWAQPagina\\Pages\\studentView.cshtml.cs",
+              "RelativeDocumentMoniker": "AWAQPagina\\Pages\\studentView.cshtml.cs",
+              "ToolTip": "C:\\Users\\Santiago Lozano\\source\\repos\\Zucaritas-TM\\Web\\AWAQPagina\\AWAQPagina\\Pages\\studentView.cshtml.cs",
+              "RelativeToolTip": "AWAQPagina\\Pages\\studentView.cshtml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-15T03:00:13.312Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "studentView.css",
+              "DocumentMoniker": "C:\\Users\\Santiago Lozano\\source\\repos\\Zucaritas-TM\\Web\\AWAQPagina\\AWAQPagina\\wwwroot\\css\\studentView.css",
+              "RelativeDocumentMoniker": "AWAQPagina\\wwwroot\\css\\studentView.css",
+              "ToolTip": "C:\\Users\\Santiago Lozano\\source\\repos\\Zucaritas-TM\\Web\\AWAQPagina\\AWAQPagina\\wwwroot\\css\\studentView.css",
+              "RelativeToolTip": "AWAQPagina\\wwwroot\\css\\studentView.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAJIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-03-15T03:20:23.738Z",
+              "EditorCaption": ""
             }
           ]
         }
