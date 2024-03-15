@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "+qqvZY0XceIeBfMx4NAV7PlMKBtcz+P6sSBLyVsUWpg=",
+  "Hash": "uc7YROMMoDLwXk9jNsXjUarlhwprXP6p2Ku05RD8Qhg=",
   "Source": "AWAQPagina",
   "BasePath": "_content/AWAQPagina",
   "Mode": "Default",
@@ -131,12 +131,12 @@
       "OriginalItemSpec": "wwwroot\\images\\1.jpg"
     },
     {
-      "Identity": "D:\\Users\\conta\\Documents\\Tec\\Cuarto Semestre\\Construcción de Software y Toma de Decisiones\\Github\\Web\\AWAQPagina\\AWAQPagina\\wwwroot\\images\\AWAQ-Hblanco ESP.png",
+      "Identity": "D:\\Users\\conta\\Documents\\Tec\\Cuarto Semestre\\Construcción de Software y Toma de Decisiones\\Github\\Web\\AWAQPagina\\AWAQPagina\\wwwroot\\images\\awaq.png",
       "SourceId": "AWAQPagina",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Users\\conta\\Documents\\Tec\\Cuarto Semestre\\Construcción de Software y Toma de Decisiones\\Github\\Web\\AWAQPagina\\AWAQPagina\\wwwroot\\",
       "BasePath": "_content/AWAQPagina",
-      "RelativePath": "images/AWAQ-Hblanco ESP.png",
+      "RelativePath": "images/awaq.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -147,7 +147,26 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\AWAQ-Hblanco ESP.png"
+      "OriginalItemSpec": "wwwroot\\images\\awaq.png"
+    },
+    {
+      "Identity": "D:\\Users\\conta\\Documents\\Tec\\Cuarto Semestre\\Construcción de Software y Toma de Decisiones\\Github\\Web\\AWAQPagina\\AWAQPagina\\wwwroot\\images\\logoBlanco.png",
+      "SourceId": "AWAQPagina",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Users\\conta\\Documents\\Tec\\Cuarto Semestre\\Construcción de Software y Toma de Decisiones\\Github\\Web\\AWAQPagina\\AWAQPagina\\wwwroot\\",
+      "BasePath": "_content/AWAQPagina",
+      "RelativePath": "images/logoBlanco.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\logoBlanco.png"
     },
     {
       "Identity": "D:\\Users\\conta\\Documents\\Tec\\Cuarto Semestre\\Construcción de Software y Toma de Decisiones\\Github\\Web\\AWAQPagina\\AWAQPagina\\wwwroot\\js\\site.js",
