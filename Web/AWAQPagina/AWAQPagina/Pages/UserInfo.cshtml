@@ -6,16 +6,16 @@
 
 <header>
     <div class="headerClass bgGreen">
-        <img src="~/images/logoBlanco.png" style="height:100%"/>
+        <img src="~/images/logoBlanco.png" style="height:100%" />
         <button class="btn buttonClass">Home</button>
     </div>
 </header>
 <div class="centerClass container-fluid" style="padding:32px; overflow:scroll;">
     <div class="centerClass containerUserClass">
-        <img src="~/images/1.jpg" class="imgContainer" />
+        <img src="@Model.imagePath" class="imgContainer" /> @*@Model.imagePath*@
         <div style="padding: 20px;">
             <h2 style="font-size: 32px">Biografia</h2>
-            <p class="userBioClass">Soy Santiago Vargas García, un apasionado biólogo colombiano dedicado al estudio y conservación de la biodiversidad de nuestro hermoso país. Con una formación académica sólida en Biología, especializada en Ecología y Conservación, he dedicado mi carrera a investigar y comprender los ecosistemas únicos de Colombia. Mi trabajo se centra en identificar patrones ecológicos, evaluar el impacto humano en los ecosistemas y proponer estrategias de conservación efectivas. A lo largo de mi trayectoria, he colaborado en diversos proyectos de investigación, participando en expediciones científicas y contribuyendo a la divulgación de conocimiento en comunidades locales.</p>
+            <p class="userBioClass">@Model.Biography</p>
         </div>
         <form method="post" enctype="multipart/form-data" class="d-flex">
             <div class="form-group">
@@ -24,6 +24,12 @@
             </div>
             <button type="submit" class="btn btn-primary">Upload</button>
         </form>
+        <form method="post">
+            <div class="form-group">
+                <label for="biography">Biography</label>
+                <textarea class="form-control" id="biography" name="Biography">@Model.Biography</textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" asp-page-handler="SaveBiography">Save</button>
+        </form>
     </div>
-    
 </div>
