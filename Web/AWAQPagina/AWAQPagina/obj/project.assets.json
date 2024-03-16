@@ -1793,19 +1793,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/adolfogonzalez/.nuget/packages/": {}
+    "/Users/herveynavarro/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/adolfogonzalez/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/AWAQPagina.csproj",
+      "projectUniqueName": "/Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/AWAQPagina.csproj",
       "projectName": "AWAQPagina",
-      "projectPath": "/Users/adolfogonzalez/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/AWAQPagina.csproj",
-      "packagesPath": "/Users/adolfogonzalez/.nuget/packages/",
-      "outputPath": "/Users/adolfogonzalez/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/obj/",
+      "projectPath": "/Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/AWAQPagina.csproj",
+      "packagesPath": "/Users/herveynavarro/.nuget/packages/",
+      "outputPath": "/Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/adolfogonzalez/.nuget/NuGet/NuGet.Config"
+        "/Users/herveynavarro/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
