@@ -817,7 +817,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\u2302"
+  m_Text: 
 --- !u!222 &1759372295
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -911,7 +911,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 106672865}
         m_TargetAssemblyTypeName: Aves, Assembly-CSharp
-        m_MethodName: returnToMenu
+        m_MethodName: returnToTree
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

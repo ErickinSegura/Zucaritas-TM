@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using MySql.Data.MySqlClient;
+using MySqlX.XDevAPI.Common;
 using System;
 
 namespace AWAQPagina.Pages
@@ -20,6 +21,9 @@ namespace AWAQPagina.Pages
         }
 
         public string UserId { get; private set; }
+        public string nombre{ get; private set; }
+        public string apellido { get; private set; }
+        public string nombreUsuario { get; private set; }
 
         public IActionResult OnPost()
         {
@@ -28,6 +32,9 @@ namespace AWAQPagina.Pages
 
             string sql = "SELECT COUNT(*) FROM USUARIO WHERE Usuario = @usuario AND Contraseña = @contraseña";
             string sql2 = "SELECT ID_USER FROM USUARIO WHERE Usuario = @usuario AND Contraseña = @contraseña";
+            string sql3 = "SELECT Nombre FROM USUARIO WHERE Usuario = @usuario AND Contraseña = @contraseña";
+            string sql4 = "SELECT APELLIDO_PATERNO FROM USUARIO WHERE Usuario = @usuario AND Contraseña = @contraseña";
+            string sql5 = "SELECT Usuario FROM USUARIO WHERE Usuario = @usuario AND Contraseña = @contraseña";
 
             using (MySqlConnection connection = new MySqlConnection(_connectionString))
             {
@@ -40,6 +47,7 @@ namespace AWAQPagina.Pages
                     command.Parameters.AddWithValue("@contraseña", contraseña);
 
                     int count = Convert.ToInt32(command.ExecuteScalar());
+
 
                     if (count > 0)
                     {
@@ -59,6 +67,52 @@ namespace AWAQPagina.Pages
                             }
                         }
 
+
+                        using (MySqlCommand command3 = new MySqlCommand(sql3, connection))
+                        {
+                            command3.Parameters.AddWithValue("@usuario", usuario);
+                            command3.Parameters.AddWithValue("@contraseña", contraseña);
+
+                            object result = command3.ExecuteScalar();
+
+                            if (result != null)
+                            {
+                                nombre = result.ToString();
+                                _httpContextAccessor.HttpContext.Response.Cookies.Append("Nombre", nombre);
+
+                            }
+                        }
+
+                        using (MySqlCommand command4 = new MySqlCommand(sql4, connection))
+                        {
+                            command4.Parameters.AddWithValue("@usuario", usuario);
+                            command4.Parameters.AddWithValue("@contraseña", contraseña);
+
+                            object result = command4.ExecuteScalar();
+
+                            if (result != null)
+                            {
+                                apellido = result.ToString();
+                                _httpContextAccessor.HttpContext.Response.Cookies.Append("APELLIDO_PATERNO", apellido);
+                            }
+                        }
+
+
+                        using (MySqlCommand command5 = new MySqlCommand(sql5, connection))
+                        {
+                            command5.Parameters.AddWithValue("@usuario", usuario);
+                            command5.Parameters.AddWithValue("@contraseña", contraseña);
+
+                            object result = command5.ExecuteScalar();
+
+                            if (result != null)
+                            {
+                                nombreUsuario = result.ToString();
+                                _httpContextAccessor.HttpContext.Response.Cookies.Append("Usuario", nombreUsuario);
+                            }
+                        }
+
+
                         // Redirect to studentView page
                         return RedirectToPage("/studentView");
                     }
@@ -71,7 +125,11 @@ namespace AWAQPagina.Pages
 
         public void OnGet()
         {
-            // You can handle GET requests here if needed
+            // Quitar cookies
+            _httpContextAccessor.HttpContext.Response.Cookies.Delete("UserId");
+            
+
+            
         }
     }
 }

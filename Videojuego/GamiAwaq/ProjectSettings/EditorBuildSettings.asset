@@ -41,4 +41,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/RecapMoni.unity
     guid: 332e31a1fe975e74c8773f38907de629
+  - enabled: 1
+    path: Assets/Scenes/Enciclopedia.unity
+    guid: b9781491bc4e35745a4e04532919b8c9
   m_configObjects: {}
