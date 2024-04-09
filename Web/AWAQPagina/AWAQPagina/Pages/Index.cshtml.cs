@@ -11,7 +11,7 @@ namespace AWAQPagina.Pages
     public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
-        private readonly string _connectionString = "Server=127.0.0.1;Port=3306;Database=AWAQ;Uid=root;password=lala14;";
+        private readonly string _connectionString = "Server=127.0.0.1;Port=3306;Database=AWAQ;Uid=root;password=password;";
         private readonly IHttpContextAccessor _httpContextAccessor;
 
         public IndexModel(ILogger<IndexModel> logger, IHttpContextAccessor httpContextAccessor)

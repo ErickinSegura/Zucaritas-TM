@@ -27,7 +27,7 @@ namespace AWAQPagina.Pages
             string userId = _httpContextAccessor.HttpContext.Request.Cookies["UserId"];
 
             // Update the biography in the database using the user ID
-            string connectionString = "Server=127.0.0.1;Port=3306;Database=AWAQ;Uid=root;password=lala14;";
+            string connectionString = "Server=127.0.0.1;Port=3306;Database=AWAQ;Uid=root;password=password;";
             string sql = "UPDATE USUARIO SET BIO = @Biography WHERE ID_USER = @userId";
 
             using (MySqlConnection connection = new MySqlConnection(connectionString))
