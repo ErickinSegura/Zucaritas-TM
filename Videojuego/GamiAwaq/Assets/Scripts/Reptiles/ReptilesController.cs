@@ -9,27 +9,65 @@ public class ReptilesController : MonoBehaviour
 {
 
     static public ReptilesController Instance;
-    public GameObject parentObject;
+    public GameObject finishPopup;
     public GameObject registerPopup;
+
     public Image newImage;
 
+    public Text incoText;
 
     Texture2D image;
     Sprite newSprite;
 
-    public string dropdownParentTag = "DropdownParent";
-    private Dropdown dropdown;
 
-
-
-    public void returnToLobby()
+    public void finish()
     {
-        SceneManager.LoadScene("Lobby Noche");
+        finishPopup.SetActive(true);
     }
+
+    public void exit()
+    {
+        finishPopup.SetActive(false);
+    }
+
+    public void continueToScore()
+    {
+        SceneManager.LoadScene("FinalReptile");
+    }
+
+
 
     public void enter()
     {
+        PlayerPrefs.SetInt("Registros", PlayerPrefs.GetInt("Registros")+1);
+        string val = Dropdown.Instance.GetDropdownValue();
+
+        string correct = PlayerPrefs.GetString("reptile");
+
+        Debug.Log("El valor del dropdown "+val);
+
+        if (val == correct)
+        {
+            incoText.text = "Correcto";
+            incoText.color = Color.green;
+            Debug.Log("Correcto");
+            PlayerPrefs.SetInt("Puntaje", PlayerPrefs.GetInt("Puntaje") + 1);
+            StartCoroutine(hideText());
+        }
+        else
+        {
+            incoText.text = "Incorrecto";
+            incoText.color = Color.red;
+            Debug.Log("Incorrecto");
+            StartCoroutine(hideText());
+        }
         registerPopup.SetActive(false);
+    }
+
+    IEnumerator hideText()
+    {
+        yield return new WaitForSeconds(2);
+        incoText.text = "";
     }
 
     public void activatePopup(string url)
@@ -40,7 +78,10 @@ public class ReptilesController : MonoBehaviour
 
     public void Awake()
     {
+
         Instance = this;
+        PlayerPrefs.SetInt("Puntaje", 0);
+
     }
 
     IEnumerator DownloadImageCoroutine(string MediaUrl)
@@ -61,7 +102,6 @@ public class ReptilesController : MonoBehaviour
             }
         }
     }
-
 
     
 

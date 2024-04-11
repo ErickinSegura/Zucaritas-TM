@@ -60,6 +60,7 @@ public class ReptileBehaviour : MonoBehaviour
             ReptilesController.Instance.activatePopup(reptile.Image);
             Dropdown.Instance.ChangeDropdownOptions(reptile.Name);
             GameObject.Destroy(this.gameObject);
+            PlayerPrefs.SetString("reptile", reptile.Name);
         }
     }
 

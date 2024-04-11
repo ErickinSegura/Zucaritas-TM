@@ -14,21 +14,21 @@ public class Dropdown : MonoBehaviour
         Instance = this;
     }
 
-    public void GetDropdownValue()
+    public string GetDropdownValue()
     {
         int pickedValue = dropdown.value;
         string pickedReptile = dropdown.options[pickedValue].text;
         Debug.Log(pickedReptile);
+        return pickedReptile;  
     }
 
     public void ChangeDropdownOptions(string Name)
     {
-        Debug.Log(Name);
+        Debug.Log("El nombre correcto "+Name);
         dropdown.ClearOptions();
         List<string> reptileNames = new List<string>();
         int i = 0;
 
-        // Add 3 random reptile names to the list
         while (i < 3)
         {
             int randReptile = Random.Range(0, ReptileBehaviour.Instance.reptiles.Count);
@@ -40,7 +40,6 @@ public class Dropdown : MonoBehaviour
             }
         }
 
-        // Insert the correct reptile name at a random position in the list
         int insertIndex = Random.Range(0, reptileNames.Count);
         reptileNames.Insert(insertIndex, Name);
 
