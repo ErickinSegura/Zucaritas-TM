@@ -1,4 +1,4 @@
-﻿@page
+@page
 @model AWAQPagina.Pages.studentViewModel
 @{
 }
@@ -33,11 +33,11 @@
             <img src="~/images/chicoAWAQ.png" alt="Avatar" class="user-photo">
 
             <div style="margin-top: 10px; font-weight: bold;">
-                @Model.nombre @Model.apellido
+                @Model.usuario.name @Model.usuario.firstLastname
             </div>
 
             <div>
-                <em>@Model.nombreUsuario</em>
+                <em>@Model.usuario.userName</em>
             </div>
 
             <br>
