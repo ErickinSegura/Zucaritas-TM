@@ -3,6 +3,13 @@
   "WorkspaceRootPath": "D:\\Users\\conta\\Documents\\Tec\\Cuarto Semestre\\Construcci\u00F3n de Software y Toma de Decisiones\\Github\\Web\\AWAQPagina\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Users\\conta\\Documents\\Tec\\Cuarto Semestre\\Construcci\u00F3n de Software y Toma de Decisiones\\Github\\Videojuego\\GamiAwaq\\Assets\\Scripts\\Reptiles\\ReptileBehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65F54CFA-1526-497B-8D21-9B6426FF991C}|AWAQPagina\\AWAQPagina.csproj|d:\\users\\conta\\documents\\tec\\cuarto semestre\\construcci\u00F3n de software y toma de decisiones\\github\\web\\awaqpagina\\awaqpagina\\pages\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{65F54CFA-1526-497B-8D21-9B6426FF991C}|AWAQPagina\\AWAQPagina.csproj|solutionrelative:awaqpagina\\pages\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{65F54CFA-1526-497B-8D21-9B6426FF991C}|AWAQPagina\\AWAQPagina.csproj|d:\\users\\conta\\documents\\tec\\cuarto semestre\\construcci\u00F3n de software y toma de decisiones\\github\\web\\awaqpagina\\awaqpagina\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{65F54CFA-1526-497B-8D21-9B6426FF991C}|AWAQPagina\\AWAQPagina.csproj|solutionrelative:awaqpagina\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -22,11 +29,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ReptileBehaviour.cs",
+              "DocumentMoniker": "D:\\Users\\conta\\Documents\\Tec\\Cuarto Semestre\\Construcci\u00F3n de Software y Toma de Decisiones\\Github\\Videojuego\\GamiAwaq\\Assets\\Scripts\\Reptiles\\ReptileBehaviour.cs",
+              "RelativeDocumentMoniker": "..\\..\\Videojuego\\GamiAwaq\\Assets\\Scripts\\Reptiles\\ReptileBehaviour.cs",
+              "ToolTip": "D:\\Users\\conta\\Documents\\Tec\\Cuarto Semestre\\Construcci\u00F3n de Software y Toma de Decisiones\\Github\\Videojuego\\GamiAwaq\\Assets\\Scripts\\Reptiles\\ReptileBehaviour.cs",
+              "RelativeToolTip": "..\\..\\Videojuego\\GamiAwaq\\Assets\\Scripts\\Reptiles\\ReptileBehaviour.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAACsAAABFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-11T17:49:39.994Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "D:\\Users\\conta\\Documents\\Tec\\Cuarto Semestre\\Construcci\u00F3n de Software y Toma de Decisiones\\Github\\Web\\AWAQPagina\\AWAQPagina\\Pages\\Register.cshtml",
+              "RelativeDocumentMoniker": "AWAQPagina\\Pages\\Register.cshtml",
+              "ToolTip": "D:\\Users\\conta\\Documents\\Tec\\Cuarto Semestre\\Construcci\u00F3n de Software y Toma de Decisiones\\Github\\Web\\AWAQPagina\\AWAQPagina\\Pages\\Register.cshtml",
+              "RelativeToolTip": "AWAQPagina\\Pages\\Register.cshtml",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-11T17:33:56.828Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Usuario.cs",
               "DocumentMoniker": "D:\\Users\\conta\\Documents\\Tec\\Cuarto Semestre\\Construcci\u00F3n de Software y Toma de Decisiones\\Github\\Web\\AWAQPagina\\AWAQPagina\\Usuario.cs",
               "RelativeDocumentMoniker": "AWAQPagina\\Usuario.cs",
@@ -34,25 +67,24 @@
               "RelativeToolTip": "AWAQPagina\\Usuario.cs",
               "ViewState": "AQIAAAkAAAAAAAAAAAAcwAcAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-11T08:26:30.527Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-11T08:26:30.527Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\Users\\conta\\Documents\\Tec\\Cuarto Semestre\\Construcci\u00F3n de Software y Toma de Decisiones\\Github\\Web\\AWAQPagina\\AWAQPagina\\Pages\\Index.cshtml",
               "RelativeDocumentMoniker": "AWAQPagina\\Pages\\Index.cshtml",
               "ToolTip": "D:\\Users\\conta\\Documents\\Tec\\Cuarto Semestre\\Construcci\u00F3n de Software y Toma de Decisiones\\Github\\Web\\AWAQPagina\\AWAQPagina\\Pages\\Index.cshtml",
               "RelativeToolTip": "AWAQPagina\\Pages\\Index.cshtml",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAACEAAAA6AAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABUAAABRAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-04-11T07:27:52.88Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Index.cshtml.cs",
               "DocumentMoniker": "D:\\Users\\conta\\Documents\\Tec\\Cuarto Semestre\\Construcci\u00F3n de Software y Toma de Decisiones\\Github\\Web\\AWAQPagina\\AWAQPagina\\Pages\\Index.cshtml.cs",
               "RelativeDocumentMoniker": "AWAQPagina\\Pages\\Index.cshtml.cs",
@@ -60,8 +92,7 @@
               "RelativeToolTip": "AWAQPagina\\Pages\\Index.cshtml.cs",
               "ViewState": "AQIAAA4AAAAAAAAAAAAQwB8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-11T07:21:40.829Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-11T07:21:40.829Z"
             }
           ]
         }

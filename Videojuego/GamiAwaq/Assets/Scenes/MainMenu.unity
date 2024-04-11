@@ -949,7 +949,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Capacitacion de Biomonitoreo
+  m_Text: "Capacitaci\xF3n de Biomonitoreo"
 --- !u!222 &2067745288
 CanvasRenderer:
   m_ObjectHideFlags: 0
