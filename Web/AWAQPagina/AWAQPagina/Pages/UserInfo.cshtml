@@ -4,6 +4,7 @@
 }
 @*<script>System.Diagnostics.Debug.WriteLine("test");</script>*@
 
+<link rel="stylesheet" href="~/css/userInfoStyles.css">
 <header>
     <div class="headerClass bgGreen">
         <img src="~/images/logoBlanco.png" style="height:100%" />
@@ -21,17 +22,17 @@
         </div>
         <form method="post" enctype="multipart/form-data" class="d-flex">
             <div class="form-group">
-                <label for="profilePicture">Profile Picture</label>
+                <label for="profilePicture">Foto de perfíl</label>
                 <input type="file" class="form-control-file" id="profilePicture" name="profilePicture" accept="image/">
             </div>
-            <button type="submit" class="btn btn-primary shadow-hover" style="background-color: #198754">Upload</button>
+            <button type="submit" class="btn btn-primary shadow-hover" style="background-color: #198754">Subir</button>
         </form>
         <form method="post">
             <div class="form-group">
                 <label for="biography">Biography</label>
-                <textarea class="form-control" id="biography" name="usuario.bio">@Model.usuario.bio</textarea>
+                <textarea class="form-control m-0" id="biography" name="usuario.bio">@Model.usuario.bio</textarea>
             </div>
-            <button type="submit" class="btn btn-primary" asp-page-handler="SaveBiography">Save</button>
+            <button type="submit" class="btn btn-primary" asp-page-handler="SaveBiography">Guardar</button>
         </form>
     </div>
 </div>

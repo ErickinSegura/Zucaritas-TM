@@ -4,7 +4,6 @@
 }
 
 .general {
-    background-color: azure;
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -98,7 +97,7 @@
     padding-right: 100px;
     padding-left: 10px;
     font-size: 16px;
-    border: 1px solid #ccc;
+    border: 1px solid white;
     border-radius: 5px;
     transition: border-color 0.3s ease; /* Add smooth transition */
     background-color: #2A3217;
@@ -108,6 +107,8 @@
 
     .modern-input::placeholder {
         font-style: italic; /* Italicize placeholder text */
+        color: #ddd;
+        font-size: 14px;
     }
 
     .modern-input:hover {

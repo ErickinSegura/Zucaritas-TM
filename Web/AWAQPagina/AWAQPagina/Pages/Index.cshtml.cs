@@ -18,7 +18,7 @@ namespace AWAQPagina.Pages
 
         public IActionResult OnPost()
         {
-            string connectionString = "Server=127.0.0.1;Port=3306;Database=AWAQ;Uid=root;password=password;";
+            string connectionString = "Server=127.0.0.1;Port=3306;Database=AWAQ;Uid=root;password=Vela0376;";
             MySqlConnection conexion = new MySqlConnection(connectionString);
 
             conexion.Open();
@@ -40,7 +40,7 @@ namespace AWAQPagina.Pages
             }
             else
             {
-                ModelState.AddModelError(string.Empty, "Usuario o contraseña incorrectos");
+                ModelState.AddModelError(string.Empty, "Usuario o contraseï¿½a incorrectos");
                 return Page();
             }
         }

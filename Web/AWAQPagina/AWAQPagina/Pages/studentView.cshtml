@@ -10,17 +10,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AWAQ</title>
     <link rel="stylesheet" href="~/css/studentView.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/css/userInfoStyles.css">
 
 
 </head>
 <body>
-    <div class="navBar">
-        <img src="~/images/logoBlanco.png" alt="Profile Picture">
-        <div class="navBarRight">
-            <a asp-page="/UserInfo" class="navLink" style="width:78px"><button type="button" class="btn btn-success">Perfil</button></a>
+    <header>
+        <div class="headerClass bgGreen">
+            <img src="~/images/logoBlanco.png" style="height:100%" />
+            <a asp-page="/UserInfo" class="navLink" style="width: 78px">
+                <button type="button" class="btn buttonClass">Perfil</button>
+            </a>
         </div>
-    </div>
+    </header>
 
 
 

@@ -11,7 +11,7 @@ namespace AWAQPagina.Pages
 
         public IActionResult OnPost(Usuario usuario)
         {
-            string connectionString = "Server=127.0.0.1;Port=3306;Database=AWAQ;Uid=root;password=password;";
+            string connectionString = "Server=127.0.0.1;Port=3306;Database=AWAQ;Uid=root;password=Vela0376;";
             MySqlConnection conexion = new MySqlConnection(connectionString);
 
             conexion.Open();

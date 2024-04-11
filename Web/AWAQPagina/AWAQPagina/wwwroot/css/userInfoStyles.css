@@ -1,0 +1,71 @@
+﻿body {
+    min-width: 1000px;
+    margin: 0;
+}
+
+.headerClass {
+    height: 12vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vh 4vw;
+}
+
+.bgGreen {
+    background-color: #2C5629
+}
+
+.buttonClass {
+    border: solid 2px white;
+    color: white;
+    padding: 1.5vh 2vw;
+    border-radius: 10px;
+    font-size: 2vh;
+    font-weight:500;
+}
+
+    .buttonClass:hover {
+        border: solid 2px #eee;
+        color: #ddd;
+        font-weight: 500;
+        transform: scale(1.01);
+    }
+
+.centerClass {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerUserClass {
+    border-radius: 50px;
+    padding: 4% 10%;
+    width: 80%;
+    gap: 16px;
+    flex-direction: column;
+}
+
+.imgContainer {
+    border: solid 2px black;
+    border-radius: 50%;
+    width: 30%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    min-width: 300px
+}
+
+.userBioClass {
+    font-size: 16px;
+    min-width: 270px;
+}
+
+.inputClass::placeholder {
+    color: #F5F5F5;
+}
+
+.mainImage {
+    min-height: 100vh;
+    min-width: 100%;
+    object-fit: cover;
+}
