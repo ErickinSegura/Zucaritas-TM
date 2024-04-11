@@ -8,12 +8,15 @@ public class Generate : MonoBehaviour
     public GameObject prefab;
     public Tilemap tilemap;
     public int numberOfObjects = 10;
+    public Sprite[] variants;
+
+
+    public ReptileBehaviour.ReptileType[] availableTypes; // Array de tipos de reptiles disponibles
 
     // Start is called before the first frame update
     void Start()
     {
         BoundsInt bounds = tilemap.cellBounds; // Obtener los límites del Tilemap
-
         // Calcular el área total del Tilemap
         int totalTiles = bounds.size.x * bounds.size.y;
 
@@ -50,7 +53,50 @@ public class Generate : MonoBehaviour
         {
             int randomIndex = Random.Range(0, availablePositions.Count);
             Vector3 spawnPosition = tilemap.GetCellCenterWorld(availablePositions[randomIndex]);
-            Instantiate(prefab, spawnPosition, Quaternion.identity);
+
+            // Seleccionar un tipo aleatorio de reptil
+            ReptileBehaviour.ReptileType randomType = availableTypes[Random.Range(0, availableTypes.Length)];
+
+            // Instanciar el prefab correspondiente al tipo aleatorio
+            GameObject reptilePrefab = Instantiate(prefab, spawnPosition, Quaternion.identity);
+            ReptileBehaviour reptileBehaviour = reptilePrefab.GetComponent<ReptileBehaviour>();
+            SpriteRenderer spriteRenderer = reptilePrefab.GetComponent<SpriteRenderer>(); // Obtener el SpriteRenderer del reptil
+
+            if (reptileBehaviour != null && spriteRenderer != null)
+            {
+                // Establecer el tipo aleatorio al comportamiento del reptil
+                reptileBehaviour.reptileType = randomType;
+
+                // Asignar el sprite correspondiente al tipo de reptil
+                Sprite selectedSprite = null;
+
+                switch (randomType)
+                {
+                    case ReptileBehaviour.ReptileType.CaimanAguja:
+                    case ReptileBehaviour.ReptileType.CaimanLlanero:
+                        selectedSprite = variants[0];
+                        break;
+                        case ReptileBehaviour.ReptileType.SerpienteSabanera:
+                        case ReptileBehaviour.ReptileType.SerpienteTerciopelo:
+                        case ReptileBehaviour.ReptileType.SerpienteSanAndres:
+                        selectedSprite = variants[1];
+                        break;
+                        case ReptileBehaviour.ReptileType.TortugaCienegaCol:
+                        case ReptileBehaviour.ReptileType.TortugaMorrocoy:
+                        selectedSprite = variants[2];
+                        break;
+                        case ReptileBehaviour.ReptileType.CamaleonCundimamarca:
+                        case ReptileBehaviour.ReptileType.AnolisCalima:
+                        case ReptileBehaviour.ReptileType.LagartijaBogota:
+                        selectedSprite = variants[3];
+                        break;
+
+                }
+
+
+                spriteRenderer.sprite = selectedSprite; // Asignar el sprite seleccionado al SpriteRenderer del reptil
+            }
+
             availablePositions.RemoveAt(randomIndex); // Eliminar la posición utilizada para evitar la superposición de objetos
         }
     }

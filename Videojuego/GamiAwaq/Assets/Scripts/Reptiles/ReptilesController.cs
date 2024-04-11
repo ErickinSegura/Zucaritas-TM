@@ -9,12 +9,17 @@ public class ReptilesController : MonoBehaviour
 {
 
     static public ReptilesController Instance;
-
+    public GameObject parentObject;
     public GameObject registerPopup;
     public Image newImage;
 
+
     Texture2D image;
     Sprite newSprite;
+
+    public string dropdownParentTag = "DropdownParent";
+    private Dropdown dropdown;
+
 
 
     public void returnToLobby()
@@ -36,7 +41,6 @@ public class ReptilesController : MonoBehaviour
     public void Awake()
     {
         Instance = this;
-        DontDestroyOnLoad(gameObject);
     }
 
     IEnumerator DownloadImageCoroutine(string MediaUrl)
@@ -58,5 +62,7 @@ public class ReptilesController : MonoBehaviour
         }
     }
 
+
+    
 
 }
