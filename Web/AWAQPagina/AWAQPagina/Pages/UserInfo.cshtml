@@ -1,4 +1,4 @@
-﻿@page
+@page
 @model AWAQPagina.Pages.UserInfoModel
 @{
 }
@@ -8,16 +8,16 @@
     <div class="headerClass bgGreen">
         <img src="~/images/logoBlanco.png" style="height:100%" />
         <a asp-page="/studentView" class="navLink" style="width: 78px">
-            <button type="button" class="btn buttonClass">Home</button>
+            <button type="button" class="btn buttonClass">Inicio</button>
         </a>
     </div>
 </header>
 <div class="centerClass container-fluid" style="padding:32px; overflow:scroll;">
     <div class="centerClass containerUserClass">
-        <img src="@Model.imagePath" class="imgContainer" /> @*@Model.imagePath*@
+        <img src="@Model.usuario.profilePicture" class="imgContainer" /> @*@Model.imagePath*@
         <div style="padding: 20px;">
             <h2 style="font-size: 32px">Biografia</h2>
-            <p class="userBioClass">@Model.Biography</p>
+            <p class="userBioClass">@Model.usuario.bio</p>
         </div>
         <form method="post" enctype="multipart/form-data" class="d-flex">
             <div class="form-group">
@@ -29,7 +29,7 @@
         <form method="post">
             <div class="form-group">
                 <label for="biography">Biography</label>
-                <textarea class="form-control" id="biography" name="Biography">@Model.Biography</textarea>
+                <textarea class="form-control" id="biography" name="usuario.bio">@Model.usuario.bio</textarea>
             </div>
             <button type="submit" class="btn btn-primary" asp-page-handler="SaveBiography">Save</button>
         </form>
