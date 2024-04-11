@@ -220,8 +220,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 925e6ffda8d72664ba4086b5941f0690, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentDirection: 0
-  directionText: {fileID: 1709364054}
 --- !u!4 &229384545
 Transform:
   m_ObjectHideFlags: 0
@@ -614,19 +612,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 759566249}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 229384544}
-        m_TargetAssemblyTypeName: TreeController, Assembly-CSharp
-        m_MethodName: ChangeDirection
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &759566249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -830,19 +816,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1707613972}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 229384544}
-        m_TargetAssemblyTypeName: TreeController, Assembly-CSharp
-        m_MethodName: ChangeDirection
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: -1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1707613972
 MonoBehaviour:
   m_ObjectHideFlags: 0
