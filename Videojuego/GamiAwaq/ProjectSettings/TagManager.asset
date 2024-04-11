@@ -3,8 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - DropdownParent
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -41,13 +40,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: background
-    uniqueID: 2672882843
-    locked: 0
-  - name: decoration
-    uniqueID: 1663521297
-    locked: 0
-  - name: animals
-    uniqueID: 1944818295
     locked: 0
