@@ -6,41 +6,49 @@
 
 @*Redirect a UserInfo*@
 @*<meta http-equiv="Refresh" content="0; url='https://localhost:7026/UserInfo'" />*@
-<link rel="stylesheet" href="~/css/studentView.css">
-<div style="height: 100vh">
-    <div class="row">
-        <div class="col-md-5 p-0 d-flex">
-            <img src="~/images/awaq.png" alt="img" class="mainImage" style="background-color: #202714;">
+
+<link rel="stylesheet" href="~/css/styles.css">
+<div class="general">
+    <div class="main-container">
+        <div class="logo-container">
         </div>
-        <div class="col-md-7 p-5 bgGreen">
-                <h1 class="display-5 p-5" style="color: white;"><strong class="text-uppercase">Log In</strong></h1>
-                <div class="p-5">
-                    <form method="post">
-                        <div class="form-group">
-                            <label for="usuario"></label>
-                            <input name="usuario.userName" type="text" class="form-control mb-5 pt-4 pb-4 inputClass" aria-describedby="emailHelp" placeholder="Usuario"
-                                   style="border: 1px solid #ccc;
-                           background-color: rgba(0, 0, 0, 0);
-                           color: white;">
-                        </div>
-                        <div class="form-group">
-                            <label for="contraseña"></label>
-                            <input name="usuario.password" type="password" class="form-control mb-5 pt-4 pb-4 inputClass" placeholder="Contraseña"
-                                   style="border: 1px solid #ccc; background-color: rgba(0, 0, 0, 0);
-                          color: white;">
+        <img src="~/images/logoBlanco.png" style="position: absolute; height: 100px; width: 220px; margin-right: 610px;" alt="Profile Picture">
 
-                        </div>
-                        <div class="form-check">
-                        </div>
-                        <div class="text-center">
-                            <button type="submit" class="btn btn-secondary btn-lg mt-5 p-3 col-md-5 bg-white text-black">Enviar</button>
-                        </div>
-
-                    </form>
+        <form method="post">
+            <div class="login-container">
+                <h1 style="color: white;">Inicio de sesión</h1>
+                <div class="input-section">
+                    <label style="color: white;">Nombre de usuario</label>
+                    <input type="text" class="modern-input" placeholder="Usuario" asp-for="usuario.userName">
+                    <span asp-validation-for="usuario.userName" class="text-danger"></span>
                 </div>
+
+                <div class="input-section">
+                    <label style="color: white;">Contraseña</label>
+                    <input type="password" class="modern-input" placeholder="Contraseña" asp-for="usuario.password">
+                    <span asp-validation-for="usuario.password" class="text-danger"></span>
+                </div>
+
+                @if (ModelState.IsValid == false)
+                {
+                    <div class="text-danger" role="alert">
+                        @foreach (var error in ModelState.Values.SelectMany(v => v.Errors))
+                        {
+                            <span>@error.ErrorMessage</span>
+                            break;
+                            <br />
+                        }
+                    </div>
+                }
+
+               
+
+                <button class="modern-button" type="submit">Ingresar</button>
             </div>
-        </div>
-
-
-
+        </form>
+    </div>
 </div>
+
+
+
+

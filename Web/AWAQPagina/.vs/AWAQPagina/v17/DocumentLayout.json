@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "D:\\Users\\conta\\Documents\\Tec\\Cuarto Semestre\\Construcci\u00F3n de Software y Toma de Decisiones\\Github\\Web\\AWAQPagina\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{65F54CFA-1526-497B-8D21-9B6426FF991C}|AWAQPagina\\AWAQPagina.csproj|d:\\users\\conta\\documents\\tec\\cuarto semestre\\construcci\u00F3n de software y toma de decisiones\\github\\web\\awaqpagina\\awaqpagina\\pages\\userinfo.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{65F54CFA-1526-497B-8D21-9B6426FF991C}|AWAQPagina\\AWAQPagina.csproj|solutionrelative:awaqpagina\\pages\\userinfo.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{65F54CFA-1526-497B-8D21-9B6426FF991C}|AWAQPagina\\AWAQPagina.csproj|d:\\users\\conta\\documents\\tec\\cuarto semestre\\construcci\u00F3n de software y toma de decisiones\\github\\web\\awaqpagina\\awaqpagina\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{65F54CFA-1526-497B-8D21-9B6426FF991C}|AWAQPagina\\AWAQPagina.csproj|solutionrelative:awaqpagina\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{65F54CFA-1526-497B-8D21-9B6426FF991C}|AWAQPagina\\AWAQPagina.csproj|d:\\users\\conta\\documents\\tec\\cuarto semestre\\construcci\u00F3n de software y toma de decisiones\\github\\web\\awaqpagina\\awaqpagina\\pages\\studentview.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{65F54CFA-1526-497B-8D21-9B6426FF991C}|AWAQPagina\\AWAQPagina.csproj|solutionrelative:awaqpagina\\pages\\studentview.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{65F54CFA-1526-497B-8D21-9B6426FF991C}|AWAQPagina\\AWAQPagina.csproj|d:\\users\\conta\\documents\\tec\\cuarto semestre\\construcci\u00F3n de software y toma de decisiones\\github\\web\\awaqpagina\\awaqpagina\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65F54CFA-1526-497B-8D21-9B6426FF991C}|AWAQPagina\\AWAQPagina.csproj|solutionrelative:awaqpagina\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{65F54CFA-1526-497B-8D21-9B6426FF991C}|AWAQPagina\\AWAQPagina.csproj|d:\\users\\conta\\documents\\tec\\cuarto semestre\\construcci\u00F3n de software y toma de decisiones\\github\\web\\awaqpagina\\awaqpagina\\wwwroot\\css\\studentview.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{65F54CFA-1526-497B-8D21-9B6426FF991C}|AWAQPagina\\AWAQPagina.csproj|solutionrelative:awaqpagina\\wwwroot\\css\\studentview.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{65F54CFA-1526-497B-8D21-9B6426FF991C}|AWAQPagina\\AWAQPagina.csproj|d:\\users\\conta\\documents\\tec\\cuarto semestre\\construcci\u00F3n de software y toma de decisiones\\github\\web\\awaqpagina\\awaqpagina\\pages\\studentview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{65F54CFA-1526-497B-8D21-9B6426FF991C}|AWAQPagina\\AWAQPagina.csproj|solutionrelative:awaqpagina\\pages\\studentview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{65F54CFA-1526-497B-8D21-9B6426FF991C}|AWAQPagina\\AWAQPagina.csproj|d:\\users\\conta\\documents\\tec\\cuarto semestre\\construcci\u00F3n de software y toma de decisiones\\github\\web\\awaqpagina\\awaqpagina\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65F54CFA-1526-497B-8D21-9B6426FF991C}|AWAQPagina\\AWAQPagina.csproj|solutionrelative:awaqpagina\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,56 +22,46 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UserInfo.cshtml.cs",
-              "DocumentMoniker": "D:\\Users\\conta\\Documents\\Tec\\Cuarto Semestre\\Construcci\u00F3n de Software y Toma de Decisiones\\Github\\Web\\AWAQPagina\\AWAQPagina\\Pages\\UserInfo.cshtml.cs",
-              "RelativeDocumentMoniker": "AWAQPagina\\Pages\\UserInfo.cshtml.cs",
-              "ToolTip": "D:\\Users\\conta\\Documents\\Tec\\Cuarto Semestre\\Construcci\u00F3n de Software y Toma de Decisiones\\Github\\Web\\AWAQPagina\\AWAQPagina\\Pages\\UserInfo.cshtml.cs",
-              "RelativeToolTip": "AWAQPagina\\Pages\\UserInfo.cshtml.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAQwB0AAABtAAAA",
+              "DocumentIndex": 1,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "D:\\Users\\conta\\Documents\\Tec\\Cuarto Semestre\\Construcci\u00F3n de Software y Toma de Decisiones\\Github\\Web\\AWAQPagina\\AWAQPagina\\Usuario.cs",
+              "RelativeDocumentMoniker": "AWAQPagina\\Usuario.cs",
+              "ToolTip": "D:\\Users\\conta\\Documents\\Tec\\Cuarto Semestre\\Construcci\u00F3n de Software y Toma de Decisiones\\Github\\Web\\AWAQPagina\\AWAQPagina\\Usuario.cs",
+              "RelativeToolTip": "AWAQPagina\\Usuario.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAcwAcAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-16T05:23:30.064Z",
+              "WhenOpened": "2024-04-11T08:26:30.527Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "studentView.cshtml",
-              "DocumentMoniker": "D:\\Users\\conta\\Documents\\Tec\\Cuarto Semestre\\Construcci\u00F3n de Software y Toma de Decisiones\\Github\\Web\\AWAQPagina\\AWAQPagina\\Pages\\studentView.cshtml",
-              "RelativeDocumentMoniker": "AWAQPagina\\Pages\\studentView.cshtml",
-              "ToolTip": "D:\\Users\\conta\\Documents\\Tec\\Cuarto Semestre\\Construcci\u00F3n de Software y Toma de Decisiones\\Github\\Web\\AWAQPagina\\AWAQPagina\\Pages\\studentView.cshtml",
-              "RelativeToolTip": "AWAQPagina\\Pages\\studentView.cshtml",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABIAAABBAAAA",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Users\\conta\\Documents\\Tec\\Cuarto Semestre\\Construcci\u00F3n de Software y Toma de Decisiones\\Github\\Web\\AWAQPagina\\AWAQPagina\\Pages\\Index.cshtml",
+              "RelativeDocumentMoniker": "AWAQPagina\\Pages\\Index.cshtml",
+              "ToolTip": "D:\\Users\\conta\\Documents\\Tec\\Cuarto Semestre\\Construcci\u00F3n de Software y Toma de Decisiones\\Github\\Web\\AWAQPagina\\AWAQPagina\\Pages\\Index.cshtml",
+              "RelativeToolTip": "AWAQPagina\\Pages\\Index.cshtml",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAACEAAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-15T02:59:52.715Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "studentView.cshtml.cs",
-              "DocumentMoniker": "D:\\Users\\conta\\Documents\\Tec\\Cuarto Semestre\\Construcci\u00F3n de Software y Toma de Decisiones\\Github\\Web\\AWAQPagina\\AWAQPagina\\Pages\\studentView.cshtml.cs",
-              "RelativeDocumentMoniker": "AWAQPagina\\Pages\\studentView.cshtml.cs",
-              "ToolTip": "D:\\Users\\conta\\Documents\\Tec\\Cuarto Semestre\\Construcci\u00F3n de Software y Toma de Decisiones\\Github\\Web\\AWAQPagina\\AWAQPagina\\Pages\\studentView.cshtml.cs",
-              "RelativeToolTip": "AWAQPagina\\Pages\\studentView.cshtml.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-15T03:00:13.312Z"
+              "WhenOpened": "2024-04-11T07:27:52.88Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "studentView.css",
-              "DocumentMoniker": "D:\\Users\\conta\\Documents\\Tec\\Cuarto Semestre\\Construcci\u00F3n de Software y Toma de Decisiones\\Github\\Web\\AWAQPagina\\AWAQPagina\\wwwroot\\css\\studentView.css",
-              "RelativeDocumentMoniker": "AWAQPagina\\wwwroot\\css\\studentView.css",
-              "ToolTip": "D:\\Users\\conta\\Documents\\Tec\\Cuarto Semestre\\Construcci\u00F3n de Software y Toma de Decisiones\\Github\\Web\\AWAQPagina\\AWAQPagina\\wwwroot\\css\\studentView.css",
-              "RelativeToolTip": "AWAQPagina\\wwwroot\\css\\studentView.css",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAJIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-03-15T03:20:23.738Z"
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "D:\\Users\\conta\\Documents\\Tec\\Cuarto Semestre\\Construcci\u00F3n de Software y Toma de Decisiones\\Github\\Web\\AWAQPagina\\AWAQPagina\\Pages\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "AWAQPagina\\Pages\\Index.cshtml.cs",
+              "ToolTip": "D:\\Users\\conta\\Documents\\Tec\\Cuarto Semestre\\Construcci\u00F3n de Software y Toma de Decisiones\\Github\\Web\\AWAQPagina\\AWAQPagina\\Pages\\Index.cshtml.cs",
+              "RelativeToolTip": "AWAQPagina\\Pages\\Index.cshtml.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAQwB8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-11T07:21:40.829Z",
+              "EditorCaption": ""
             }
           ]
         }

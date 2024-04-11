@@ -1,9 +1,6 @@
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.Extensions.Logging;
 using MySql.Data.MySqlClient;
-using MySqlX.XDevAPI.Common;
 using System;
 using System.Data;
 
@@ -11,11 +8,17 @@ namespace AWAQPagina.Pages
 {
     public class IndexModel : PageModel
     {
+        [BindProperty]
         public Usuario usuario { get; set; }
 
-        public IActionResult OnPost(Usuario usuario)
+        public IndexModel()
         {
-            string connectionString = "Server=127.0.0.1;Port=3306;Database=AWAQ;Uid=root;password=Vela0376;";
+            usuario = new Usuario(); // Inicializa el objeto usuario
+        }
+
+        public IActionResult OnPost()
+        {
+            string connectionString = "Server=127.0.0.1;Port=3306;Database=AWAQ;Uid=root;password=password;";
             MySqlConnection conexion = new MySqlConnection(connectionString);
 
             conexion.Open();
@@ -28,21 +31,18 @@ namespace AWAQPagina.Pages
             cmd.Parameters.AddWithValue("@passcode", usuario.password);
 
             object result = cmd.ExecuteScalar();
-            int userID = Convert.ToInt32(result);
-
-            usuario.userID = userID;
-
             if (result != null)
             {
+                int userID = Convert.ToInt32(result);
+                usuario.userID = userID;
                 Response.Cookies.Append("ID_USER", usuario.userID.ToString());
                 return RedirectToPage("/studentView");
             }
             else
             {
+                ModelState.AddModelError(string.Empty, "Usuario o contraseña incorrectos");
                 return Page();
             }
         }
-
-
     }
 }
