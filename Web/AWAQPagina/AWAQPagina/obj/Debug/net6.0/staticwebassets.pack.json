@@ -29,6 +29,10 @@
       "PackagePath": "staticwebassets\\images\\awaq.png"
     },
     {
+      "Id": "D:\\Users\\conta\\Documents\\Tec\\Cuarto Semestre\\Construcción de Software y Toma de Decisiones\\Github\\Web\\AWAQPagina\\AWAQPagina\\wwwroot\\images\\bg_form.png",
+      "PackagePath": "staticwebassets\\images\\bg_form.png"
+    },
+    {
       "Id": "D:\\Users\\conta\\Documents\\Tec\\Cuarto Semestre\\Construcción de Software y Toma de Decisiones\\Github\\Web\\AWAQPagina\\AWAQPagina\\wwwroot\\images\\chicoAWAQ.png",
       "PackagePath": "staticwebassets\\images\\chicoAWAQ.png"
     },

@@ -1,0 +1,50 @@
+@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+@*Redirect a UserInfo*@
+@*<meta http-equiv="Refresh" content="0; url='https://localhost:7026/UserInfo'" />*@
+
+<link rel="stylesheet" href="~/css/styles.css">
+<div class="general">
+        <div class="main-container">
+            <div class="logo-container">
+            </div>
+            <img src="~/images/logoBlanco.png" style="position: absolute; height: 100px; width: 220px; margin-right: 610px;" alt="Profile Picture">
+
+            <form method="post">
+            <div class="login-container">
+                <h1 style="color: white;">Registro de Usuarios</h1>
+
+                <div class="input-section">
+                    <label style="color: white;">Nombre</label>
+                    <input type="text" class="modern-input" id="floatingInput" placeholder="Nombre">
+                </div>
+
+                <div class="input-section">
+                    <label style="color: white;">Apellido Paterno</label>
+                    <input type="text" class="modern-input" id="floatingInput" placeholder="Apellido Paterno">
+                </div>
+
+                <div class="input-section">
+                    <label style="color: white;">Apellido Materno</label>
+                    <input type="text" class="modern-input" id="floatingInput" placeholder="Apellido Materno">
+                </div>
+
+                <div class="input-section">
+                    <label style="color: white;">Nombre de usuario</label>
+                    <input type="text" class="modern-input" id="floatingInput" placeholder="Usuario">
+                </div>
+
+                <div class="input-section">
+                    <label style="color: white;">Contraseña</label>
+                    <input type="password" class="modern-input" id="floatingPassword" placeholder="Contraseña">
+                </div>
+                <button class="modern-button" type="submit">Registrar</button>
+            </div>
+            </form>
+        </div>  
+    </div>
+

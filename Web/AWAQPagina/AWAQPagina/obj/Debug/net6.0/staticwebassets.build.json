@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "pXECsbeovNby4yImEeQjlI+heWqeLKGVWg78EPMugzc=",
+  "Hash": "3jBYZSuZJWl37NkdRxhE2lNhhfQN6pL+RKxX6f5k4Tg=",
   "Source": "AWAQPagina",
   "BasePath": "_content/AWAQPagina",
   "Mode": "Default",
@@ -167,6 +167,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\awaq.png"
+    },
+    {
+      "Identity": "D:\\Users\\conta\\Documents\\Tec\\Cuarto Semestre\\Construcción de Software y Toma de Decisiones\\Github\\Web\\AWAQPagina\\AWAQPagina\\wwwroot\\images\\bg_form.png",
+      "SourceId": "AWAQPagina",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Users\\conta\\Documents\\Tec\\Cuarto Semestre\\Construcción de Software y Toma de Decisiones\\Github\\Web\\AWAQPagina\\AWAQPagina\\wwwroot\\",
+      "BasePath": "_content/AWAQPagina",
+      "RelativePath": "images/bg_form.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\bg_form.png"
     },
     {
       "Identity": "D:\\Users\\conta\\Documents\\Tec\\Cuarto Semestre\\Construcción de Software y Toma de Decisiones\\Github\\Web\\AWAQPagina\\AWAQPagina\\wwwroot\\images\\chicoAWAQ.png",
