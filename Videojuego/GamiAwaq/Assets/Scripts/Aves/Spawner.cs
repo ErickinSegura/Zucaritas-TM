@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Spawner : MonoBehaviour
@@ -9,8 +11,12 @@ public class Spawner : MonoBehaviour
     public float velocidadMaxima = 5f;
     public GameManager gameManager; // Agrega una referencia al GameManager
 
+    public Pajaro.TipoAve[] availableTypes;
+
     void Start()
     {
+        Debug.Log("Lista:" + availableTypes);
+
         InvokeRepeating("SpawnPajaro", Random.Range(tiempoEntreSpawnMin, tiempoEntreSpawnMax), Random.Range(tiempoEntreSpawnMin, tiempoEntreSpawnMax));
     }
 
@@ -18,10 +24,24 @@ public class Spawner : MonoBehaviour
     {
         float spawnY = Random.Range(-2.5f, 2.5f);
         Vector3 spawnPosition = new Vector3(transform.position.x, spawnY, 0f);
-        GameObject pajaro = Instantiate(pajaroPrefab, spawnPosition, Quaternion.identity);
+
+       
+
+
+        // Cambiar el tipo de ave en el GameManager
+
+        Pajaro.TipoAve randomType = availableTypes[Random.Range(0, availableTypes.Length)];
+
+
+        GameObject PajaroPrefab = Instantiate(pajaroPrefab, spawnPosition, Quaternion.identity);
+        Pajaro pajaroBeh = PajaroPrefab.GetComponent<Pajaro>();
+
+        pajaroBeh.tipoAve = randomType;
+
+
 
         // Cambiar la velocidad del pájaro y dirección del movimiento
-        MovimientoHorizontal movimientoPajaro = pajaro.GetComponent<MovimientoHorizontal>();
+        MovimientoHorizontal movimientoPajaro = PajaroPrefab.GetComponent<MovimientoHorizontal>();
         if (movimientoPajaro != null)
         {
             float nuevaVelocidad = Random.Range(velocidadMinima, velocidadMaxima);

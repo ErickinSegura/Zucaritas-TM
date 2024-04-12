@@ -14,8 +14,9 @@ public class Generate : MonoBehaviour
     public ReptileBehaviour.ReptileType[] availableTypes; // Array de tipos de reptiles disponibles
 
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
+
         BoundsInt bounds = tilemap.cellBounds; // Obtener los límites del Tilemap
         // Calcular el área total del Tilemap
         int totalTiles = bounds.size.x * bounds.size.y;

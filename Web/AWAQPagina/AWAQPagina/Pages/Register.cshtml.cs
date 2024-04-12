@@ -22,18 +22,25 @@ namespace AWAQPagina.Pages
             cmd.CommandText = "new_register";
             cmd.Connection = conexion;
 
-            cmd.Parameters.AddWithValue("@nombre", usuario.name);
-            cmd.Parameters.AddWithValue("@apellidoPaterno", usuario.firstLastname);
-            cmd.Parameters.AddWithValue("@apellidoMaterno", usuario.secondLastname);
-            cmd.Parameters.AddWithValue("@usuario", usuario.userName);
-            cmd.Parameters.AddWithValue("@passcode", usuario.password);
-            cmd.Parameters.AddWithValue("@admin", 0);
+            try
+            {
+                cmd.Parameters.AddWithValue("@nombre", usuario.name);
+                cmd.Parameters.AddWithValue("@apellidoPaterno", usuario.firstLastname);
+                cmd.Parameters.AddWithValue("@apellidoMaterno", usuario.secondLastname);
+                cmd.Parameters.AddWithValue("@usuario", usuario.userName);
+                cmd.Parameters.AddWithValue("@passcode", usuario.password);
+                cmd.Parameters.AddWithValue("@admin", 0);
 
-            cmd.ExecuteNonQuery();
+                cmd.ExecuteNonQuery();
+                return RedirectToPage();
 
-            return RedirectToPage();
+            }
 
+            catch
+            {
+                return Page();
+            }
+        }
 
-        }   
     }
 }
