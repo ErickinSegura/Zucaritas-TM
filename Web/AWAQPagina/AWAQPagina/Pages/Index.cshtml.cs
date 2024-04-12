@@ -46,7 +46,7 @@ namespace AWAQPagina.Pages
 
                 if (usuario.isAdmin == true)
                 {
-                    return RedirectToPage("/Register");
+                    return Redirect("/studentView");
                 }
                 else
                 {
@@ -54,6 +54,7 @@ namespace AWAQPagina.Pages
                     
                 }
             }
+
             else
             {
                 ModelState.AddModelError(string.Empty, "Usuario o contraseña incorrectos");
