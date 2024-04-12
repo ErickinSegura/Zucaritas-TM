@@ -5,6 +5,10 @@
 
 .general {
     display: flex;
+    height: 88vh;
+    gap: 5vw;
+    min-height:600px;
+    min-width: 800px;
 }
 
 .navBar {
@@ -55,7 +59,6 @@
     border-radius: 5px;
     text-align: center;
     position: relative;
-    overflow: hidden;
 }
 
 .user-photo {
@@ -135,10 +138,9 @@
 
 .line {
     border-left: 4px solid green;
-    height: 500px;
-    margin-top: 55px;
-    margin-left: 35px;
+    height: 70%;
     border-radius: 5px;
+    
 }
 
 .dashboard {

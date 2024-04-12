@@ -17,22 +17,22 @@
     <div class="centerClass containerUserClass">
         <img src="@Model.usuario.profilePicture" class="imgContainer" /> @*@Model.imagePath*@
         <div style="padding: 20px;">
-            <h2 style="font-size: 32px">Biografia</h2>
+            <h2 style="font-size: 32px">Biografía</h2>
             <p class="userBioClass">@Model.usuario.bio</p>
         </div>
         <form method="post" enctype="multipart/form-data" class="d-flex">
             <div class="form-group">
                 <label for="profilePicture">Foto de perfíl</label>
-                <input type="file" class="form-control-file" id="profilePicture" name="profilePicture" accept="image/">
+                <input type="file" class="form-control-file m-1" id="profilePicture" name="profilePicture" accept="image/">
             </div>
             <button type="submit" class="btn btn-primary shadow-hover" style="background-color: #198754">Subir</button>
         </form>
-        <form method="post">
-            <div class="form-group">
-                <label for="biography">Biography</label>
-                <textarea class="form-control m-0" id="biography" name="usuario.bio">@Model.usuario.bio</textarea>
+        <form method="post" class="w-75 d-flex justify-content-center align-items-bottom">
+            <div class="form-group w-75">
+                @*<label for="biography">Biografía</label>*@
+                <textarea class="form-control m-0 p-1" id="biography" name="usuario.bio">@Model.usuario.bio</textarea>
             </div>
-            <button type="submit" class="btn btn-primary" asp-page-handler="SaveBiography">Guardar</button>
+            <div><button type="submit" class="btn btn-primary" asp-page-handler="SaveBiography">Guardar</button></div>
         </form>
     </div>
 </div>
