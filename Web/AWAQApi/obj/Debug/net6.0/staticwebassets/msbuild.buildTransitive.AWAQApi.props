@@ -1,3 +1,3 @@
 ﻿<Project>
-  <Import Project="..\buildMultiTargeting\AWAQApi.props" />
+  <Import Project="../buildMultiTargeting/AWAQApi.props" />
 </Project>
