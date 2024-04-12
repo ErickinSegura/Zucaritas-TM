@@ -8,11 +8,14 @@ public class TreeController : MonoBehaviour
 {
     public enum Direction { N, E, S, O };
 
-    public Direction currentDirection = Direction.N;
+    public Direction currentDirection;
     public Text directionText;
 
     void Start()
     {
+        int randomDirectionIndex = Random.Range(0, 4);
+        // Asigna la dirección correspondiente al número aleatorio generado
+        currentDirection = (Direction)randomDirectionIndex;
         UpdateDirectionText();
     }
 
@@ -27,6 +30,8 @@ public class TreeController : MonoBehaviour
         int newDirectionIndex = ((int)currentDirection + directionChange + directionCount) % directionCount;
         currentDirection = (Direction)newDirectionIndex;
         UpdateDirectionText();
+        PlayerPrefs.SetString("currentDirection", currentDirection.ToString());
+        Debug.Log("Dirección actual: " + currentDirection);
     }
 
     public void MamiferosLoad()

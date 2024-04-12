@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 using System.Collections.Generic;
+
 
 public class MamiferosManager : MonoBehaviour
 {
@@ -11,9 +13,25 @@ public class MamiferosManager : MonoBehaviour
     private List<Mamifero> mamiferosMostrados = new List<Mamifero>();
     private int indiceActual = 0;
 
+    public GameObject popupError;
+
     void Start()
     {
-        MostrarMamiferosAleatorios();
+        if (PlayerPrefs.GetString("currentDirection") == "N")
+        {
+            MostrarMamiferosAleatorios();
+        }
+        else
+        {
+            popupError.SetActive(true);
+        }
+
+    }
+
+    public IEnumerator close()
+    {
+        yield return new WaitForSeconds(2);
+        popupError.SetActive(false);
     }
 
     public void MostrarMamiferosAleatorios()
