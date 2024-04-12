@@ -62,18 +62,21 @@ public class ReptilesController : MonoBehaviour
             StartCoroutine(hideText());
         }
         registerPopup.SetActive(false);
+        Time.timeScale = 1f;
     }
 
     IEnumerator hideText()
     {
         yield return new WaitForSeconds(2);
         incoText.text = "";
+
     }
 
     public void activatePopup(string url)
     {
         registerPopup.SetActive(true);
         StartCoroutine(DownloadImageCoroutine(url));
+        Time.timeScale = 0f;
     }
 
     public void Awake()
