@@ -15,13 +15,15 @@ public class MamiferosController : MonoBehaviour
 
     private List<int> selectedIndices = new List<int>();
     private int currentImageIndex = 0;
-    private int numberOfAnimalsToShow = 3; // Número de animales a mostrar
+    private int numberOfAnimalsToShow; // Número de animales a mostrar
 
     void Start()
     {
+        numberOfAnimalsToShow = Random.Range(1, 4);
+        PlayerPrefs.SetInt("NumberOfAnimalsToShow", numberOfAnimalsToShow);
+        PlayerPrefs.Save();
         SetRandomAnimalUI();
         UpdateArrowButtons();
-
         // Asigna la función ChangeImage() al evento de clic de la flecha derecha
         rightArrowButton.onClick.AddListener(ChangeImage);
         if (PlayerPrefs.HasKey("LastAnimalIndex"))
@@ -83,5 +85,9 @@ public class MamiferosController : MonoBehaviour
 
         PlayerPrefs.SetInt("LastAnimalIndex", currentAnimalIndex);
         PlayerPrefs.Save();
+    }
+    public void ChangeScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
     }
 }

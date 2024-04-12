@@ -3,17 +3,13 @@ using UnityEngine;
 public class Pajaro : MonoBehaviour
 {
     public static Pajaro Instance;
-    private DropdownAves dropdownController;
+    public GameObject dropdownGameObject;
+
     public void Awake()
     {
         Instance = this;
     }
 
-    private void Start()
-    {
-        // Buscar el controlador del dropdown en la escena
-        dropdownController = GameObject.FindObjectOfType<DropdownAves>();
-    }
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -24,21 +20,13 @@ public class Pajaro : MonoBehaviour
             if (hit.collider != null && hit.collider.CompareTag("Pajaro"))
             {
                 GameManager.instance.IncrementarContadorPajarosClicados();
-                dropdownController.ShowDropdown(gameObject);
-
                 // Hacer desaparecer el pájaro
+                dropdownGameObject.SetActive(true);
+                Time.timeScale = 0f;
                 Destroy(hit.collider.gameObject);
+                
             }
 
-        }
-    }
-    private void OnMouseDown()
-    {
-        // Verificar si el controlador del dropdown existe y mostrar el dropdown
-        if (dropdownController != null)
-        {
-            // Mostrar el dropdown y pasar el GameObject del pájaro
-            dropdownController.ShowDropdown(gameObject);
         }
     }
 }
