@@ -1,26 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQApi/AWAQApi.csproj": {}
+    "D:\\Users\\conta\\Documents\\Tec\\Cuarto Semestre\\Construcción de Software y Toma de Decisiones\\Github\\Web\\AWAQApi\\AWAQApi.csproj": {}
   },
   "projects": {
-    "/Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQApi/AWAQApi.csproj": {
+    "D:\\Users\\conta\\Documents\\Tec\\Cuarto Semestre\\Construcción de Software y Toma de Decisiones\\Github\\Web\\AWAQApi\\AWAQApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQApi/AWAQApi.csproj",
+        "projectUniqueName": "D:\\Users\\conta\\Documents\\Tec\\Cuarto Semestre\\Construcción de Software y Toma de Decisiones\\Github\\Web\\AWAQApi\\AWAQApi.csproj",
         "projectName": "AWAQApi",
-        "projectPath": "/Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQApi/AWAQApi.csproj",
-        "packagesPath": "/Users/herveynavarro/.nuget/packages/",
-        "outputPath": "/Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQApi/obj/",
+        "projectPath": "D:\\Users\\conta\\Documents\\Tec\\Cuarto Semestre\\Construcción de Software y Toma de Decisiones\\Github\\Web\\AWAQApi\\AWAQApi.csproj",
+        "packagesPath": "C:\\Users\\conta\\.nuget\\packages\\",
+        "outputPath": "D:\\Users\\conta\\Documents\\Tec\\Cuarto Semestre\\Construcción de Software y Toma de Decisiones\\Github\\Web\\AWAQApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/herveynavarro/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\conta\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "/usr/local/share/dotnet/sdk/7.0.313/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -33,12 +34,25 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.3.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.5.0, )"
@@ -63,7 +77,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.313/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }
