@@ -183,11 +183,11 @@
 
 
 .dashContainer {
-    border: 2px solid lightgrey;
+/*    border: 2px solid lightgrey;*/
     border-radius: 20px;
     padding: 10px;
     width: 90%;
     height: 90%;
-    background-color: #e1ddcb;
-    box-shadow: 4px 8px lightgrey;
+/*    background-color: #e1ddcb;*/
+/*    box-shadow: 4px 8px lightgrey;*/
 }
