@@ -1,5 +1,5 @@
 @page
-@model IndexModel
+@model AWAQPagina.Pages.RegisterModel
 @{
     ViewData["Title"] = "Register";
 }
@@ -20,27 +20,32 @@
 
                 <div class="input-section">
                     <label style="color: white;">Nombre</label>
-                    <input type="text" class="modern-input" id="floatingInput" placeholder="Nombre">
+                    <input type="text" class="modern-input" id="floatingInput" placeholder="Nombre" asp-for="usuario.name">
+                    <span asp-validation-for="usuario.name" class="text-danger"></span>
                 </div>
 
                 <div class="input-section">
                     <label style="color: white;">Apellido Paterno</label>
-                    <input type="text" class="modern-input" id="floatingInput" placeholder="Apellido Paterno">
+                    <input type="text" class="modern-input" id="floatingInput" placeholder="Apellido Paterno" asp-for="usuario.firstLastname">
+                    <span asp-validation-for="usuario.firstLastname" class="text-danger"></span>
                 </div>
 
                 <div class="input-section">
                     <label style="color: white;">Apellido Materno</label>
-                    <input type="text" class="modern-input" id="floatingInput" placeholder="Apellido Materno">
+                    <input type="text" class="modern-input" id="floatingInput" placeholder="Apellido Materno" asp-for="usuario.secondLastname">
+                    <span asp-validation-for="usuario.secondLastname" class="text-danger"></span>
                 </div>
 
                 <div class="input-section">
                     <label style="color: white;">Nombre de usuario</label>
-                    <input type="text" class="modern-input" id="floatingInput" placeholder="Usuario">
+                    <input type="text" class="modern-input" id="floatingInput" placeholder="Usuario" asp-for="usuario.userName">
+                    <span asp-validation-for="usuario.userName" class="text-danger"></span>
                 </div>
 
                 <div class="input-section">
                     <label style="color: white;">Contraseña</label>
-                    <input type="password" class="modern-input" id="floatingPassword" placeholder="Contraseña">
+                    <input type="password" class="modern-input" id="floatingPassword" placeholder="Contraseña" asp-for="usuario.password">
+                    <span asp-validation-for="usuario.password" class="text-danger"></span>
                 </div>
                 <button class="modern-button" type="submit">Registrar</button>
             </div>
