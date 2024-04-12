@@ -8,28 +8,36 @@
 <header>
     <div class="headerClass bgGreen">
         <img src="~/images/logoBlanco.png" style="height:100%" />
-        <a asp-page="/studentView" class="navLink" style="width: 78px">
-            <button type="button" class="btn buttonClass">Inicio</button>
-        </a>
+        @if ((bool)ViewData["admin"])
+        {
+            <a asp-page="/adminView" class="navLink" style="width: 78px">
+                <button type="button" class="btn buttonClass">Inicio</button>
+            </a>
+        }
+        else
+        {
+            <a asp-page="/studentView" class="navLink" style="width: 78px">
+                <button type="button" class="btn buttonClass">Inicio</button>
+            </a>
+        }
     </div>
 </header>
 <div class="centerClass container-fluid" style="padding:32px; overflow:scroll;">
     <div class="centerClass containerUserClass">
-        <img src="@Model.usuario.profilePicture" class="imgContainer" /> @*@Model.imagePath*@
+        <img src="@Model.usuario.profilePicture" class="imgContainer" />
         <div style="padding: 20px;">
             <h2 style="font-size: 32px">Biografía</h2>
             <p class="userBioClass">@Model.usuario.bio</p>
         </div>
         <form method="post" enctype="multipart/form-data" class="d-flex">
             <div class="form-group">
-                <label for="profilePicture">Foto de perfíl</label>
+                <label for="profilePicture">Foto de perfil</label>
                 <input type="file" class="form-control-file m-1" id="profilePicture" name="profilePicture" accept="image/">
             </div>
             <button type="submit" class="btn btn-primary shadow-hover" style="background-color: #198754">Subir</button>
         </form>
         <form method="post" class="w-75 d-flex justify-content-center align-items-bottom">
             <div class="form-group w-75">
-                @*<label for="biography">Biografía</label>*@
                 <textarea class="form-control m-0 p-1" id="biography" name="usuario.bio">@Model.usuario.bio</textarea>
             </div>
             <div><button type="submit" class="btn btn-primary" style="background-color: #198754" asp-page-handler="SaveBiography">Guardar</button></div>
