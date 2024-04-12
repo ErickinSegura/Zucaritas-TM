@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "xrAx2r8DxLX0tzItdXoT0RaWXDxfj1fuXcVVBcrtvso=",
+  "Hash": "2OmdvVWMX5QcDnF49TskB4HInBsmUf5NIrUebDogwJY=",
   "Source": "AWAQPagina",
   "BasePath": "_content/AWAQPagina",
   "Mode": "Default",
@@ -100,6 +100,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/css/styles.css"
+    },
+    {
+      "Identity": "/Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/wwwroot/css/userInfoStyles.css",
+      "SourceId": "AWAQPagina",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/wwwroot/",
+      "BasePath": "_content/AWAQPagina",
+      "RelativePath": "css/userInfoStyles.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/userInfoStyles.css"
     },
     {
       "Identity": "/Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/wwwroot/favicon.ico",
@@ -1188,6 +1205,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/lib/jquery/LICENSE.txt"
+    },
+    {
+      "Identity": "/Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/wwwroot/profilePics/1_20240411131540.jpg",
+      "SourceId": "AWAQPagina",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/wwwroot/",
+      "BasePath": "_content/AWAQPagina",
+      "RelativePath": "profilePics/1_20240411131540.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/profilePics/1_20240411131540.jpg"
     },
     {
       "Identity": "/Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/wwwroot/profilePics/1_20240411155130.jpg",

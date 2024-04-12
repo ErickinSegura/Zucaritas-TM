@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets/css/styles.css"
     },
     {
+      "Id": "/Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/wwwroot/css/userInfoStyles.css",
+      "PackagePath": "staticwebassets/css/userInfoStyles.css"
+    },
+    {
       "Id": "/Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/wwwroot/favicon.ico",
       "PackagePath": "staticwebassets/favicon.ico"
     },
@@ -275,6 +279,10 @@
     {
       "Id": "/Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/wwwroot/profilePics/1.jpg",
       "PackagePath": "staticwebassets/profilePics/1.jpg"
+    },
+    {
+      "Id": "/Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/wwwroot/profilePics/1_20240411131540.jpg",
+      "PackagePath": "staticwebassets/profilePics/1_20240411131540.jpg"
     },
     {
       "Id": "/Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/wwwroot/profilePics/1_20240411155130.jpg",

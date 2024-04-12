@@ -6,8 +6,9 @@ using System.Data;
 
 namespace AWAQPagina.Pages
 {
-    public class Register : PageModel
+    public class RegisterModel : PageModel
     {
+        [BindProperty]
         public Usuario usuario { get; set; }
 
         public IActionResult OnPost(Usuario usuario)
@@ -18,28 +19,20 @@ namespace AWAQPagina.Pages
             conexion.Open();
             MySqlCommand cmd = new MySqlCommand();
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "get_id";
+            cmd.CommandText = "new_register";
             cmd.Connection = conexion;
 
-            cmd.Parameters.AddWithValue("@nombreUsuario", usuario.userName);
+            cmd.Parameters.AddWithValue("@nombre", usuario.name);
+            cmd.Parameters.AddWithValue("@apellidoPaterno", usuario.firstLastname);
+            cmd.Parameters.AddWithValue("@apellidoMaterno", usuario.secondLastname);
+            cmd.Parameters.AddWithValue("@usuario", usuario.userName);
             cmd.Parameters.AddWithValue("@passcode", usuario.password);
+            cmd.Parameters.AddWithValue("@admin", 0);
 
-            object result = cmd.ExecuteScalar();
-            int userID = Convert.ToInt32(result);
+            cmd.ExecuteNonQuery();
 
-            usuario.userID = userID;
-
-            if (result != null)
-            {
-                Response.Cookies.Append("ID_USER", usuario.userID.ToString());
-                return RedirectToPage("/studentView");
-            }
-            else
-            {
-                return Page();
-            }
-        }
-
+            return RedirectToPage();
+        }   
 
     }
 }
