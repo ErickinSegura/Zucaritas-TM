@@ -6,9 +6,9 @@
 .general {
     display: flex;
     height: 88vh;
-    gap: 5vw;
     min-height:600px;
-    min-width: 800px;
+    min-width: 1000px;
+    justify-content: space-around;
 }
 
 .navBar {
@@ -54,12 +54,11 @@
     background-color: rgba(213, 213, 213, 0);
     width: 22%;
     height: 600px;
-    margin-top: 10px;
-    margin-left: 24px;
     border-radius: 5px;
     text-align: center;
     position: relative;
     min-width:200px;
+    margin: 0 1%;
 }
 
 .user-photo {
@@ -150,10 +149,10 @@
     width: 72%;
     height: 600px;
     margin-left: auto;
-    margin-top: 10px;
-    margin-right: 10px;
     border-radius: 5px;
-    text-align: center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
 
 .containerRegistroBoton{
@@ -181,3 +180,14 @@
         background-color: rgb(53, 143, 53); /* Darker shade of green on hover */
         border: 2px solid white;
     }
+
+
+.dashContainer {
+    border: 2px solid lightgrey;
+    border-radius: 20px;
+    padding: 10px;
+    width: 90%;
+    height: 90%;
+    background-color: #e1ddcb;
+    box-shadow: 4px 8px lightgrey;
+}
