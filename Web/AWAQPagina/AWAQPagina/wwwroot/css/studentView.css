@@ -55,16 +55,19 @@
     width: 22%;
     height: 600px;
     margin-top: 10px;
-    margin-left: 10px;
+    margin-left: 24px;
     border-radius: 5px;
     text-align: center;
     position: relative;
+    min-width:200px;
 }
 
 .user-photo {
     height: 180px;
     width: 180px;
     border-radius: 50%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
 }
 
 .stats-user {
@@ -87,8 +90,7 @@
     height: 80px;
     background-color: rgba(63, 47, 151, 0);
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -131,7 +133,7 @@
 .medals-text {
     display: flex;
     justify-content: center;
-    gap: 62px;
+    gap: 25%;
     align-items: center;
     font-size: 18px;
 }
@@ -153,3 +155,29 @@
     border-radius: 5px;
     text-align: center;
 }
+
+.containerRegistroBoton{
+    height:200px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.modern-button {
+    background-color: #29692b; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    margin-top: 30px;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Add smooth transition */
+}
+
+    .modern-button:hover {
+        background-color: rgb(53, 143, 53); /* Darker shade of green on hover */
+        border: 2px solid white;
+    }

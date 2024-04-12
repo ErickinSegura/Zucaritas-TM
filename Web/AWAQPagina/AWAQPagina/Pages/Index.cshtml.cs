@@ -46,7 +46,7 @@ namespace AWAQPagina.Pages
 
                 if (usuario.isAdmin == true)
                 {
-                    return Redirect("/Register");
+                    return Redirect("/adminView");
                 }
                 else
                 {

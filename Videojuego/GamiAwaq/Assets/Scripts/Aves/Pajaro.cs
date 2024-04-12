@@ -2,11 +2,12 @@ using UnityEngine;
 
 public class Pajaro : MonoBehaviour
 {
-    private GameManager gameManager;
+    public static Pajaro Instance;
+    public GameObject dropdownGameObject;
 
-    public void SetGameManager(GameManager manager)
+    public void Awake()
     {
-        gameManager = manager;
+        Instance = this;
     }
 
     void Update()
@@ -18,20 +19,14 @@ public class Pajaro : MonoBehaviour
 
             if (hit.collider != null && hit.collider.CompareTag("Pajaro"))
             {
-                // Verifica si el GameManager está asignado
-                if (gameManager != null)
-                {
-                    // Incrementa el contador de pájaros clicados
-                    gameManager.IncrementarContadorPajarosClicados();
-                }
-                else
-                {
-                    Debug.LogWarning("El GameManager no está asignado en el objeto Pajaro.");
-                }
-
+                GameManager.instance.IncrementarContadorPajarosClicados();
                 // Hacer desaparecer el pájaro
+                dropdownGameObject.SetActive(true);
+                Time.timeScale = 0f;
                 Destroy(hit.collider.gameObject);
+                
             }
+
         }
     }
 }

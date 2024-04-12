@@ -47,4 +47,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FinalScenes/FinalReptile.unity
     guid: d06e251102766464b9b981abb14388e0
+  - enabled: 1
+    path: Assets/Scenes/FinalScenes/Final_mamiferos.unity
+    guid: 85b88cc3d9bff2749b2660c307872757
   m_configObjects: {}

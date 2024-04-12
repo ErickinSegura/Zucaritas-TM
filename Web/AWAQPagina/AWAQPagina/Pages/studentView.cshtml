@@ -32,13 +32,13 @@
             <br>
             <br>
             <br>
-            <img src="~/images/chicoAWAQ.png" alt="Avatar" class="user-photo">
+            <img src="@Model.usuario.profilePicture" alt="Avatar" class="user-photo">
 
-            <div style="margin-top: 10px; font-weight: bold;">
+            <div style="margin-top: 10px; font-weight: bold; height: 24px; line-height:24px;">
                 @Model.usuario.name @Model.usuario.firstLastname
             </div>
 
-            <div>
+            <div style="height: 24px; line-height: 24px;">
                 <em>@Model.usuario.userName</em>
             </div>
 

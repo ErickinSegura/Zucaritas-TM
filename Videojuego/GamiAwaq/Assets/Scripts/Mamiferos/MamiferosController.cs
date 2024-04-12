@@ -6,22 +6,31 @@ using UnityEngine.UI;
 
 public class MamiferosController : MonoBehaviour
 {
-    public Sprite[] allAnimalImages; // Lista completa de imágenes de animales
-    public string[] allAnimalNames; // Lista completa de nombres de animales
-    public Image[] animalImageUIs; // Imágenes de animales en la interfaz de usuario
-    public Text[] animalNameUIs; // Textos de nombres de animales en la interfaz de usuario
-    public Button leftArrowButton; // Flecha izquierda en la interfaz de usuario
-    public Button rightArrowButton; // Flecha derecha en la interfaz de usuario
+    public Sprite[] animalImages;
+    public string[] animalNames;
+    public Image animalImageUI;
+    public Text animalNameUI;
+    public Button leftArrowButton;
+    public Button rightArrowButton;
 
-    private Sprite[] displayedAnimalImages = new Sprite[3]; // Imágenes de animales que se muestran actualmente
-    private string[] displayedAnimalNames = new string[3]; // Nombres de animales que se muestran actualmente
-    private int currentIndex = 0; // Índice del animal actualmente mostrado
+    private List<int> selectedIndices = new List<int>();
+    private int currentImageIndex = 0;
+    private int numberOfAnimalsToShow; // Número de animales a mostrar
 
     void Start()
     {
-        GenerateAnimals();
-        UpdateAnimalUIs();
+        numberOfAnimalsToShow = Random.Range(1, 4);
+        PlayerPrefs.SetInt("NumberOfAnimalsToShow", numberOfAnimalsToShow);
+        PlayerPrefs.Save();
+        SetRandomAnimalUI();
         UpdateArrowButtons();
+        // Asigna la función ChangeImage() al evento de clic de la flecha derecha
+        rightArrowButton.onClick.AddListener(ChangeImage);
+        if (PlayerPrefs.HasKey("LastAnimalIndex"))
+        {
+            int lastIndex = PlayerPrefs.GetInt("LastAnimalIndex");
+            // Usar lastIndex para cargar la última imagen mostrada
+        }
     }
 
     public void returnToMenu()
@@ -29,63 +38,56 @@ public class MamiferosController : MonoBehaviour
         SceneManager.LoadScene("RecapMoni");
     }
 
-    void GenerateAnimals()
+    void SetRandomAnimalUI()
     {
-        List<int> chosenIndices = new List<int>();
+        // Limpiar la lista de índices seleccionados
+        selectedIndices.Clear();
 
-        int maxIndex = Mathf.Min(3, allAnimalImages.Length); // Determina el máximo de animales a mostrar
-        for (int i = 0; i < maxIndex; i++)
+        // Seleccionar un número específico de índices de animales al azar
+        for (int i = 0; i < numberOfAnimalsToShow; i++)
         {
             int randomIndex;
             do
             {
-                randomIndex = Random.Range(0, allAnimalImages.Length);
-            } while (chosenIndices.Contains(randomIndex));
+                randomIndex = Random.Range(0, animalImages.Length);
+            } while (selectedIndices.Contains(randomIndex)); // Evitar duplicados
 
-            chosenIndices.Add(randomIndex);
+            selectedIndices.Add(randomIndex);
 
-            displayedAnimalImages[i] = allAnimalImages[randomIndex];
-            displayedAnimalNames[i] = allAnimalNames[randomIndex];
-        }
-    }
-
-
-
-    void UpdateAnimalUIs()
-    {
-        // Actualiza las imágenes y nombres de animales en la interfaz de usuario
-        for (int i = 0; i < displayedAnimalImages.Length; i++)
-        {
-            if (displayedAnimalImages[i] != null)
+            // Mostrar la imagen y el nombre del animal en la primera iteración
+            if (i == 0)
             {
-                animalImageUIs[i].sprite = displayedAnimalImages[i];
-                animalNameUIs[i].text = displayedAnimalNames[i];
-            }
-            else
-            {
-                // Si no hay un animal para mostrar, desactiva la imagen y el nombre
-                animalImageUIs[i].gameObject.SetActive(false);
-                animalNameUIs[i].gameObject.SetActive(false);
+                animalImageUI.sprite = animalImages[randomIndex];
+                animalNameUI.text = animalNames[randomIndex];
             }
         }
     }
 
     void UpdateArrowButtons()
     {
-        // Activa o desactiva las flechas según el número de animales generados
-        leftArrowButton.gameObject.SetActive(displayedAnimalImages.Length > 1);
-        rightArrowButton.gameObject.SetActive(displayedAnimalImages.Length > 1);
+        // Establecer la cantidad de animales generados según la cantidad seleccionada
+        int numberOfAnimals = selectedIndices.Count;
+        leftArrowButton.gameObject.SetActive(numberOfAnimals >= 2);
+        rightArrowButton.gameObject.SetActive(numberOfAnimals >= 2);
     }
 
-    public void ShowPreviousAnimal()
+    void ChangeImage()
     {
-        currentIndex = (currentIndex - 1 + displayedAnimalImages.Length) % displayedAnimalImages.Length;
-        UpdateAnimalUIs();
-    }
+        // Avanzar al siguiente índice de imagen circularmente
+        currentImageIndex = (currentImageIndex + 1) % numberOfAnimalsToShow;
 
-    public void ShowNextAnimal()
+        // Obtener el índice de animal correspondiente al índice actual
+        int currentAnimalIndex = selectedIndices[currentImageIndex];
+
+        // Mostrar la nueva imagen y su nombre correspondiente
+        animalImageUI.sprite = animalImages[currentAnimalIndex];
+        animalNameUI.text = animalNames[currentAnimalIndex];
+
+        PlayerPrefs.SetInt("LastAnimalIndex", currentAnimalIndex);
+        PlayerPrefs.Save();
+    }
+    public void ChangeScene(string sceneName)
     {
-        currentIndex = (currentIndex + 1) % displayedAnimalImages.Length;
-        UpdateAnimalUIs();
+        SceneManager.LoadScene(sceneName);
     }
 }
