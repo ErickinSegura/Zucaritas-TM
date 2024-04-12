@@ -71,6 +71,15 @@ namespace AWAQPagina.Pages
                         }
                     }
                 }
+
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "get_isAdmin";
+                cmd.Connection = conexion;
+                object isAdmin = cmd.ExecuteScalar();
+                usuario.isAdmin = Convert.ToBoolean(isAdmin);
+
+                var admin = usuario.isAdmin;
+                ViewData["admin"] = admin;
             }
 
             return Page();
@@ -131,5 +140,7 @@ namespace AWAQPagina.Pages
 
             return RedirectToPage();
         }
+
     }
 }
+   

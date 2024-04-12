@@ -55,6 +55,11 @@ namespace AWAQPagina.Pages
                 }
             }
 
+            else if(usuario.userName == null || usuario.password == null){
+                ModelState.AddModelError(string.Empty, "");
+                return Page();
+            }
+
             else
             {
                 ModelState.AddModelError(string.Empty, "Usuario o contraseña incorrectos");
