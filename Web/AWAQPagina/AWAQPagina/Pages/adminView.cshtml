@@ -1,0 +1,65 @@
+﻿@page
+@model AWAQPagina.Pages.adminViewModel
+@{
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWAQ</title>
+    <link rel="stylesheet" href="~/css/studentView.css">
+    <link rel="stylesheet" href="~/css/userInfoStyles.css">
+
+
+</head>
+<body>
+    <header>
+        <div class="headerClass bgGreen">
+            <img src="~/images/logoBlanco.png" style="height:100%" />
+            <a asp-page="/UserInfo" class="navLink" style="width: 78px">
+                <button type="button" class="btn buttonClass">Perfil</button>
+            </a>
+        </div>
+    </header>
+
+
+
+    <div class="general">
+        <div class="profile">
+            <br>
+            <br>
+            <br>
+            <br>
+            <img src="~/images/chicoAWAQ.png" alt="Avatar" class="user-photo">
+
+            <div style="margin-top: 10px; font-weight: bold;">
+                @Model.usuario.name @Model.usuario.firstLastname
+            </div>
+
+            <div>
+                <em>@Model.usuario.userName</em>
+            </div>
+
+            <br>
+            <br>
+
+            <div class="containerRegistroBoton">
+                <a asp-page="/Register" class="navLink">
+                    <button type="button" class="btn modern-button">Registro Nuevo Usuario</button>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="line">
+        </div>
+
+        <div class="dashboard">
+            <p></p>
+        </div>
+    </div>
+
+</body>
+</html>

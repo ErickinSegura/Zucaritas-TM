@@ -64,8 +64,3 @@
     color: #F5F5F5;
 }
 
-.mainImage {
-    min-height: 100vh;
-    min-width: 100%;
-    object-fit: cover;
-}
