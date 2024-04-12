@@ -289,6 +289,10 @@
       "PackagePath": "staticwebassets/profilePics/1_20240411155130.jpg"
     },
     {
+      "Id": "/Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/wwwroot/profilePics/1_20240411202002.jpg",
+      "PackagePath": "staticwebassets/profilePics/1_20240411202002.jpg"
+    },
+    {
       "Id": "/Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/wwwroot/profilePics/2.jpg",
       "PackagePath": "staticwebassets/profilePics/2.jpg"
     },
@@ -299,6 +303,22 @@
     {
       "Id": "/Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/wwwroot/profilePics/2_20240411151728.jpg",
       "PackagePath": "staticwebassets/profilePics/2_20240411151728.jpg"
+    },
+    {
+      "Id": "/Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/wwwroot/profilePics/2_20240411202017.jpg",
+      "PackagePath": "staticwebassets/profilePics/2_20240411202017.jpg"
+    },
+    {
+      "Id": "/Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/wwwroot/profilePics/2_20240411204505.jpg",
+      "PackagePath": "staticwebassets/profilePics/2_20240411204505.jpg"
+    },
+    {
+      "Id": "/Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/wwwroot/profilePics/2_20240411210355.jpg",
+      "PackagePath": "staticwebassets/profilePics/2_20240411210355.jpg"
+    },
+    {
+      "Id": "/Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/wwwroot/profilePics/2_20240411213931.jpg",
+      "PackagePath": "staticwebassets/profilePics/2_20240411213931.jpg"
     },
     {
       "Id": "obj/Debug/net6.0/staticwebassets/msbuild.AWAQPagina.Microsoft.AspNetCore.StaticWebAssets.props",
