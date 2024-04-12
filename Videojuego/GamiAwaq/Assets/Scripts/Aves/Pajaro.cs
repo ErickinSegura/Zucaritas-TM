@@ -2,13 +2,18 @@ using UnityEngine;
 
 public class Pajaro : MonoBehaviour
 {
-    private GameManager gameManager;
-
-    public void SetGameManager(GameManager manager)
+    public static Pajaro Instance;
+    private DropdownAves dropdownController;
+    public void Awake()
     {
-        gameManager = manager;
+        Instance = this;
     }
 
+    private void Start()
+    {
+        // Buscar el controlador del dropdown en la escena
+        dropdownController = GameObject.FindObjectOfType<DropdownAves>();
+    }
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -18,20 +23,22 @@ public class Pajaro : MonoBehaviour
 
             if (hit.collider != null && hit.collider.CompareTag("Pajaro"))
             {
-                // Verifica si el GameManager está asignado
-                if (gameManager != null)
-                {
-                    // Incrementa el contador de pájaros clicados
-                    gameManager.IncrementarContadorPajarosClicados();
-                }
-                else
-                {
-                    Debug.LogWarning("El GameManager no está asignado en el objeto Pajaro.");
-                }
+                GameManager.instance.IncrementarContadorPajarosClicados();
+                dropdownController.ShowDropdown(gameObject);
 
                 // Hacer desaparecer el pájaro
                 Destroy(hit.collider.gameObject);
             }
+
+        }
+    }
+    private void OnMouseDown()
+    {
+        // Verificar si el controlador del dropdown existe y mostrar el dropdown
+        if (dropdownController != null)
+        {
+            // Mostrar el dropdown y pasar el GameObject del pájaro
+            dropdownController.ShowDropdown(gameObject);
         }
     }
 }

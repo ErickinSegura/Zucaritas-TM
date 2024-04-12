@@ -16,7 +16,7 @@ namespace AWAQPagina
         [Required(ErrorMessage = "El campo de nombre de usuario es obligatorio")]
 		public string userName { get; set; }
 
-        [Required(ErrorMessage = "El campo de contraseña es obligatorio")]
+        [Required(ErrorMessage = "El campo de contraseÃ±a es obligatorio")]
         public string password { get; set; }
 
         

@@ -7,7 +7,14 @@ public class ReptileBehaviour : MonoBehaviour
 {
     static public ReptileBehaviour Instance;
 
-    public ReptileType reptileType = ReptileType.CaimanAguja;    
+    public ReptileType reptileType = ReptileType.CaimanAguja;
+
+    [SerializeField] private float _speed;
+    [SerializeField] private float _rotationSpeed;
+
+    private Rigidbody2D _rigidbody;
+    private Vector2 _targetDirection;
+    private float _changeDirectionCooldown;
 
     public enum ReptileType
     {
@@ -32,25 +39,51 @@ public class ReptileBehaviour : MonoBehaviour
     }
 
 
-
     public Dictionary<ReptileType, Reptile> reptiles = new Dictionary<ReptileType, Reptile>
     {
-        {ReptileType.CaimanAguja, new Reptile { ID = 1, Name = "Caimán Aguja", Image = "https://inaturalist-open-data.s3.amazonaws.com/photos/3715/large.jpg" } },
-        {ReptileType.CaimanLlanero, new Reptile { ID = 2, Name = "Caimán Llanero", Image = "https://img.lalr.co/cms/2022/12/05112918/Caiman-llanero.jpg" } },
-        {ReptileType.SerpienteSabanera, new Reptile { ID = 3, Name = "Serpiente Sabanera", Image = "https://static.inaturalist.org/photos/215474301/large.jpeg" } },
-        {ReptileType.SerpienteTerciopelo, new Reptile { ID = 4, Name = "Serpiente Terciopelo", Image = "https://culturacientifica.utpl.edu.ec/wp-content/uploads/2023/07/Bothrops-asper-vibora-de-terciopelo-1.jpg" } },
-        {ReptileType.SerpienteSanAndres, new Reptile { ID = 5, Name = "Serpiente San Andrés", Image = "https://inaturalist-open-data.s3.amazonaws.com/photos/130995125/large.jpg" } },
-        {ReptileType.TortugaCienegaCol, new Reptile { ID = 6, Name = "Tortuga Ciénega Col", Image = "https://static.wikia.nocookie.net/colombia/images/b/b2/Tortuga_de_ci%C3%A9naga_colombiana.jpg/revision/latest?cb=20130120201413&path-prefix=es" } },
-        {ReptileType.TortugaMorrocoy, new Reptile { ID = 7, Name = "Tortuga Morrocoy", Image = "https://upload.wikimedia.org/wikipedia/commons/a/ae/Chelonoidis_carbonaria_LoroParqueTenerife_red-foot_tortoise_IMG_5135.JPG" } },
-        {ReptileType.CamaleonCundimamarca, new Reptile { ID = 8, Name = "Camaleón Cundimamarca", Image = "https://upload.wikimedia.org/wikipedia/commons/6/6f/Anolis_heterodermus01.jpeg" } },
-        {ReptileType.AnolisCalima, new Reptile { ID = 9, Name = "Anolis Calima", Image = "https://inaturalist-open-data.s3.amazonaws.com/photos/65194113/large.jpg" } },
-        {ReptileType.LagartijaBogota, new Reptile { ID = 10, Name = "Lagartija Bogotá", Image = "https://www.dicyt.com/data/04/29004.jpg" } }
+        {ReptileType.CaimanAguja, new Reptile { ID = 1, Name = "Caimán Aguja", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/rep8.png?raw=true" } },
+        {ReptileType.CaimanLlanero, new Reptile { ID = 2, Name = "Caimán Llanero", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/rep4.png?raw=true" } },
+        {ReptileType.SerpienteSabanera, new Reptile { ID = 3, Name = "Serpiente Sabanera", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/rep7.png?raw=true" } },
+        {ReptileType.SerpienteTerciopelo, new Reptile { ID = 4, Name = "Serpiente Terciopelo", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/rep3.png?raw=true" } },
+        {ReptileType.SerpienteSanAndres, new Reptile { ID = 5, Name = "Serpiente San Andrés", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/rep5.png?raw=true" } },
+        {ReptileType.TortugaCienegaCol, new Reptile { ID = 6, Name = "Tortuga Ciénega Col", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/rep9.png?raw=true" } },
+        {ReptileType.TortugaMorrocoy, new Reptile { ID = 7, Name = "Tortuga Morrocoy", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/rep10.png?raw=true" } },
+        {ReptileType.CamaleonCundimamarca, new Reptile { ID = 8, Name = "Camaleón Cundimamarca", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/rep2.png?raw=true" } },
+        {ReptileType.AnolisCalima, new Reptile { ID = 9, Name = "Anolis Calima", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/rep6.png?raw=true" } },
+        {ReptileType.LagartijaBogota, new Reptile { ID = 10, Name = "Lagartija Bogotá", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/rep1.png?raw=true" } }
     };
-    
+
     private void Awake()
     {
         Instance = this;
+        _rigidbody = GetComponent<Rigidbody2D>();
+        _changeDirectionCooldown = Random.Range(1f, 5f);
     }
+
+    private void FixedUpdate()
+    {
+        HandleRandomDirectionChange();
+    }
+
+    private void HandleRandomDirectionChange()
+    {
+        _changeDirectionCooldown -= Time.deltaTime;
+
+        if (_changeDirectionCooldown <= 0)
+        {
+            float angleChange = Random.Range(-180f, 180f);
+            Vector2 randomDirection = Quaternion.AngleAxis(angleChange, Vector3.forward) * Vector2.up;
+            _rigidbody.AddForce(randomDirection.normalized * _speed, ForceMode2D.Impulse);
+
+            _changeDirectionCooldown = Random.Range(1f, 5f);
+        }
+    }
+
+    private void SetVelocity()
+    {
+        _rigidbody.velocity = _targetDirection * _speed;
+    }
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -64,7 +97,4 @@ public class ReptileBehaviour : MonoBehaviour
         }
     }
 
-
-
-    
 }

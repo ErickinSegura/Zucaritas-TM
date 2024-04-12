@@ -20,13 +20,6 @@ public class Spawner : MonoBehaviour
         Vector3 spawnPosition = new Vector3(transform.position.x, spawnY, 0f);
         GameObject pajaro = Instantiate(pajaroPrefab, spawnPosition, Quaternion.identity);
 
-        // Asignar el GameManager al Pajaro
-        Pajaro pajaroScript = pajaro.GetComponent<Pajaro>();
-        if (pajaroScript != null && gameManager != null)
-        {
-            pajaroScript.SetGameManager(gameManager);
-        }
-
         // Cambiar la velocidad del pájaro y dirección del movimiento
         MovimientoHorizontal movimientoPajaro = pajaro.GetComponent<MovimientoHorizontal>();
         if (movimientoPajaro != null)

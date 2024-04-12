@@ -32,7 +32,8 @@ namespace AWAQPagina.Pages
             cmd.ExecuteNonQuery();
 
             return RedirectToPage();
-        }   
 
+
+        }   
     }
 }

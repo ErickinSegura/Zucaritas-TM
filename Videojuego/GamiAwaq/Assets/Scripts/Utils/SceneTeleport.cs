@@ -13,7 +13,14 @@ public class SceneTeleport : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene(sceneName);
+            Fade.Instance.FadeIn();
+            StartCoroutine(enumerate());
         }
+    }
+
+    public IEnumerator enumerate()
+    {
+        yield return new WaitForSeconds(0.4f);
+        SceneManager.LoadScene(sceneName);
     }
 }
