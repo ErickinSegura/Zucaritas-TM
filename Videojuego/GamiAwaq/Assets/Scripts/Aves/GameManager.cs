@@ -9,11 +9,19 @@ public class GameManager : MonoBehaviour
     private int contadorPajarosClicados = 0;
     public Text textoContadorPajaros;
 
+    static public GameManager instance;
+
+    private void Awake()
+    {
+        instance = this;
+    }
     public void IncrementarContadorPajarosClicados()
     {
         contadorPajarosClicados++;
+        Debug.Log("Contador de pájaros clicados incrementado: " + contadorPajarosClicados);
         ActualizarContadorPajarosUI();
     }
+
 
     void Start()
     {
