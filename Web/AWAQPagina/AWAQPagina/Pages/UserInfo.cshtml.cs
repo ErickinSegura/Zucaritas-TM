@@ -25,7 +25,7 @@ namespace AWAQPagina.Pages
         public IActionResult OnGet()
         {
             string userID = _httpContextAccessor.HttpContext.Request.Cookies["ID_USER"];
-            string connectionString = "Server=127.0.0.1;Port=3306;Database=AWAQ;Uid=root;password=Vela0376;";
+            string connectionString = "Server=127.0.0.1;Port=3306;Database=awaq2;Uid=root;password=Vela0376;";
 
             using (MySqlConnection conexion = new MySqlConnection(connectionString))
             {
@@ -88,7 +88,7 @@ namespace AWAQPagina.Pages
         public IActionResult OnPostSaveBiography()
         {
             string userID = _httpContextAccessor.HttpContext.Request.Cookies["ID_USER"];
-            string connectionString = "Server=127.0.0.1;Port=3306;Database=AWAQ;Uid=root;password=Vela0376;";
+            string connectionString = "Server=127.0.0.1;Port=3306;Database=awaq2;Uid=root;password=Vela0376;";
 
             using (MySqlConnection conexion = new MySqlConnection(connectionString))
             {
@@ -111,7 +111,7 @@ namespace AWAQPagina.Pages
         public async Task<IActionResult> OnPostAsync(IFormFile profilePicture)
         {
             string userID = _httpContextAccessor.HttpContext.Request.Cookies["ID_USER"];
-            string connectionString = "Server=127.0.0.1;Port=3306;Database=AWAQ;Uid=root;password=Vela0376;";
+            string connectionString = "Server=127.0.0.1;Port=3306;Database=awaq2;Uid=root;password=Vela0376;";
 
             var uploadsDirectory = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "profilePics");
             Directory.CreateDirectory(uploadsDirectory);
