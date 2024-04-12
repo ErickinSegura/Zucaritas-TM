@@ -9,6 +9,7 @@ public class SelectionController : MonoBehaviour
     public string sceneName2;
     public GameObject popup;
 
+
     public void closePopup()
     {
         popup.SetActive(false);
@@ -30,6 +31,17 @@ public class SelectionController : MonoBehaviour
         {
             popup.SetActive(true);
         }
+    }
+
+    public void openPopupError()
+    {
+        popup.SetActive(false);
+        GameController.Instance.openPopupError();
+    }
+
+    public void closePopupError()
+    {
+        GameController.Instance.closePopupError();
     }
 
 
