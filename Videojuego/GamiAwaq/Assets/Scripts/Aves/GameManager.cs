@@ -70,7 +70,7 @@ public class GameManager : MonoBehaviour
     // Actualizar el contador de pájaros en la interfaz de usuario
     void ActualizarContadorPajarosUI()
     {
-        textoContadorPajaros.text = "Pájaros Clicados: " + contadorPajarosClicados;
+        textoContadorPajaros.text = "Aves Registradas: " + contadorPajarosClicados;
     }
 
     public void continueToScore()
