@@ -13,7 +13,7 @@ namespace AWAQPagina.Pages
 
         public IndexModel()
         {
-            usuario = new Usuario(); // Inicializa el objeto usuario
+            usuario = new Usuario(); 
         }
 
         public IActionResult OnPost()
@@ -32,15 +32,32 @@ namespace AWAQPagina.Pages
 
             object result = cmd.ExecuteScalar();
             if (result != null)
-            {
+            { 
                 int userID = Convert.ToInt32(result);
                 usuario.userID = userID;
                 Response.Cookies.Append("ID_USER", usuario.userID.ToString());
-                return RedirectToPage("/studentView");
+
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "get_isAdmin";
+                cmd.Parameters.AddWithValue("@userID", userID);
+
+                object isAdmin = cmd.ExecuteScalar();
+                usuario.isAdmin = Convert.ToBoolean(isAdmin);
+
+                if (usuario.isAdmin == true)
+                {
+                    return Redirect("/Register");
+                }
+                else
+                {
+                    return Redirect("/studentView");
+                    
+                }
             }
+
             else
             {
-                ModelState.AddModelError(string.Empty, "Usuario o contrase�a incorrectos");
+                ModelState.AddModelError(string.Empty, "Usuario o contraseña incorrectos");
                 return Page();
             }
         }
