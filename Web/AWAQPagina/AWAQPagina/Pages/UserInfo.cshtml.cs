@@ -122,6 +122,7 @@ namespace AWAQPagina.Pages
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = "update_img";
                 cmd.Connection = conexion;
+
                 cmd.Parameters.AddWithValue("@userID", userID);
                 cmd.Parameters.AddWithValue("@profilepic", $"~/profilePics/{fileName}");
                 cmd.ExecuteNonQuery();

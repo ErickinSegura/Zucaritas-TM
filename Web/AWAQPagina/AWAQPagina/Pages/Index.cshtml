@@ -8,6 +8,7 @@
 @*<meta http-equiv="Refresh" content="0; url='https://localhost:7026/UserInfo'" />*@
 
 <link rel="stylesheet" href="~/css/styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 <div class="general">
     <div class="main-container">
         <div class="logo-container">
@@ -18,13 +19,13 @@
             <div class="login-container">
                 <h1 style="color: white;">Inicio de sesión</h1>
                 <div class="input-section">
-                    <label style="color: white;">Nombre de usuario</label>
+                    <label style="color: white;"><i class="bi bi-person-circle"></i> Nombre de usuario</label>
                     <input type="text" class="modern-input" placeholder="Usuario" asp-for="usuario.userName">
                     <span asp-validation-for="usuario.userName" class="text-danger"></span>
                 </div>
 
                 <div class="input-section">
-                    <label style="color: white;">Contraseña</label>
+                    <label style="color: white;"><i class="bi bi-lock-fill"></i> Contraseña</label>
                     <input type="password" class="modern-input" placeholder="Contraseña" asp-for="usuario.password">
                     <span asp-validation-for="usuario.password" class="text-danger"></span>
                 </div>
