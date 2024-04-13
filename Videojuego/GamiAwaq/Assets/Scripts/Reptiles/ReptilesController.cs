@@ -84,6 +84,7 @@ public class ReptilesController : MonoBehaviour
 
         Instance = this;
         PlayerPrefs.SetInt("Puntaje", 0);
+        PlayerPrefs.SetInt("Registros", 0);
 
     }
 

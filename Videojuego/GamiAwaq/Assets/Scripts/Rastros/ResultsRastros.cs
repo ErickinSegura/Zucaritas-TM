@@ -11,7 +11,7 @@ public class ResultsRastros : MonoBehaviour
 
     public void returnToLobby()
     {
-        SceneManager.LoadScene("Lobby Noche");
+        SceneManager.LoadScene("Arbol Cam");
     }
 
     public void updateResults()
@@ -20,8 +20,8 @@ public class ResultsRastros : MonoBehaviour
         string correct = score.ToString();
         int total = PlayerPrefs.GetInt("Registros");
 
-        correctText.text = correct.ToString();
-        totalText.text = total.ToString();
+        correctText.text = correct.ToString() + "/" + total.ToString();
+        totalText.text = total.ToString() + "/10";
 
         resetScore();
     }

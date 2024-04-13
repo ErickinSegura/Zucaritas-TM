@@ -7,12 +7,15 @@ using UnityEngine.Networking;
 
 public class EncicloController : MonoBehaviour
 {
-    public class Specie
+
+    public enum SpecieType
     {
-        public int ID;
-        public string Name;
-        public string Image;
+        Reptiles,
+        Mamiferos,
+        Rastros
     }
+
+    public SpecieType currentSpecieType = SpecieType.Reptiles;
 
     public int index = 0;
 
@@ -22,7 +25,7 @@ public class EncicloController : MonoBehaviour
     public Image image1;
     public Image image2;
 
-    public List<Specie> especies = new List<Specie>
+    public List<Specie> reptiles = new List<Specie>
     {
         new Specie { ID = 1, Name = "Caimán Aguja", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/rep8.png?raw=true"},
         new Specie { ID = 2, Name = "Caimán Llanero", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/rep4.png?raw=true"},
@@ -36,6 +39,35 @@ public class EncicloController : MonoBehaviour
         new Specie { ID = 10, Name = "Lagartija Bogotá", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/rep1.png?raw=true"}
     };
 
+    public List<Specie> mamiferos = new List<Specie>
+    {
+        new Specie { ID = 1, Name = "Oso de Anteojos", Image = ""},
+        new Specie { ID = 2, Name = "Oso Perezoso", Image = ""},
+        new Specie { ID = 3, Name = "Oso Hormiguero", Image = ""},
+        new Specie { ID = 4, Name = "Oso de Anteojos", Image = ""},
+        new Specie { ID = 5, Name = "Oso Perezoso", Image = ""},
+        new Specie { ID = 6, Name = "Oso Hormiguero", Image = ""},
+        new Specie { ID = 7, Name = "Oso de Anteojos", Image = ""},
+        new Specie { ID = 8, Name = "Oso Perezoso", Image = ""},
+        new Specie { ID = 9, Name = "Oso Hormiguero", Image = ""},
+        new Specie { ID = 10, Name = "Oso de Anteojos", Image = ""}
+
+    };
+
+    public List<Specie> rastros = new List<Specie>
+    {
+        new Specie { ID = 1, Name = "Huella de Tortuga", Image = ""},
+        new Specie { ID = 2, Name = "Huella de Cocodrilo", Image = ""},
+        new Specie { ID = 3, Name = "Rastro de Serpiente", Image = ""},
+        new Specie { ID = 4, Name = "Huella de Lagartija", Image = ""},
+        new Specie { ID = 5, Name = "Huella de Camaleon", Image = ""},
+        new Specie { ID = 6, Name = "Huella de Ocelote", Image = ""},
+        new Specie { ID = 7, Name = "Huella de Zorro", Image = ""},
+        new Specie { ID = 8, Name = "Huella de Armadillo", Image = ""},
+        new Specie { ID = 9, Name = "Huella de Mapache", Image = ""},
+        new Specie { ID = 10, Name = "Huella de Coati", Image = ""}
+    };
+
     void Start()
     {
         UpdateSpeciesDisplay();
@@ -43,17 +75,61 @@ public class EncicloController : MonoBehaviour
 
     void UpdateSpeciesDisplay()
     {
-        if (index < especies.Count)
+        List<Specie> currentSpeciesList = GetCurrentSpeciesList();
+
+        if (index < currentSpeciesList.Count)
         {
-            text1.text = especies[index].Name;
-            StartCoroutine(LoadImage(especies[index].Image, image1));
+            text1.text = currentSpeciesList[index].Name;
+            StartCoroutine(LoadImage(currentSpeciesList[index].Image, image1));
         }
 
-        if (index + 1 < especies.Count)
+        if (index + 1 < currentSpeciesList.Count)
         {
-            text2.text = especies[index + 1].Name;
-            StartCoroutine(LoadImage(especies[index + 1].Image, image2));
+            text2.text = currentSpeciesList[index + 1].Name;
+            StartCoroutine(LoadImage(currentSpeciesList[index + 1].Image, image2));
         }
+    }
+
+    List<Specie> GetCurrentSpeciesList()
+    {
+        switch (currentSpecieType)
+        {
+            case SpecieType.Reptiles:
+                return reptiles;
+            case SpecieType.Mamiferos:
+                return mamiferos;
+            case SpecieType.Rastros:
+                return rastros;
+            default:
+                return reptiles;
+        }
+    }
+
+    public void NextSpecies()
+    {
+        List<Specie> currentSpeciesList = GetCurrentSpeciesList();
+
+        if (index + 2 < currentSpeciesList.Count)
+        {
+            index += 2;
+            UpdateSpeciesDisplay();
+        }
+    }
+
+    public void PreviousSpecies()
+    {
+        if (index - 2 >= 0)
+        {
+            index -= 2;
+            UpdateSpeciesDisplay();
+        }
+    }
+
+    public void ChangeSpecieType(int type)
+    {
+        currentSpecieType = (SpecieType)type;
+        index = 0; // Reset index when changing specie type
+        UpdateSpeciesDisplay();
     }
 
     IEnumerator LoadImage(string url, Image targetImage)
@@ -73,26 +149,15 @@ public class EncicloController : MonoBehaviour
         }
     }
 
-    public void NextSpecies()
-    {
-        if (index + 2 < especies.Count)
-        {
-            index += 2;
-            UpdateSpeciesDisplay();
-        }
-    }
-
-    public void PreviousSpecies()
-    {
-        if (index - 2 >= 0)
-        {
-            index -= 2;
-            UpdateSpeciesDisplay();
-        }
-    }
-
     public void ReturnToMenu()
     {
         SceneManager.LoadScene("Lobby");
+    }
+
+    public class Specie
+    {
+        public int ID;
+        public string Name;
+        public string Image;
     }
 }

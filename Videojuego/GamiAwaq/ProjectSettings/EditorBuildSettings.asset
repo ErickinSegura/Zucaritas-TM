@@ -53,4 +53,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FinalScenes/FinalAves.unity
     guid: 925fe544985d55b41aaf8261260eca06
+  - enabled: 1
+    path: Assets/Scenes/FinalScenes/FinalRastros.unity
+    guid: 2328bd34d2d6b86418c183fb24f2f0da
   m_configObjects: {}
