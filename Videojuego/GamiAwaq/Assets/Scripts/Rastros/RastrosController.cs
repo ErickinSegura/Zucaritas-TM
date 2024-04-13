@@ -11,6 +11,10 @@ public class RastrosController : MonoBehaviour
     public GameObject finishPopup;
     public GameObject registerPopup;
 
+    public Text timerText;
+
+    public int time;
+
     public Image newImage;
 
     public Text incoText;
@@ -19,9 +23,12 @@ public class RastrosController : MonoBehaviour
     Sprite newSprite;
 
 
-    public void finish()
+    IEnumerator finish()
     {
         finishPopup.SetActive(true);
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene("FinalRastros");
+
     }
 
     public void exit()
@@ -31,7 +38,7 @@ public class RastrosController : MonoBehaviour
 
     public void continueToScore()
     {
-        SceneManager.LoadScene("FinalReptile");
+        SceneManager.LoadScene("FinalRastros");
     }
 
     public void enter()
@@ -76,9 +83,10 @@ public class RastrosController : MonoBehaviour
 
     public void Awake()
     {
-
         Instance = this;
         PlayerPrefs.SetInt("Puntaje", 0);
+        PlayerPrefs.SetInt("Registros", 0);
+        StartCoroutine(updatetimer());
 
     }
 
@@ -100,4 +108,23 @@ public class RastrosController : MonoBehaviour
             }
         }
     }
+
+    IEnumerator updatetimer()
+    {
+        while (time > 0)
+        {
+            yield return new WaitForSeconds(1);
+            time -= 1;
+            updateTimeText(time.ToString());
+        }
+        StartCoroutine(finish());
+    }
+
+    public void updateTimeText(string time)
+    {
+        timerText.text = "Tiempo Restante: " + time;
+    }
+
+
+
 }
