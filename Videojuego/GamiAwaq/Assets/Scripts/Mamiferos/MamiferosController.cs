@@ -1,37 +1,61 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using System.Collections.Generic;
+
+public enum RarityLevel
+{
+    Common,
+    Uncommon,
+    Rare,
+    VeryRare
+}
+
+[System.Serializable]
+public class AnimalInfo
+{
+    public string name;
+    public Sprite image;
+    public RarityLevel rarity;
+}
 
 public class MamiferosController : MonoBehaviour
 {
-    public Sprite[] animalImages;
-    public string[] animalNames;
+    public AnimalInfo[] animals;
     public Image animalImageUI;
     public Text animalNameUI;
     public Button leftArrowButton;
     public Button rightArrowButton;
-
-    private List<int> selectedIndices = new List<int>();
-    private int currentImageIndex = 0;
-    private int numberOfAnimalsToShow; // Número de animales a mostrar
-
     public GameObject popupError;
+
+    private int numberOfAnimalsToShow;
+    private List<AnimalInfo> selectedAnimals = new List<AnimalInfo>();
+    private int currentAnimalIndex = 0;
+    private List<Color> rarityColors = new List<Color>{
+        Color.black,     // Common
+        Color.green,     // Uncommon
+        Color.blue,      // Rare
+        Color.magenta    // VeryRare
+    };
+
+    private List<float> rarityProbabilities = new List<float>{
+        0.6f,   // Common
+        0.3f,   // Uncommon
+        0.08f,  // Rare
+        0.02f   // VeryRare
+    };
 
     void Start()
     {
-
-
         if (PlayerPrefs.GetString("currentDirection") == "N")
         {
-            numberOfAnimalsToShow = Random.Range(2, 4);
+            numberOfAnimalsToShow = Random.Range(3, 5);
+
             PlayerPrefs.SetInt("NumberOfAnimalsToShow", numberOfAnimalsToShow);
             PlayerPrefs.Save();
             SetRandomAnimalUI();
             UpdateArrowButtons();
-            // Asigna la función ChangeImage() al evento de clic de la flecha derecha
-            rightArrowButton.onClick.AddListener(ChangeImage);
+            //rightArrowButton.onClick.AddListener(ChangeAnimal);
             if (PlayerPrefs.HasKey("LastAnimalIndex"))
             {
                 int lastIndex = PlayerPrefs.GetInt("LastAnimalIndex");
@@ -42,62 +66,89 @@ public class MamiferosController : MonoBehaviour
         {
             popupError.SetActive(true);
         }
-
-    }
-
-    public void returnToMenu()
-    {
-        SceneManager.LoadScene("Lobby");
     }
 
     void SetRandomAnimalUI()
     {
-        // Limpiar la lista de índices seleccionados
-        selectedIndices.Clear();
+        selectedAnimals.Clear();
 
-        // Seleccionar un número específico de índices de animales al azar
         for (int i = 0; i < numberOfAnimalsToShow; i++)
         {
-            int randomIndex;
-            do
+            RarityLevel selectedRarity = GetRandomRarityLevel();
+
+            List<AnimalInfo> filteredAnimals = new List<AnimalInfo>();
+
+            foreach (AnimalInfo animal in animals)
             {
-                randomIndex = Random.Range(0, animalImages.Length);
-            } while (selectedIndices.Contains(randomIndex)); // Evitar duplicados
+                if (animal.rarity == selectedRarity)
+                {
+                    filteredAnimals.Add(animal);
+                    
+                }
+            }
 
-            selectedIndices.Add(randomIndex);
 
-            // Mostrar la imagen y el nombre del animal en la primera iteración
+            AnimalInfo randomAnimal = filteredAnimals[Random.Range(0, filteredAnimals.Count)];
+            Debug.Log("Animal: " + randomAnimal.name + " Rarity: " + randomAnimal.rarity);
+            selectedAnimals.Add(randomAnimal);
+
             if (i == 0)
             {
-                animalImageUI.sprite = animalImages[randomIndex];
-                animalNameUI.text = animalNames[randomIndex];
+                animalImageUI.sprite = randomAnimal.image;
+                animalNameUI.text = randomAnimal.name;
+                animalNameUI.color = rarityColors[(int)randomAnimal.rarity];
             }
         }
     }
 
+    RarityLevel GetRandomRarityLevel()
+    {
+        float randomValue = Random.value;
+        float cumulativeProbability = 0f;
+
+        for (int i = 0; i < rarityProbabilities.Count; i++)
+        {
+            cumulativeProbability += rarityProbabilities[i];
+            if (randomValue <= cumulativeProbability)
+            {
+                return (RarityLevel)i;
+            }
+        }
+
+        // Fallback to the most common rarity level
+        return RarityLevel.Common;
+    }
+
+
     void UpdateArrowButtons()
     {
-        // Establecer la cantidad de animales generados según la cantidad seleccionada
-        int numberOfAnimals = selectedIndices.Count;
-        leftArrowButton.gameObject.SetActive(numberOfAnimals >= 2);
-        rightArrowButton.gameObject.SetActive(numberOfAnimals >= 2);
+        leftArrowButton.gameObject.SetActive(currentAnimalIndex > 0);
+        rightArrowButton.gameObject.SetActive(currentAnimalIndex < selectedAnimals.Count - 1);
     }
 
-    void ChangeImage()
+    void NextAnimal()
     {
-        // Avanzar al siguiente índice de imagen circularmente
-        currentImageIndex = (currentImageIndex + 1) % numberOfAnimalsToShow;
-
-        // Obtener el índice de animal correspondiente al índice actual
-        int currentAnimalIndex = selectedIndices[currentImageIndex];
-
-        // Mostrar la nueva imagen y su nombre correspondiente
-        animalImageUI.sprite = animalImages[currentAnimalIndex];
-        animalNameUI.text = animalNames[currentAnimalIndex];
-
-        PlayerPrefs.SetInt("LastAnimalIndex", currentAnimalIndex);
-        PlayerPrefs.Save();
+        currentAnimalIndex = (currentAnimalIndex + 1);
+        Debug.Log("Current Animal Index: " + currentAnimalIndex);
+        UpdateAnimalUI();
     }
+
+    void PreviousAnimal()
+    {
+        currentAnimalIndex = (currentAnimalIndex - 1);
+        Debug.Log("Current Animal Index: " + currentAnimalIndex);
+        UpdateAnimalUI();
+    }
+
+    void UpdateAnimalUI()
+    {
+        AnimalInfo currentAnimal = selectedAnimals[currentAnimalIndex];
+        animalImageUI.sprite = currentAnimal.image;
+        animalNameUI.text = currentAnimal.name;
+        animalNameUI.color = rarityColors[(int)currentAnimal.rarity];
+        UpdateArrowButtons();
+    }
+
     public void ChangeScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);

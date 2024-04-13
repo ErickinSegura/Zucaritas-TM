@@ -47,7 +47,7 @@ namespace AWAQPagina.Pages
                         }
                         else
                         {
-                            usuario.bio = "Crea tu biografia!";
+                            usuario.bio = "¡Crea tu biografía!";
                         }
 
                         if (!reader.IsDBNull(reader.GetOrdinal("Imagen_USUARIO")))

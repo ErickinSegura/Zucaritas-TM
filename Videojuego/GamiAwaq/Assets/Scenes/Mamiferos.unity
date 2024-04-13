@@ -280,7 +280,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 159009230}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2042772490}
+        m_TargetAssemblyTypeName: MamiferosController, Assembly-CSharp
+        m_MethodName: NextAnimal
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &159009230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -376,7 +388,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1622084453
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: e8b81a4b9cafb714c90baaaa367bd8bc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -397,11 +409,11 @@ Transform:
   m_GameObject: {fileID: 230220913}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.03483702, w: 0.99939305}
-  m_LocalPosition: {x: -0.08999944, y: 1.01, z: 0}
+  m_LocalPosition: {x: -0.060899436, y: 1.0564, z: 0}
   m_LocalScale: {x: 1, y: 1.2286445, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 699775654}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 3.993}
 --- !u!1 &306214005
 GameObject:
@@ -480,12 +492,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 306214005}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0291, y: -0.0464, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2.319546, y: 1.7917174, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 699775654}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &443699310
 GameObject:
@@ -787,6 +799,40 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &699775653
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 699775654}
+  m_Layer: 0
+  m_Name: NDEA
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &699775654
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 699775653}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.0291, y: -0.0464, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1117638311}
+  - {fileID: 230220915}
+  - {fileID: 306214007}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &701756375
@@ -1477,14 +1523,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1117638309}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.24, y: 2.28, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -7.2109, y: 2.3264, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2065758744}
   - {fileID: 701756376}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 699775654}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1403117613
 GameObject:
@@ -1568,13 +1614,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 2042772490}
+        m_TargetAssemblyTypeName: MamiferosController, Assembly-CSharp
+        m_MethodName: PreviousAnimal
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2116,19 +2162,19 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 50
+    m_Font: {fileID: 12800000, guid: 0eb1d6e34e3c88043a3f78f3acb9d71f, type: 3}
+    m_FontSize: 80
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 60
+    m_MaxSize: 100
     m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Animal
+  m_Text: "Perezoso did\xE1ctilo de Hoffmann"
 --- !u!222 &1933950726
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2153,8 +2199,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.271}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -19, y: -272}
-  m_SizeDelta: {x: 450.6874, y: 90.56}
+  m_AnchoredPosition: {x: -19, y: -275}
+  m_SizeDelta: {x: 720.1992, y: 190.7071}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1993114498
 GameObject:
@@ -2265,30 +2311,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1c612c9519d55b44a04c8543d7aad4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animalImages:
-  - {fileID: 21300000, guid: bcecf7c098d0e41478c6e06c0e61d27f, type: 3}
-  - {fileID: 21300000, guid: 06a1e9e21e74db34a95003c9666e90c7, type: 3}
-  - {fileID: 21300000, guid: 568816725c0ed034da21671b596a0fa0, type: 3}
-  - {fileID: 21300000, guid: 4538717aad8e45944a701b7167e5307a, type: 3}
-  - {fileID: 21300000, guid: c7b0b23415dbe4f4db054ef118ad6d7e, type: 3}
-  - {fileID: 21300000, guid: c7b0b23415dbe4f4db054ef118ad6d7e, type: 3}
-  - {fileID: 21300000, guid: c7b0b23415dbe4f4db054ef118ad6d7e, type: 3}
-  - {fileID: 21300000, guid: c7b0b23415dbe4f4db054ef118ad6d7e, type: 3}
-  - {fileID: 21300000, guid: c7b0b23415dbe4f4db054ef118ad6d7e, type: 3}
-  - {fileID: 21300000, guid: c7b0b23415dbe4f4db054ef118ad6d7e, type: 3}
-  - {fileID: 21300000, guid: c7b0b23415dbe4f4db054ef118ad6d7e, type: 3}
-  animalNames:
-  - 1
-  - 2
-  - 3
-  - 4
-  - 5
-  - 5
-  - 5
-  - 5
-  - 5
-  - 5
-  - 5
+  animals:
+  - name: "Perezoso did\xE1ctilo de Hoffmann"
+    image: {fileID: 0}
+    rarity: 0
+  - name: "Puercoesp\xEDn arbor\xEDcola"
+    image: {fileID: 0}
+    rarity: 0
+  - name: Tepezcuintle
+    image: {fileID: 0}
+    rarity: 0
+  - name: "Agut\xED centroamericano"
+    image: {fileID: 0}
+    rarity: 1
+  - name: Amadillo de nueve bandas
+    image: {fileID: 0}
+    rarity: 1
+  - name: Tayra
+    image: {fileID: 0}
+    rarity: 2
+  - name: Zorro cangrejero
+    image: {fileID: 0}
+    rarity: 2
+  - name: "Coat\xED de cola anillada"
+    image: {fileID: 0}
+    rarity: 2
+  - name: Puma
+    image: {fileID: 0}
+    rarity: 3
+  - name: Ocelote
+    image: {fileID: 0}
+    rarity: 3
   animalImageUI: {fileID: 1499942096}
   animalNameUI: {fileID: 1933950725}
   leftArrowButton: {fileID: 1403117615}
@@ -2477,9 +2530,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 664866477}
-  - {fileID: 1117638311}
-  - {fileID: 230220915}
-  - {fileID: 306214007}
+  - {fileID: 699775654}
   - {fileID: 1591268013}
   - {fileID: 1660508663}
   - {fileID: 2042772491}

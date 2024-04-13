@@ -34,10 +34,13 @@ public class GameManager : MonoBehaviour
         contadorPajarosClicados++;
         Debug.Log("Contador de pájaros clicados incrementado: " + contadorPajarosClicados);
         ActualizarContadorPajarosUI();
+        PlayerPrefs.SetInt("avesPuntaje", PlayerPrefs.GetInt("avesPuntaje") + 1);
     }
 
     void Start()
     {
+        PlayerPrefs.SetInt("avesPuntaje", 0);
+        PlayerPrefs.SetInt("avesRegistros", 0);
         tiempoRestante = tiempoTotal;
         StartTimer(); // Iniciar el temporizador al inicio
         ActualizarContadorPajarosUI();
@@ -75,14 +78,14 @@ public class GameManager : MonoBehaviour
 
     public void continueToScore()
     {
-        SceneManager.LoadScene("Arbol Cam");
+        SceneManager.LoadScene("FinalAves");
     }
 
 
 
     public void enter()
     {
-        PlayerPrefs.SetInt("Registros", PlayerPrefs.GetInt("Registros") + 1);
+        PlayerPrefs.SetInt("avesRegistros", PlayerPrefs.GetInt("avesRegistros") + 1);
         string val = DropdownAves.Instance.GetDropdownValue();
 
         string correct = PlayerPrefs.GetString("ave");
@@ -94,8 +97,9 @@ public class GameManager : MonoBehaviour
             incoText.text = "Correcto";
             incoText.color = Color.green;
             Debug.Log("Correcto");
-            PlayerPrefs.SetInt("Puntaje", PlayerPrefs.GetInt("Puntaje") + 1);
+            
             StartCoroutine(hideText());
+            IncrementarContadorPajarosClicados();
         }
         else
         {
