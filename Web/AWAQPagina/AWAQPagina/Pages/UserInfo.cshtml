@@ -8,18 +8,24 @@
 <header>
     <div class="headerClass bgGreen">
         <img src="~/images/logoBlanco.png" style="height:100%" />
-        @if ((bool)ViewData["admin"])
-        {
-            <a asp-page="/adminView" class="navLink" style="width: 78px">
-                <button type="button" class="btn buttonClass">Inicio</button>
+        <div style="display: flex; flex-direction:row; gap:20px">
+            @if ((bool)ViewData["admin"])
+            {
+                <a asp-page="/adminView" class="navLink" style="width: fit-content; height: fit-content;">
+                    <button type="button" class="btn buttonClass">Inicio</button>
+                </a>
+            }
+            else
+            {
+                <a asp-page="/studentView" class="navLink" style="width: fit-content; height: fit-content;">
+                    <button type="button" class="btn buttonClass">Inicio</button>
+                </a>
+
+            }
+            <a asp-page="/Index" class="navLink" style="width: fit-content; height: fit-content;">
+                <button type="button" class="btn buttonClass">Cerrar Sesión</button>
             </a>
-        }
-        else
-        {
-            <a asp-page="/studentView" class="navLink" style="width: 78px">
-                <button type="button" class="btn buttonClass">Inicio</button>
-            </a>
-        }
+        </div>
     </div>
 </header>
 <div class="centerClass container-fluid" style="padding:32px; overflow:scroll;">
