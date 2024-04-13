@@ -2313,34 +2313,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animals:
   - name: "Perezoso did\xE1ctilo de Hoffmann"
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 8ae1a4592fa47bf48bfc180bf860569f, type: 3}
     rarity: 0
   - name: "Puercoesp\xEDn arbor\xEDcola"
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 92e48e706ce7a0b4b8c0b9ef1883f7d9, type: 3}
     rarity: 0
   - name: Tepezcuintle
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: a20586eda69c02c45af36703ae547f89, type: 3}
     rarity: 0
   - name: "Agut\xED centroamericano"
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 839dc817a345e1743b7dbf965179821b, type: 3}
     rarity: 1
   - name: Amadillo de nueve bandas
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 46bffc0174e076e4fb0ee6011e139f36, type: 3}
     rarity: 1
   - name: Tayra
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 0704e6a4591dcd644848de83b23a0b0c, type: 3}
     rarity: 2
   - name: Zorro cangrejero
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 4162359649b1b374492b654f9e1e766b, type: 3}
     rarity: 2
   - name: "Coat\xED de cola anillada"
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 888ee728ed8e4fe47b7a001d6b002798, type: 3}
     rarity: 2
   - name: Puma
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: c30a0721e5580664b9c064b62667ba7a, type: 3}
     rarity: 3
   - name: Ocelote
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 548df51e2794a074bb7d84e7f8c99611, type: 3}
     rarity: 3
   animalImageUI: {fileID: 1499942096}
   animalNameUI: {fileID: 1933950725}

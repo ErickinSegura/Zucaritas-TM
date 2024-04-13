@@ -71,16 +71,16 @@ public class EncicloController : MonoBehaviour
 
     public List<Specie> aves = new List<Specie>
     {
-        new Specie { ID = 1, Name = "Pájaro cantil", Image = ""},
-        new Specie { ID = 2, Name = "Gallineta morada", Image = ""},
-        new Specie { ID = 3, Name = "Monja frentiblanca", Image = ""},
-        new Specie { ID = 4, Name = "Jacamar Cola Canela", Image = ""},
-        new Specie { ID = 5, Name = "Bobo barrado", Image = ""},
-        new Specie { ID = 6, Name = "Momoto corona azul", Image = ""},
-        new Specie { ID = 7, Name = "Cuclillo pico negro", Image = ""},
-        new Specie { ID = 8, Name = "Martí­n pescador amazónico", Image = ""},
-        new Specie { ID = 9, Name = "Perdiz", Image = ""},
-        new Specie { ID = 10, Name = "Pava cojolita", Image = ""}
+        new Specie { ID = 1, Name = "Pájaro cantil", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/ave1.png?raw=true"},
+        new Specie { ID = 2, Name = "Gallineta morada", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/ave2.png?raw=true"},
+        new Specie { ID = 3, Name = "Monja frentiblanca", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/ave3.png?raw=true"},
+        new Specie { ID = 4, Name = "Jacamar Cola Canela", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/ave4.png?raw=true"},
+        new Specie { ID = 5, Name = "Bobo barrado", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/ave5.png?raw=true"},
+        new Specie { ID = 6, Name = "Momoto corona azul", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/ave6.png?raw=true"},
+        new Specie { ID = 7, Name = "Cuclillo pico negro", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/ave7.png?raw=true"},
+        new Specie { ID = 8, Name = "Martí­n pescador amazónico", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/ave8.png?raw=true"},
+        new Specie { ID = 9, Name = "Perdiz", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/ave9.png?raw=true"},
+        new Specie { ID = 10, Name = "Pava cojolita", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/ave10.png?raw=true"}
     };
 
     void Start()
@@ -115,6 +115,8 @@ public class EncicloController : MonoBehaviour
                 return mamiferos;
             case SpecieType.Rastros:
                 return rastros;
+            case SpecieType.Aves:
+                    return aves;
             default:
                 return reptiles;
         }
