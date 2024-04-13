@@ -138,6 +138,7 @@ D:/Users/conta/Documents/Tec/Cuarto Semestre/Construcción de Software y Toma de
 /Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/bin/Debug/net6.0/K4os.Hash.xxHash.dll
 /Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/bin/Debug/net6.0/Microsoft.Win32.SystemEvents.dll
 /Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/bin/Debug/net6.0/MySql.Data.dll
+/Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/bin/Debug/net6.0/Newtonsoft.Json.dll
 /Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/bin/Debug/net6.0/System.Configuration.ConfigurationManager.dll
 /Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/bin/Debug/net6.0/System.Diagnostics.DiagnosticSource.dll
 /Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/bin/Debug/net6.0/System.Drawing.Common.dll
@@ -183,4 +184,3 @@ D:/Users/conta/Documents/Tec/Cuarto Semestre/Construcción de Software y Toma de
 /Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/obj/Debug/net6.0/AWAQPagina.pdb
 /Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/obj/Debug/net6.0/AWAQPagina.genruntimeconfig.cache
 /Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/obj/Debug/net6.0/ref/AWAQPagina.dll
-/Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/bin/Debug/net6.0/Newtonsoft.Json.dll
