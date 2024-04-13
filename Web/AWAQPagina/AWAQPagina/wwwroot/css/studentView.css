@@ -177,8 +177,9 @@
 }
 
     .modern-button:hover {
-        background-color: rgb(53, 143, 53); /* Darker shade of green on hover */
-        border: 2px solid white;
+        background-color: #1f4921; /* Darker green on hover */
+        transform: scale(1.02);
+        color: white;
     }
 
 

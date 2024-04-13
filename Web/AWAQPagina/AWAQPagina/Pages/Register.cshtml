@@ -10,46 +10,54 @@
 <link rel="stylesheet" href="~/css/styles.css">
 <div class="general">
         <div class="main-container">
-            <div class="logo-container">
-                <a asp-page="/UserInfo" class="navLink" style="width: 78px">
-                    <button type="button" class="btn buttonClass">Perfil</button></a>
+            <div class="img-container" style="height:735px;">
+                <div class="logo-container">
+                    <a asp-page="/UserInfo" class="navLink" style="width: 78px">
+                        <button type="button" class="btn buttonClass">Perfil</button>
+                    </a>
+                </div>
             </div>
             <img src="~/images/logoBlanco.png" style="position: absolute; height: 100px; width: 220px; margin-right: 610px;" alt="Profile Picture">
             <form method="post">
-            <div class="login-container">
-                <h1 style="color: white;">Registro de Usuarios</h1>
+                <div class="login-container">
+                    <h1 style="color: white;">Registro de Usuarios</h1>
 
-                <div class="input-section">
-                    <label style="color: white;">Nombre</label>
-                    <input type="text" class="modern-input" id="floatingInput" placeholder="Nombre" asp-for="usuario.name">
-                    <span asp-validation-for="usuario.name" class="text-danger"></span>
-                </div>
+                    <div class="input-section">
+                        <label style="color: white;">Nombre</label>
+                        <input type="text" class="modern-input" id="floatingInput" placeholder="Nombre" asp-for="usuario.name">
+                        <span asp-validation-for="usuario.name" class="text-danger"></span>
+                    </div>
 
-                <div class="input-section">
-                    <label style="color: white;">Apellido Paterno</label>
-                    <input type="text" class="modern-input" id="floatingInput" placeholder="Apellido Paterno" asp-for="usuario.firstLastname">
-                    <span asp-validation-for="usuario.firstLastname" class="text-danger"></span>
-                </div>
+                    <div class="input-section">
+                        <label style="color: white;">Apellido Paterno</label>
+                        <input type="text" class="modern-input" id="floatingInput" placeholder="Apellido Paterno" asp-for="usuario.firstLastname">
+                        <span asp-validation-for="usuario.firstLastname" class="text-danger"></span>
+                    </div>
 
-                <div class="input-section">
-                    <label style="color: white;">Apellido Materno</label>
-                    <input type="text" class="modern-input" id="floatingInput" placeholder="Apellido Materno" asp-for="usuario.secondLastname">
-                    <span asp-validation-for="usuario.secondLastname" class="text-danger"></span>
-                </div>
+                    <div class="input-section">
+                        <label style="color: white;">Apellido Materno</label>
+                        <input type="text" class="modern-input" id="floatingInput" placeholder="Apellido Materno" asp-for="usuario.secondLastname">
+                        <span asp-validation-for="usuario.secondLastname" class="text-danger"></span>
+                    </div>
 
-                <div class="input-section">
-                    <label style="color: white;">Nombre de usuario</label>
-                    <input type="text" class="modern-input" id="floatingInput" placeholder="Usuario" asp-for="usuario.userName">
-                    <span asp-validation-for="usuario.userName" class="text-danger"></span>
-                </div>
+                    <div class="input-section">
+                        <label style="color: white;">Nombre de usuario</label>
+                        <input type="text" class="modern-input" id="floatingInput" placeholder="Usuario" asp-for="usuario.userName">
+                        <span asp-validation-for="usuario.userName" class="text-danger"></span>
+                    </div>
 
-                <div class="input-section">
-                    <label style="color: white;">Contraseña</label>
-                    <input type="password" class="modern-input" id="floatingPassword" placeholder="Contraseña" asp-for="usuario.password">
-                    <span asp-validation-for="usuario.password" class="text-danger"></span>
+                    <div class="input-section">
+                        <label style="color: white;">Contraseña</label>
+                        <input type="password" class="modern-input" id="floatingPassword" placeholder="Contraseña" asp-for="usuario.password">
+                        <span asp-validation-for="usuario.password" class="text-danger"></span>
+                    </div>
+                    <div class="buttonContainer">
+                        <a asp-page="/adminView" class="navLink" style="width: fit-content; height: fit-content;">
+                            <button type="button" class="btn classButton">Perfil</button>
+                        </a>
+                        <button class="modern-button" type="submit" style="margin:0;">Registrar</button>
+                    </div>
                 </div>
-                <button class="modern-button" type="submit">Registrar</button>
-            </div>
             </form>
             <div>
         </div>  
