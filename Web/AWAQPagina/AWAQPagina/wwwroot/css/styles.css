@@ -17,21 +17,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 20px;
+    border-radius: 30px;
     box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
     height: fit-content;
 }
 
 .logo-container {
-    height: 547.45px; /*TEMPORAL*/
-    width: 400px;
-    border-radius: 20px;
+    border-radius: 30px 0 0 30px;
     display: flex;
     justify-content: center;
     align-items: center;
     filter: brightness(0.35);
     background-image: url(/images/bg_form.png);
     background-size: 100% 100%;
+    object-fit:cover;
+    aspect-ratio: 1/1;
+    width: 400px;
+    height:100%;
 }
 
     .logo-container img {
@@ -120,4 +122,30 @@
     display: flex;
     flex-direction: column;
     margin-top: 16px;
+}
+
+
+.img-container {
+    height: 100%;
+    width: 400px;
+}
+
+.classButton {
+    border: solid 2px white;
+    color: white;
+    padding: 1.5vh 2vw;
+    border-radius: 10px;
+    font-size: 2vh;
+    font-weight: 500;
+}
+
+.buttonContainer{
+    margin-top: 30px;
+    display:flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.classButton:hover {
+    color: white;
 }
