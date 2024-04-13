@@ -31,7 +31,8 @@ public class TreeController : MonoBehaviour
         currentDirection = (Direction)newDirectionIndex;
         UpdateDirectionText();
         PlayerPrefs.SetString("currentDirection", currentDirection.ToString());
-        Debug.Log("Dirección actual: " + currentDirection);
+        PlayerPrefs.Save();
+        Debug.Log(PlayerPrefs.GetString("currentDirection"));
     }
 
     public void MamiferosLoad()
