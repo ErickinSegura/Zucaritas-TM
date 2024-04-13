@@ -12,7 +12,8 @@ public class EncicloController : MonoBehaviour
     {
         Reptiles,
         Mamiferos,
-        Rastros
+        Rastros,
+        Aves
     }
 
     public SpecieType currentSpecieType = SpecieType.Reptiles;
@@ -41,16 +42,16 @@ public class EncicloController : MonoBehaviour
 
     public List<Specie> mamiferos = new List<Specie>
     {
-        new Specie { ID = 1, Name = "Oso de Anteojos", Image = ""},
-        new Specie { ID = 2, Name = "Oso Perezoso", Image = ""},
-        new Specie { ID = 3, Name = "Oso Hormiguero", Image = ""},
-        new Specie { ID = 4, Name = "Oso de Anteojos", Image = ""},
-        new Specie { ID = 5, Name = "Oso Perezoso", Image = ""},
-        new Specie { ID = 6, Name = "Oso Hormiguero", Image = ""},
-        new Specie { ID = 7, Name = "Oso de Anteojos", Image = ""},
-        new Specie { ID = 8, Name = "Oso Perezoso", Image = ""},
-        new Specie { ID = 9, Name = "Oso Hormiguero", Image = ""},
-        new Specie { ID = 10, Name = "Oso de Anteojos", Image = ""}
+        new Specie { ID = 1, Name = "Perezoso didáctilo de Hoffmann ", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/mam3.png?raw=true"},
+        new Specie { ID = 2, Name = "Puercoesín arbícola", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/mam5.png?raw=true"},
+        new Specie { ID = 3, Name = "Tepezcuintle", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/mam7.png?raw=true"},
+        new Specie { ID = 4, Name = "Agutí centroamericano", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/mam8.png?raw=true"},
+        new Specie { ID = 5, Name = "Armadillo de nueve bandas", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/mam6.png?raw=true"},
+        new Specie { ID = 6, Name = "Tayra", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/mam10.png?raw=true"},
+        new Specie { ID = 7, Name = "Zorro cangrejero", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/mam4.png?raw=true"},
+        new Specie { ID = 8, Name = "Coatí de cola anillada", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/mam2.png?raw=true"},
+        new Specie { ID = 9, Name = "Puma", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/mam1.png?raw=true"},
+        new Specie { ID = 10, Name = "Ocelote", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/mam9.png?raw=true"}
 
     };
 
@@ -66,6 +67,20 @@ public class EncicloController : MonoBehaviour
         new Specie { ID = 8, Name = "Huella de Armadillo", Image = ""},
         new Specie { ID = 9, Name = "Huella de Mapache", Image = ""},
         new Specie { ID = 10, Name = "Huella de Coati", Image = ""}
+    };
+
+    public List<Specie> aves = new List<Specie>
+    {
+        new Specie { ID = 1, Name = "Pájaro cantil", Image = ""},
+        new Specie { ID = 2, Name = "Gallineta morada", Image = ""},
+        new Specie { ID = 3, Name = "Monja frentiblanca", Image = ""},
+        new Specie { ID = 4, Name = "Jacamar Cola Canela", Image = ""},
+        new Specie { ID = 5, Name = "Bobo barrado", Image = ""},
+        new Specie { ID = 6, Name = "Momoto corona azul", Image = ""},
+        new Specie { ID = 7, Name = "Cuclillo pico negro", Image = ""},
+        new Specie { ID = 8, Name = "Martí­n pescador amazónico", Image = ""},
+        new Specie { ID = 9, Name = "Perdiz", Image = ""},
+        new Specie { ID = 10, Name = "Pava cojolita", Image = ""}
     };
 
     void Start()
