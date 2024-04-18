@@ -7,6 +7,9 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame()
     {
+        SFXContoller.Instance.PlayClick();
+        SFXContoller.Instance.Stop();
+        SFXContoller.Instance.PlayPajaros();
         SceneManager.LoadScene("Lobby");
     }
 }

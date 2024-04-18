@@ -85,6 +85,7 @@ public class GameManager : MonoBehaviour
 
     public void enter()
     {
+        SFXContoller.Instance.PlayClick();
         PlayerPrefs.SetInt("avesRegistros", PlayerPrefs.GetInt("avesRegistros") + 1);
         string val = DropdownAves.Instance.GetDropdownValue();
 
@@ -120,6 +121,7 @@ public class GameManager : MonoBehaviour
 
     public void openPopup(string imgUrl)
     {
+        SFXContoller.Instance.PlayClick();
         popup.SetActive(true);
         Time.timeScale = 0f;
         StartCoroutine(DownloadImageCoroutine(imgUrl));

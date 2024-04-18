@@ -42,7 +42,7 @@ public class EncicloController : MonoBehaviour
 
     public List<Specie> mamiferos = new List<Specie>
     {
-        new Specie { ID = 1, Name = "Perezoso didáctilo de Hoffmann ", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/mam3.png?raw=true"},
+        new Specie { ID = 1, Name = "Perezoso didáctilo", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/mam3.png?raw=true"},
         new Specie { ID = 2, Name = "Puercoesín arbícola", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/mam5.png?raw=true"},
         new Specie { ID = 3, Name = "Tepezcuintle", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/mam7.png?raw=true"},
         new Specie { ID = 4, Name = "Agutí centroamericano", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/mam8.png?raw=true"},
@@ -57,16 +57,16 @@ public class EncicloController : MonoBehaviour
 
     public List<Specie> rastros = new List<Specie>
     {
-        new Specie { ID = 1, Name = "Huella de Tortuga", Image = ""},
-        new Specie { ID = 2, Name = "Huella de Cocodrilo", Image = ""},
-        new Specie { ID = 3, Name = "Rastro de Serpiente", Image = ""},
-        new Specie { ID = 4, Name = "Huella de Lagartija", Image = ""},
-        new Specie { ID = 5, Name = "Huella de Camaleon", Image = ""},
-        new Specie { ID = 6, Name = "Huella de Ocelote", Image = ""},
-        new Specie { ID = 7, Name = "Huella de Zorro", Image = ""},
-        new Specie { ID = 8, Name = "Huella de Armadillo", Image = ""},
-        new Specie { ID = 9, Name = "Huella de Mapache", Image = ""},
-        new Specie { ID = 10, Name = "Huella de Coati", Image = ""}
+        new Specie { ID = 1, Name = "Huella de Tortuga", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/ras1.jpg?raw=true"},
+        new Specie { ID = 2, Name = "Huella de Cocodrilo", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/ras2.jpg?raw=true"},
+        new Specie { ID = 3, Name = "Rastro de Serpiente", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/ras3.jpg?raw=true"},
+        new Specie { ID = 4, Name = "Huella de Lagartija", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/ras4.jpg?raw=true"},
+        new Specie { ID = 5, Name = "Huella de Camaleon", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/ras5.jpg?raw=true"},
+        new Specie { ID = 6, Name = "Huella de Ocelote", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/ras6.jpg?raw=true"},
+        new Specie { ID = 7, Name = "Huella de Zorro", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/ras7.jpg?raw=true"},
+        new Specie { ID = 8, Name = "Huella de Armadillo", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/ras8.jpg?raw=true"},
+        new Specie { ID = 9, Name = "Huella de Mapache", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/ras9.jpg?raw=true"},
+        new Specie { ID = 10, Name = "Huella de Coati", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/ras9.jpg?raw=true"}
     };
 
     public List<Specie> aves = new List<Specie>
@@ -124,6 +124,7 @@ public class EncicloController : MonoBehaviour
 
     public void NextSpecies()
     {
+        SFXContoller.Instance.PlayClick();
         List<Specie> currentSpeciesList = GetCurrentSpeciesList();
 
         if (index + 2 < currentSpeciesList.Count)
@@ -135,6 +136,7 @@ public class EncicloController : MonoBehaviour
 
     public void PreviousSpecies()
     {
+        SFXContoller.Instance.PlayClick();
         if (index - 2 >= 0)
         {
             index -= 2;
@@ -144,6 +146,7 @@ public class EncicloController : MonoBehaviour
 
     public void ChangeSpecieType(int type)
     {
+        SFXContoller.Instance.PlayClick();
         currentSpecieType = (SpecieType)type;
         index = 0; // Reset index when changing specie type
         UpdateSpeciesDisplay();

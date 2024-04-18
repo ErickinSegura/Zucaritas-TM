@@ -22,11 +22,13 @@ public class ReptilesController : MonoBehaviour
 
     public void finish()
     {
+        SFXContoller.Instance.PlayClick();
         finishPopup.SetActive(true);
     }
 
     public void exit()
     {
+        SFXContoller.Instance.PlayClick();
         finishPopup.SetActive(false);
     }
 
@@ -39,6 +41,7 @@ public class ReptilesController : MonoBehaviour
 
     public void enter()
     {
+        SFXContoller.Instance.PlayClick();
         PlayerPrefs.SetInt("Registros", PlayerPrefs.GetInt("Registros")+1);
         string val = Dropdown.Instance.GetDropdownValue();
 
@@ -74,6 +77,7 @@ public class ReptilesController : MonoBehaviour
 
     public void activatePopup(string url)
     {
+        SFXContoller.Instance.PlayClick();
         registerPopup.SetActive(true);
         StartCoroutine(DownloadImageCoroutine(url));
         Time.timeScale = 0f;

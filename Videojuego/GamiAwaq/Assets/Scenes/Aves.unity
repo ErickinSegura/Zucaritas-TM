@@ -830,7 +830,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1ebc401d3bf3b94d985b7ea8ecefe04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tiempoTotal: 60
+  tiempoTotal: 20
   textoTiempo: {fileID: 139672637}
   textoContadorPajaros: {fileID: 1010700140}
   popup: {fileID: 194289751}

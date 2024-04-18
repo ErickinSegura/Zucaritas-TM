@@ -25,6 +25,7 @@ public class RastrosController : MonoBehaviour
 
     IEnumerator finish()
     {
+        SFXContoller.Instance.PlayClick();
         finishPopup.SetActive(true);
         yield return new WaitForSeconds(2);
         SceneManager.LoadScene("FinalRastros");
@@ -33,16 +34,19 @@ public class RastrosController : MonoBehaviour
 
     public void exit()
     {
+        SFXContoller.Instance.PlayClick();
         finishPopup.SetActive(false);
     }
 
     public void continueToScore()
     {
+        SFXContoller.Instance.PlayClick();
         SceneManager.LoadScene("FinalRastros");
     }
 
     public void enter()
     {
+        SFXContoller.Instance.PlayClick();
         PlayerPrefs.SetInt("Registros", PlayerPrefs.GetInt("Registros") + 1);
         string val = DropdownRastros.Instance.GetDropdownValue();
 
