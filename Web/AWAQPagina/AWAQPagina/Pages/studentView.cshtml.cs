@@ -48,8 +48,7 @@ namespace AWAQPagina.Pages
                 }
             }
 
-            
-            dashboardLink = "https://lookerstudio.google.com/embed/reporting/ed3ae5e0-9da6-401f-8fbb-f4fd23a6d451/page/E3ZwD?params=%7B%22ds21.iduser%22%3A%221%22%3B%22ds5.iduserbar%22%3A%221%22%7D";
+            dashboardLink = String.Format("https://lookerstudio.google.com/embed/reporting/ed3ae5e0-9da6-401f-8fbb-f4fd23a6d451/page/E3ZwD?params=%7B%22ds21.iduser%22%3A{0}%2C%22ds5.iduserbar%22%3A{0}%7D", userID);
 
         }
     }
