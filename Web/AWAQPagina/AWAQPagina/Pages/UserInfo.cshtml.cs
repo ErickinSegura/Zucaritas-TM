@@ -25,7 +25,7 @@ namespace AWAQPagina.Pages
         public IActionResult OnGet()
         {
             string userID = _httpContextAccessor.HttpContext.Request.Cookies["ID_USER"];
-            string connectionString = System.IO.File.ReadAllText("connectionstring.secret");
+            string connectionString = System.IO.File.ReadAllText("../.connectionstring.txt");
 
             using (MySqlConnection conexion = new MySqlConnection(connectionString))
             {
@@ -88,7 +88,7 @@ namespace AWAQPagina.Pages
         public IActionResult OnPostSaveBiography()
         {
             string userID = _httpContextAccessor.HttpContext.Request.Cookies["ID_USER"];
-            string connectionString = System.IO.File.ReadAllText("connectionstring.secret");
+            string connectionString = System.IO.File.ReadAllText("../.connectionstring.txt");
 
             using (MySqlConnection conexion = new MySqlConnection(connectionString))
             {
@@ -111,7 +111,7 @@ namespace AWAQPagina.Pages
         public async Task<IActionResult> OnPostAsync(IFormFile profilePicture)
         {
             string userID = _httpContextAccessor.HttpContext.Request.Cookies["ID_USER"];
-            string connectionString = System.IO.File.ReadAllText("connectionstring.secret");
+            string connectionString = System.IO.File.ReadAllText("../.connectionstring.txt");
 
             var uploadsDirectory = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "profilePics");
             Directory.CreateDirectory(uploadsDirectory);

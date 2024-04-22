@@ -13,7 +13,7 @@ namespace AWAQPagina.Pages
 
         public IActionResult OnPost(Usuario usuario)
         {
-            string connectionString = System.IO.File.ReadAllText("connectionstring.secret");
+            string connectionString = System.IO.File.ReadAllText("../.connectionstring.txt");
             MySqlConnection conexion = new MySqlConnection(connectionString);
 
             conexion.Open();
