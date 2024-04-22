@@ -1,25 +1,27 @@
 ﻿<Properties StartupConfiguration="{65F54CFA-1526-497B-8D21-9B6426FF991C}|Default">
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.AWAQPagina PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MultiItemStartupConfigurations />
   <Debugger.DebugSourceFolders>
     <String>/Users/adolfogonzalez</String>
   </Debugger.DebugSourceFolders>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.AWAQPagina PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="AWAQPagina/wwwroot/css/styles.css">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="AWAQPagina/Pages/studentView.cshtml">
     <Files>
-      <File FileName="AWAQPagina/Pages/Register.cshtml" Line="55" Column="113" />
-      <File FileName="AWAQPagina/Pages/Register.cshtml.cs" Line="1" Column="1" />
+      <File FileName="AWAQPagina/Pages/Register.cshtml" />
+      <File FileName="AWAQPagina/Pages/Register.cshtml.cs" />
       <File FileName="AWAQPagina/wwwroot/css/styles.css" Line="34" Column="23" />
-      <File FileName="AWAQPagina/wwwroot/css/studentView.css" Line="182" Column="22" />
-      <File FileName="AWAQPagina/Pages/Index.cshtml" Line="47" Column="35" />
-      <File FileName="AWAQPagina/Pages/studentView.cshtml" Line="71" Column="19" />
-      <File FileName="AWAQPagina/Pages/adminView.cshtml" Line="61" Column="152" />
-      <File FileName="AWAQPagina/wwwroot/css/userInfoStyles.css" Line="26" Column="2" />
-      <File FileName="AWAQPagina/Pages/UserInfo.cshtml" Line="20" Column="107" />
+      <File FileName="AWAQPagina/wwwroot/css/studentView.css" />
+      <File FileName="AWAQPagina/Pages/Index.cshtml" />
+      <File FileName="AWAQPagina/Pages/studentView.cshtml" Line="70" Column="152" />
+      <File FileName="AWAQPagina/Pages/adminView.cshtml" />
+      <File FileName="AWAQPagina/wwwroot/css/userInfoStyles.css" />
+      <File FileName="AWAQPagina/Pages/UserInfo.cshtml" />
+      <File FileName="AWAQPagina/Pages/UserInfo.cshtml.cs" Line="1" Column="1" />
+      <File FileName="AWAQPagina/Pages/studentView.cshtml.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
