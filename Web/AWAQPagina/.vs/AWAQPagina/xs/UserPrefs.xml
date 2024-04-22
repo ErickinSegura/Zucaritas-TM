@@ -1,53 +1,42 @@
 ﻿<Properties StartupConfiguration="{65F54CFA-1526-497B-8D21-9B6426FF991C}|Default">
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <Debugger.DebugSourceFolders>
-    <String>/Users/adolfogonzalez</String>
-  </Debugger.DebugSourceFolders>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.AWAQPagina PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="AWAQPagina/wwwroot/css/styles.css">
+  <MonoDevelop.Ide.Workbench ActiveDocument="AWAQPagina/Pages/Index.cshtml.cs">
     <Files>
-      <File FileName="AWAQPagina/Pages/Register.cshtml" Line="55" Column="113" />
-      <File FileName="AWAQPagina/Pages/Register.cshtml.cs" Line="1" Column="1" />
-      <File FileName="AWAQPagina/wwwroot/css/styles.css" Line="34" Column="23" />
-      <File FileName="AWAQPagina/wwwroot/css/studentView.css" Line="182" Column="22" />
-      <File FileName="AWAQPagina/Pages/Index.cshtml" Line="47" Column="35" />
-      <File FileName="AWAQPagina/Pages/studentView.cshtml" Line="71" Column="19" />
-      <File FileName="AWAQPagina/Pages/adminView.cshtml" Line="61" Column="152" />
-      <File FileName="AWAQPagina/wwwroot/css/userInfoStyles.css" Line="26" Column="2" />
-      <File FileName="AWAQPagina/Pages/UserInfo.cshtml" Line="20" Column="107" />
+      <File FileName="AWAQPagina/connectionstring.secret" Line="2" Column="125" />
+      <File FileName="AWAQPagina/Pages/Index.cshtml.cs" Line="28" Column="39" />
+      <File FileName="AWAQPagina/Pages/Register.cshtml.cs" Line="16" Column="93" />
+      <File FileName="AWAQPagina/Pages/studentView.cshtml.cs" Line="27" Column="93" />
+      <File FileName="AWAQPagina/Pages/UserInfo.cshtml.cs" Line="114" Column="93" />
+      <File FileName="AWAQPagina/.gitignore" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="AWAQPagina" expanded="True" selected="True">
-            <Node name="AWAQPagina" expanded="True">
-              <Node name="Dependencies" expanded="True">
-                <Node name="PackageDependencies" expanded="True" />
-              </Node>
+          <Node name="AWAQPagina">
+            <Node name="AWAQPagina">
+              <Node name="Dependencies" expanded="True" />
               <Node name="Pages" expanded="True">
-                <Node name="adminView.cshtml" expanded="True" />
-                <Node name="Error.cshtml" expanded="True" />
-                <Node name="Index.cshtml" expanded="True" />
-                <Node name="Privacy.cshtml" expanded="True" />
+                <Node name="Index.cshtml" expanded="True">
+                  <Node name="Index.cshtml.cs" selected="True" />
+                </Node>
                 <Node name="Register.cshtml" expanded="True" />
                 <Node name="studentView.cshtml" expanded="True" />
                 <Node name="UserInfo.cshtml" expanded="True" />
               </Node>
-              <Node name="wwwroot" expanded="True">
-                <Node name="css" expanded="True" />
-              </Node>
+              <Node name="wwwroot" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
-      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <Debugger.DebugSourceFolders>
+    <String>/Users/adolfogonzalez</String>
+  </Debugger.DebugSourceFolders>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.AWAQPagina PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MultiItemStartupConfigurations />
 </Properties>
