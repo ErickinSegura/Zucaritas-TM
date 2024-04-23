@@ -18,7 +18,7 @@ namespace AWAQPagina.Pages
 
         public IActionResult OnPost()
         {
-            string connectionString = "Server=127.0.0.1;Port=3306;Database=awaq2;Uid=root;password=Vela0376;";
+            string connectionString = System.IO.File.ReadAllText("../.connectionstring.txt");
             MySqlConnection conexion = new MySqlConnection(connectionString);
 
             conexion.Open();
