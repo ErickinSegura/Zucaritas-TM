@@ -39,7 +39,7 @@ namespace AWAQPagina.Pages
             else
             {
                 string userID = _httpContextAccessor.HttpContext.Request.Cookies["ID_USER"];
-                string connectionString = System.IO.File.ReadAllText("../.connectionstring.txt");
+                string connectionString = System.IO.File.ReadAllText(".connectionstring.txt");
                 MySqlConnection conexion = new MySqlConnection(connectionString);
 
                 conexion.Open();
@@ -59,9 +59,10 @@ namespace AWAQPagina.Pages
                         usuario.userName = reader["Usuario"].ToString();
                         usuario.profilePicture = reader["Imagen_USUARIO"].ToString().Substring(1);
                     }
-                }
 
-                return Page();
+                    conexion.Close();
+                    return Page();
+                }
             }
         }
     }

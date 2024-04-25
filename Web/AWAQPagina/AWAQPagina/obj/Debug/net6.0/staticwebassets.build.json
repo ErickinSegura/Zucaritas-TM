@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "vuIlj8QxxXpsDCscAgMVD+Ee/mNa539cwSKzqFE6qcc=",
+  "Hash": "d0zT4lndSHTA7VzOi7B1E65M6+7nYE5hfMY7JEGt2kA=",
   "Source": "AWAQPagina",
   "BasePath": "_content/AWAQPagina",
   "Mode": "Default",
@@ -49,23 +49,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/obj/Debug/net6.0/scopedcss/projectbundle/AWAQPagina.bundle.scp.css"
-    },
-    {
-      "Identity": "/Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/wwwroot/.DS_Store",
-      "SourceId": "AWAQPagina",
-      "SourceType": "Discovered",
-      "ContentRoot": "/Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/wwwroot/",
-      "BasePath": "_content/AWAQPagina",
-      "RelativePath": ".DS_Store",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/.DS_Store"
     },
     {
       "Identity": "/Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/wwwroot/css/site.css",

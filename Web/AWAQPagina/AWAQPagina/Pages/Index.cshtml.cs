@@ -18,7 +18,7 @@ namespace AWAQPagina.Pages
 
         public IActionResult OnPost()
         {
-            string connectionString = System.IO.File.ReadAllText("../.connectionstring.txt");
+            string connectionString = System.IO.File.ReadAllText(".connectionstring.txt");
             MySqlConnection conexion = new MySqlConnection(connectionString);
 
             conexion.Open();
@@ -55,17 +55,20 @@ namespace AWAQPagina.Pages
                     if (usuario.isAdmin == true)
                     {
                         HttpContext.Session.SetString("Role", "Admin");
+                        conexion.Close();
                         return Redirect("/adminView");
                     }
                     else
                     {
                         HttpContext.Session.SetString("Role", "Student");
+                        conexion.Close();
                         return Redirect("/studentView");
 
                     }
                 }
                 else
                 {
+                    conexion.Close();
                     return RedirectToPage("/Index");
                 }
 
@@ -73,12 +76,14 @@ namespace AWAQPagina.Pages
 
             else if(usuario.userName == null || usuario.password == null){
                 ModelState.AddModelError(string.Empty, "");
+                conexion.Close();
                 return Page();
             }
 
             else
             {
                 ModelState.AddModelError(string.Empty, "Usuario o contraseña incorrectos");
+                conexion.Close();
                 return Page();
             }
         }
