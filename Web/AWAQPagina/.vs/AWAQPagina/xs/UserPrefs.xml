@@ -1,21 +1,20 @@
 ﻿<Properties StartupConfiguration="{65F54CFA-1526-497B-8D21-9B6426FF991C}|Default">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.AWAQPagina PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.Workbench ActiveDocument="AWAQPagina/Pages/Index.cshtml.cs">
     <Files>
-      <File FileName="AWAQPagina/connectionstring.secret" Line="2" Column="125" />
-      <File FileName="AWAQPagina/Pages/Index.cshtml.cs" Line="28" Column="39" />
-      <File FileName="AWAQPagina/Pages/Register.cshtml.cs" Line="16" Column="93" />
-      <File FileName="AWAQPagina/Pages/studentView.cshtml.cs" Line="27" Column="93" />
-      <File FileName="AWAQPagina/Pages/UserInfo.cshtml.cs" Line="114" Column="93" />
-      <File FileName="AWAQPagina/.gitignore" Line="1" Column="1" />
+      <File FileName="AWAQPagina/Pages/Index.cshtml.cs" Line="14" Column="28" />
+      <File FileName="AWAQPagina/Pages/Register.cshtml.cs" />
+      <File FileName="AWAQPagina/Pages/studentView.cshtml.cs" />
+      <File FileName="AWAQPagina/Pages/UserInfo.cshtml.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="AWAQPagina">
-            <Node name="AWAQPagina">
-              <Node name="Dependencies" expanded="True" />
+          <Node name="AWAQPagina" expanded="True">
+            <Node name="AWAQPagina" expanded="True">
               <Node name="Pages" expanded="True">
                 <Node name="Index.cshtml" expanded="True">
                   <Node name="Index.cshtml.cs" selected="True" />
@@ -31,12 +30,10 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <Debugger.DebugSourceFolders>
     <String>/Users/adolfogonzalez</String>
   </Debugger.DebugSourceFolders>
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.AWAQPagina PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MultiItemStartupConfigurations />
 </Properties>
