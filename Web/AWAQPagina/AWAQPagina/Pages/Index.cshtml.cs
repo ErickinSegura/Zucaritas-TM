@@ -46,10 +46,12 @@ namespace AWAQPagina.Pages
 
                 if (usuario.isAdmin == true)
                 {
+                    HttpContext.Session.SetString("Role", "Admin");
                     return Redirect("/adminView");
                 }
                 else
                 {
+                    HttpContext.Session.SetString("Role", "Student");
                     return Redirect("/studentView");
                     
                 }

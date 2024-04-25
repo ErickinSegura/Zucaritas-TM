@@ -7,15 +7,12 @@ builder.Services.AddRazorPages();
 builder.Services.AddHttpContextAccessor();
 
 // Configure cookie authentication
-builder.Services.AddAuthentication(Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationDefaults.AuthenticationScheme)
-    .AddCookie(options =>
-    {
-        options.Cookie.Name = "AWAQCookie"; // Set a custom cookie name
-        options.Cookie.HttpOnly = true; // Ensure cookie is accessible only over HTTP
-        options.ExpireTimeSpan = TimeSpan.FromMinutes(30); // Set cookie expiration time
-        options.LoginPath = "/Login"; // Set the login page
-        // Additional cookie options can be configured here
-    });
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromSeconds(20);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
 
 var app = builder.Build();
 
@@ -36,6 +33,8 @@ app.UseRouting();
 app.UseAuthentication();
 
 app.UseAuthorization();
+
+app.UseSession();
 
 app.MapRazorPages();
 

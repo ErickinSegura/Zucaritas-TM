@@ -19,15 +19,16 @@
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="AWAQPagina" expanded="True" selected="True">
-            <Node name="AWAQPagina" expanded="True">
+          <Node name="AWAQPagina" expanded="True">
+            <Node name="AWAQPagina">
+              <Node name="Dependencies" expanded="True" />
               <Node name="Pages" expanded="True">
                 <Node name="Index.cshtml" expanded="True" />
+                <Node name="Register.cshtml" expanded="True" />
                 <Node name="studentView.cshtml" expanded="True" />
               </Node>
-              <Node name="wwwroot" expanded="True">
-                <Node name="css" expanded="True" />
-              </Node>
+              <Node name="wwwroot" expanded="True" />
+              <Node name="Program.cs" selected="True" />
             </Node>
           </Node>
         </State>

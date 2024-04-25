@@ -11,6 +11,28 @@ namespace AWAQPagina.Pages
         [BindProperty]
         public Usuario usuario { get; set; }
 
+
+        public IActionResult OnGet()
+        {
+            if (HttpContext.Session.GetString("Role") != "Admin")
+            {
+                if (HttpContext.Session.GetString("Role") != "Student")
+                {
+                   return RedirectToPage("/Index");
+                }
+
+                else
+                {
+                    return RedirectToPage("/studentView");
+                }
+            }
+
+            else
+            {
+                return Page();
+            }
+        }
+
         public IActionResult OnPost(Usuario usuario)
         {
             string connectionString = System.IO.File.ReadAllText("../.connectionstring.txt");
