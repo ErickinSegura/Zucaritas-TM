@@ -23,6 +23,7 @@ namespace AWAQPagina
         public string profilePicture { get; set; }
         public string bio { get; set; }
         public bool isAdmin { get; set; }
+        public bool active { get; set; }
         public int userID { get; set; }
     }
 }

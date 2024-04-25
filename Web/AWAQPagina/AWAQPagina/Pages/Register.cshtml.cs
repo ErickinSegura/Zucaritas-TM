@@ -52,7 +52,7 @@ namespace AWAQPagina.Pages
                 cmd.Parameters.AddWithValue("@usuario", usuario.userName);
                 cmd.Parameters.AddWithValue("@passcode", usuario.password);
                 cmd.Parameters.AddWithValue("@admin", 0);
-
+                cmd.Parameters.AddWithValue("@active", 1);
                 cmd.ExecuteNonQuery();
                 return RedirectToPage();
 
