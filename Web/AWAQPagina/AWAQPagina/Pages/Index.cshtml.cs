@@ -38,21 +38,37 @@ namespace AWAQPagina.Pages
                 Response.Cookies.Append("ID_USER", usuario.userID.ToString());
 
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "get_isAdmin";
+                cmd.CommandText = "get_active";
                 cmd.Parameters.AddWithValue("@userID", userID);
 
-                object isAdmin = cmd.ExecuteScalar();
-                usuario.isAdmin = Convert.ToBoolean(isAdmin);
+                object active = cmd.ExecuteScalar();
+                usuario.active = Convert.ToBoolean(active);
 
-                if (usuario.isAdmin == true)
+                if (usuario.active == true)
                 {
-                    return Redirect("/adminView");
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.CommandText = "get_isAdmin";
+
+                    object isAdmin = cmd.ExecuteScalar();
+                    usuario.isAdmin = Convert.ToBoolean(isAdmin);
+
+                    if (usuario.isAdmin == true)
+                    {
+                        HttpContext.Session.SetString("Role", "Admin");
+                        return Redirect("/adminView");
+                    }
+                    else
+                    {
+                        HttpContext.Session.SetString("Role", "Student");
+                        return Redirect("/studentView");
+
+                    }
                 }
                 else
                 {
-                    return Redirect("/studentView");
-                    
+                    return RedirectToPage("/Index");
                 }
+
             }
 
             else if(usuario.userName == null || usuario.password == null){

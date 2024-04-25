@@ -8,7 +8,7 @@ namespace AWAQApi.Controllers
     [ApiController]
     public class RegistroEspecieController : ControllerBase
     {
-        public string connectionString = "Server=127.0.0.1;Port=3306;Database=awaq2;Uid=root;password=Vela0376;";
+        string connectionString = System.IO.File.ReadAllText(".connectionstring.txt");
 
         [HttpGet(Name = "GetRegistroEspecieByUserID")]
         public IEnumerable<RegistroEspecie> GetRegistroEspecieByUserID(int id)

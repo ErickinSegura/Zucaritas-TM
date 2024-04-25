@@ -24,39 +24,47 @@ namespace AWAQPagina.Pages
 
         public IActionResult OnGet()
         {
-            string userID = _httpContextAccessor.HttpContext.Request.Cookies["ID_USER"];
-            string connectionString = System.IO.File.ReadAllText("../.connectionstring.txt");
-
-            using (MySqlConnection conexion = new MySqlConnection(connectionString))
+            if(HttpContext.Session.GetString("Role") != null)
             {
-                conexion.Open();
-                MySqlCommand cmd = new MySqlCommand();
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "get_user_bio";
-                cmd.Connection = conexion;
+                string userID = _httpContextAccessor.HttpContext.Request.Cookies["ID_USER"];
+                string connectionString = System.IO.File.ReadAllText("../.connectionstring.txt");
 
-                cmd.Parameters.AddWithValue("@userID", userID);
-
-                using (MySqlDataReader reader = cmd.ExecuteReader())
+                using (MySqlConnection conexion = new MySqlConnection(connectionString))
                 {
-                    if (reader.Read())
+                    conexion.Open();
+                    MySqlCommand cmd = new MySqlCommand();
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.CommandText = "get_user_bio";
+                    cmd.Connection = conexion;
+
+                    cmd.Parameters.AddWithValue("@userID", userID);
+
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
                     {
-                        if (!reader.IsDBNull(reader.GetOrdinal("BIO")))
+                        if (reader.Read())
                         {
-                            usuario.bio = reader["BIO"].ToString();
-                        }
-                        else
-                        {
-                            usuario.bio = "¡Crea tu biografía!";
-                        }
-
-                        if (!reader.IsDBNull(reader.GetOrdinal("Imagen_USUARIO")))
-                        {
-                            usuario.profilePicture = reader["Imagen_USUARIO"].ToString();
-
-                            if (usuario.profilePicture.Length > 1)
+                            if (!reader.IsDBNull(reader.GetOrdinal("BIO")))
                             {
-                                usuario.profilePicture = usuario.profilePicture.Substring(1);
+                                usuario.bio = reader["BIO"].ToString();
+                            }
+                            else
+                            {
+                                usuario.bio = "¡Crea tu biografía!";
+                            }
+
+                            if (!reader.IsDBNull(reader.GetOrdinal("Imagen_USUARIO")))
+                            {
+                                usuario.profilePicture = reader["Imagen_USUARIO"].ToString();
+
+                                if (usuario.profilePicture.Length > 1)
+                                {
+                                    usuario.profilePicture = usuario.profilePicture.Substring(1);
+                                }
+                                else
+                                {
+                                    usuario.profilePicture = "~/images/falseprofilepic.jpg";
+                                    usuario.profilePicture = usuario.profilePicture.Substring(1);
+                                }
                             }
                             else
                             {
@@ -64,25 +72,26 @@ namespace AWAQPagina.Pages
                                 usuario.profilePicture = usuario.profilePicture.Substring(1);
                             }
                         }
-                        else
-                        {
-                            usuario.profilePicture = "~/images/falseprofilepic.jpg";
-                            usuario.profilePicture = usuario.profilePicture.Substring(1);
-                        }
                     }
+
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.CommandText = "get_isAdmin";
+                    cmd.Connection = conexion;
+                    object isAdmin = cmd.ExecuteScalar();
+                    usuario.isAdmin = Convert.ToBoolean(isAdmin);
+
+                    var admin = usuario.isAdmin;
+                    ViewData["admin"] = admin;
                 }
 
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "get_isAdmin";
-                cmd.Connection = conexion;
-                object isAdmin = cmd.ExecuteScalar();
-                usuario.isAdmin = Convert.ToBoolean(isAdmin);
-
-                var admin = usuario.isAdmin;
-                ViewData["admin"] = admin;
+                return Page();
             }
 
-            return Page();
+            else
+            {
+                return RedirectToPage("/Index");
+            }
+
         }
 
         public IActionResult OnPostSaveBiography()
