@@ -24,8 +24,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/Pages/Especie.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRXNwZWNpZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/Pages/ListaEspecies.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTGlzdGFFc3BlY2llcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/Pages/Privacy.cshtml]
