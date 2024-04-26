@@ -1,31 +1,21 @@
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using MySql.Data.MySqlClient;
 using System.Data;
-using System.IO;
-using System.Threading.Tasks;
-using static System.Net.WebRequestMethods;
 
 namespace AWAQPagina.Pages
 {
     public class studentViewModel : PageModel
     {
-        private readonly IHttpContextAccessor _httpContextAccessor;
 
-        public Usuario usuario { get; set; }
-        public string dashboardLink { get; set; }
-
-        public studentViewModel(IHttpContextAccessor httpContextAccessor)
-        {
-            _httpContextAccessor = httpContextAccessor;
-            usuario = new Usuario();
-
-        }
+        public Usuario? usuario { get; set; }
+        public string? dashboardLink { get; set; }
 
         public IActionResult OnGet()
         {
-            if(HttpContext.Session.GetString("Role") != "Student")
+            usuario = new Usuario();
+
+            if (HttpContext.Session.GetString("Role") != "Student")
             {
                 if(HttpContext.Session.GetString("Role") != "Admin")
                 {
@@ -40,7 +30,7 @@ namespace AWAQPagina.Pages
 
             else
             {
-                string userID = _httpContextAccessor.HttpContext.Request.Cookies["ID_USER"];
+                string? userID = HttpContext.Request.Cookies["ID_USER"];
                 string connectionString = System.IO.File.ReadAllText(".connectionstring.txt");
                 MySqlConnection conexion = new MySqlConnection(connectionString);
 

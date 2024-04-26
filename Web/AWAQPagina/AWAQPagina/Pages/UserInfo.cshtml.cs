@@ -1,32 +1,24 @@
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using System.IO;
-using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Data;
-using System.Windows.Input;
 
 namespace AWAQPagina.Pages
 {
     public class UserInfoModel : PageModel
     {
-        private readonly IHttpContextAccessor _httpContextAccessor;
 
         [BindProperty]
-        public Usuario usuario { get; set; }
+        public Usuario? usuario { get; set; }
 
-        public UserInfoModel(IHttpContextAccessor httpContextAccessor)
-        {
-            _httpContextAccessor = httpContextAccessor;
-            usuario = new Usuario();
-        }
 
         public IActionResult OnGet()
         {
-            if(HttpContext.Session.GetString("Role") != null)
+            usuario = new Usuario();
+
+            if (HttpContext.Session.GetString("Role") != null)
             {
-                string userID = _httpContextAccessor.HttpContext.Request.Cookies["ID_USER"];
+                string? userID = HttpContext.Request.Cookies["ID_USER"];
                 string connectionString = System.IO.File.ReadAllText(".connectionstring.txt");
 
                 using (MySqlConnection conexion = new MySqlConnection(connectionString))
@@ -96,7 +88,9 @@ namespace AWAQPagina.Pages
 
         public IActionResult OnPostSaveBiography()
         {
-            string userID = _httpContextAccessor.HttpContext.Request.Cookies["ID_USER"];
+            usuario = new Usuario();
+
+            string? userID = HttpContext.Request.Cookies["ID_USER"];
             string connectionString = System.IO.File.ReadAllText(".connectionstring.txt");
 
             using (MySqlConnection conexion = new MySqlConnection(connectionString))
@@ -119,7 +113,7 @@ namespace AWAQPagina.Pages
 
         public async Task<IActionResult> OnPostAsync(IFormFile profilePicture)
         {
-            string userID = _httpContextAccessor.HttpContext.Request.Cookies["ID_USER"];
+            string? userID = HttpContext.Request.Cookies["ID_USER"];
             string connectionString = System.IO.File.ReadAllText("...connectionstring.txt");
 
             var uploadsDirectory = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "profilePics");

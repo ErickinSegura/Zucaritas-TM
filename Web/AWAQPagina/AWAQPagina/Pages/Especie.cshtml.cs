@@ -1,28 +1,71 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using MySql.Data.MySqlClient;
 
 namespace AWAQPagina.Pages
 {
 	public class EspecieModel : PageModel
     {
         public string? IdEspecie { set; get; }
+
         public Especie? especie { set; get; }
 
-        public void OnGet(string idEspecieParam)
+        public void OnGet()
         {
-            IdEspecie = idEspecieParam;
+            especie = new Especie();
+            string connectionString = System.IO.File.ReadAllText(".connectionstring.txt");
+            using (MySqlConnection conexion = new MySqlConnection(connectionString))
+            {
+                conexion.Open();
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "get_especieInfo";
+                cmd.Connection = conexion;
 
+                cmd.Parameters.AddWithValue("@especieID", 1);
+
+                using (MySqlDataReader reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        especie.nombre_Especie = reader["nombre_Especie"].ToString();
+                        especie.img_web = reader["img_web"].ToString();
+                        especie.descripcion = reader["descripcion"].ToString();
+                        especie.nombre_cientifico = reader["nombre_cientifico"].ToString();
+                    }
+                }
+            }
+        }
+
+        public IActionResult OnPost()
+        {
             especie = new Especie();
 
-            especie.nombre_Especie = "Caimán Aguja";
-            especie.img_web = "https://inaturalist-open-data.s3.amazonaws.com/photos/3715/large.jpg";
-            especie.descripcion = "Es una especie de cocodrílido que vive en Florida, algunas islas del Mar Caribe y varias zonas costeras del golfo de México y el océano Pacífico. Se le suele confundir con el Alligator, pero éste último es un animal poco emparentado con el anterior, más próximo a los caimanes como el yacaré overo. Las diferencias físicas entre ambos son importantes, lo que permite identificarlos";
-            especie.nombre_cientifico = "Crocodylus acutus";
-            especie.ID_Especie = "4";
+            string connectionString = System.IO.File.ReadAllText(".connectionstring.txt");
+            using (MySqlConnection conexion = new MySqlConnection(connectionString))
+            {
+                conexion.Open();
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "get_especieInfo";
+                cmd.Connection = conexion;
+
+                cmd.Parameters.AddWithValue("@especieID", especie.ID_Especie);
+
+                using (MySqlDataReader reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        especie.nombre_Especie = reader["nombre_Especie"].ToString();
+                        especie.img_web = reader["img_web"].ToString();
+                        especie.descripcion = reader["descripcion"].ToString();
+                        especie.nombre_cientifico = reader["nombre_cientifico"].ToString();
+                    }
+                }
+                conexion.Close();
+                return Page();
+            }
         }
     }
 }

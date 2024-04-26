@@ -21,13 +21,13 @@
                 <div class="input-section">
                     <label style="color: white;"><i class="bi bi-person-circle"></i> Nombre de usuario</label>
                     <input type="text" class="modern-input" placeholder="Usuario" asp-for="usuario.userName">
-                    <span asp-validation-for="usuario.userName" class="text-warning text-nowrap"></span>
+                    <span asp-validation-for="usuario.userName" class="text-warning"></span>
                 </div>
 
                 <div class="input-section">
                     <label style="color: white;"><i class="bi bi-lock-fill"></i> Contraseña</label>
                     <input type="password" class="modern-input" placeholder="Contraseña" asp-for="usuario.password">
-                    <span asp-validation-for="usuario.password" class="text-warning text-nowrap"></span>
+                    <span asp-validation-for="usuario.password" class="text-warning"></span>
                 </div>
 
                 @if (ModelState.IsValid == false)

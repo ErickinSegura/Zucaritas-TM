@@ -11,7 +11,6 @@ namespace AWAQPagina.Pages
         [BindProperty]
         public Usuario? usuario { get; set; }
 
-
         public IActionResult OnGet()
         {
             if (HttpContext.Session.GetString("Role") != "Admin")
