@@ -9,7 +9,7 @@ namespace AWAQPagina.Pages
     public class RegisterModel : PageModel
     {
         [BindProperty]
-        public Usuario usuario { get; set; }
+        public Usuario? usuario { get; set; }
 
 
         public IActionResult OnGet()
