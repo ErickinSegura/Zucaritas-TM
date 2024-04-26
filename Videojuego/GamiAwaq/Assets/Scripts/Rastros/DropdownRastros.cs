@@ -31,8 +31,8 @@ public class DropdownRastros : MonoBehaviour
 
         while (i < 3)
         {
-            int randReptile = Random.Range(0, RastrosBehaviour.Instance.reptiles.Count);
-            string reptileName = RastrosBehaviour.Instance.reptiles[(RastrosBehaviour.RestrosType)randReptile].Name;
+            int randReptile = Random.Range(0, RastrosBehaviour.Instance.rastros.Count);
+            string reptileName = RastrosBehaviour.Instance.rastros[(RastrosBehaviour.RestrosType)randReptile].Name;
             if (!reptileNames.Contains(reptileName) && reptileName != Name)
             {
                 reptileNames.Add(reptileName);

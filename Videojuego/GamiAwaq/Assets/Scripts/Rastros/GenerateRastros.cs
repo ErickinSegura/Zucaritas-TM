@@ -54,12 +54,16 @@ public class GenerateRastros : MonoBehaviour
         {
             int randomIndex = Random.Range(0, availablePositions.Count);
             Vector3 spawnPosition = tilemap.GetCellCenterWorld(availablePositions[randomIndex]);
-
+            Debug.Log(availableTypes.Length);
             // Seleccionar un tipo aleatorio de reptil
             RastrosBehaviour.RestrosType randomType = availableTypes[Random.Range(0, availableTypes.Length)];
 
             // Instanciar el prefab correspondiente al tipo aleatorio
-            GameObject reptilePrefab = Instantiate(prefab, spawnPosition, Quaternion.identity);
+            GameObject Rastrosprefab = Instantiate(prefab, spawnPosition, Quaternion.identity);
+            RastrosBehaviour rastro = Rastrosprefab.GetComponent<RastrosBehaviour>();
+
+            rastro.rastrosType = randomType;
+
             
             availablePositions.RemoveAt(randomIndex); // Eliminar la posición utilizada para evitar la superposición de objetos
         }
