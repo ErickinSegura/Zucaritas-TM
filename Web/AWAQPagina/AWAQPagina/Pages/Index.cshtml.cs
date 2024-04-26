@@ -18,7 +18,7 @@ namespace AWAQPagina.Pages
 
         public IActionResult OnPost()
         {
-            string connectionString = System.IO.File.ReadAllText("../.connectionstring.txt");
+            string connectionString = System.IO.File.ReadAllText(".connectionstring.txt");
             MySqlConnection conexion = new MySqlConnection(connectionString);
 
             conexion.Open();
@@ -38,33 +38,52 @@ namespace AWAQPagina.Pages
                 Response.Cookies.Append("ID_USER", usuario.userID.ToString());
 
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "get_isAdmin";
+                cmd.CommandText = "get_active";
                 cmd.Parameters.AddWithValue("@userID", userID);
 
-                object isAdmin = cmd.ExecuteScalar();
-                usuario.isAdmin = Convert.ToBoolean(isAdmin);
+                object active = cmd.ExecuteScalar();
+                usuario.active = Convert.ToBoolean(active);
 
-                if (usuario.isAdmin == true)
+                if (usuario.active == true)
                 {
-                    HttpContext.Session.SetString("Role", "Admin");
-                    return Redirect("/adminView");
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.CommandText = "get_isAdmin";
+
+                    object isAdmin = cmd.ExecuteScalar();
+                    usuario.isAdmin = Convert.ToBoolean(isAdmin);
+
+                    if (usuario.isAdmin == true)
+                    {
+                        HttpContext.Session.SetString("Role", "Admin");
+                        conexion.Close();
+                        return Redirect("/adminView");
+                    }
+                    else
+                    {
+                        HttpContext.Session.SetString("Role", "Student");
+                        conexion.Close();
+                        return Redirect("/studentView");
+
+                    }
                 }
                 else
                 {
-                    HttpContext.Session.SetString("Role", "Student");
-                    return Redirect("/studentView");
-                    
+                    conexion.Close();
+                    return RedirectToPage("/Index");
                 }
+
             }
 
             else if(usuario.userName == null || usuario.password == null){
                 ModelState.AddModelError(string.Empty, "");
+                conexion.Close();
                 return Page();
             }
 
             else
             {
                 ModelState.AddModelError(string.Empty, "Usuario o contraseña incorrectos");
+                conexion.Close();
                 return Page();
             }
         }

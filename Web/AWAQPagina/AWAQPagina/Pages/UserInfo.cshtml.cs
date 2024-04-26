@@ -27,7 +27,7 @@ namespace AWAQPagina.Pages
             if(HttpContext.Session.GetString("Role") != null)
             {
                 string userID = _httpContextAccessor.HttpContext.Request.Cookies["ID_USER"];
-                string connectionString = System.IO.File.ReadAllText("../.connectionstring.txt");
+                string connectionString = System.IO.File.ReadAllText(".connectionstring.txt");
 
                 using (MySqlConnection conexion = new MySqlConnection(connectionString))
                 {
@@ -82,9 +82,9 @@ namespace AWAQPagina.Pages
 
                     var admin = usuario.isAdmin;
                     ViewData["admin"] = admin;
+                    conexion.Close();
+                    return Page();
                 }
-
-                return Page();
             }
 
             else
@@ -97,7 +97,7 @@ namespace AWAQPagina.Pages
         public IActionResult OnPostSaveBiography()
         {
             string userID = _httpContextAccessor.HttpContext.Request.Cookies["ID_USER"];
-            string connectionString = System.IO.File.ReadAllText("../.connectionstring.txt");
+            string connectionString = System.IO.File.ReadAllText(".connectionstring.txt");
 
             using (MySqlConnection conexion = new MySqlConnection(connectionString))
             {
@@ -111,16 +111,16 @@ namespace AWAQPagina.Pages
                 cmd.Parameters.AddWithValue("@Biography", usuario.bio);
 
                 cmd.ExecuteNonQuery();
+                conexion.Close();
+                return RedirectToPage();
             }
-
-            return RedirectToPage();
         }
 
 
         public async Task<IActionResult> OnPostAsync(IFormFile profilePicture)
         {
             string userID = _httpContextAccessor.HttpContext.Request.Cookies["ID_USER"];
-            string connectionString = System.IO.File.ReadAllText("../.connectionstring.txt");
+            string connectionString = System.IO.File.ReadAllText("...connectionstring.txt");
 
             var uploadsDirectory = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "profilePics");
             Directory.CreateDirectory(uploadsDirectory);
@@ -145,9 +145,10 @@ namespace AWAQPagina.Pages
                 cmd.Parameters.AddWithValue("@profilepic", $"~/profilePics/{fileName}");
                 cmd.ExecuteNonQuery();
 
-            }
+                conexion.Close();
+                return RedirectToPage();
 
-            return RedirectToPage();
+            }
         }
 
     }
