@@ -1,3 +1,7 @@
 .vs
 Web/AWAQPagina/AWAQPagina/bin/Debug/net6.0/AWAQPagina.staticwebassets.runtime.json
 .connectionstring.txt
+*.dll
+*.pdb
+*.dll
+/Web/AWAQApi/bin/Debug
