@@ -41,16 +41,16 @@ public class ReptileBehaviour : MonoBehaviour
 
     public Dictionary<ReptileType, Reptile> reptiles = new Dictionary<ReptileType, Reptile>
     {
-        {ReptileType.CaimanAguja, new Reptile { ID = 1, Name = "Caimán Aguja", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/rep8.png?raw=true" } },
-        {ReptileType.CaimanLlanero, new Reptile { ID = 2, Name = "Caimán Llanero", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/rep4.png?raw=true" } },
-        {ReptileType.SerpienteSabanera, new Reptile { ID = 3, Name = "Serpiente Sabanera", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/rep7.png?raw=true" } },
-        {ReptileType.SerpienteTerciopelo, new Reptile { ID = 4, Name = "Serpiente Terciopelo", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/rep3.png?raw=true" } },
-        {ReptileType.SerpienteSanAndres, new Reptile { ID = 5, Name = "Serpiente San Andrés", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/rep5.png?raw=true" } },
-        {ReptileType.TortugaCienegaCol, new Reptile { ID = 6, Name = "Tortuga Ciénega Col", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/rep9.png?raw=true" } },
-        {ReptileType.TortugaMorrocoy, new Reptile { ID = 7, Name = "Tortuga Morrocoy", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/rep10.png?raw=true" } },
-        {ReptileType.CamaleonCundimamarca, new Reptile { ID = 8, Name = "Camaleón Cundimamarca", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/rep2.png?raw=true" } },
-        {ReptileType.AnolisCalima, new Reptile { ID = 9, Name = "Anolis Calima", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/rep6.png?raw=true" } },
-        {ReptileType.LagartijaBogota, new Reptile { ID = 10, Name = "Lagartija Bogotá", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/rep1.png?raw=true" } }
+        {ReptileType.CaimanAguja, new Reptile { ID = 41, Name = "Caimán Aguja", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/rep8.png?raw=true" } },
+        {ReptileType.CaimanLlanero, new Reptile { ID = 42, Name = "Caimán Llanero", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/rep4.png?raw=true" } },
+        {ReptileType.SerpienteSabanera, new Reptile { ID = 43, Name = "Serpiente Sabanera", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/rep7.png?raw=true" } },
+        {ReptileType.SerpienteTerciopelo, new Reptile { ID = 44, Name = "Serpiente Terciopelo", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/rep3.png?raw=true" } },
+        {ReptileType.SerpienteSanAndres, new Reptile { ID = 45, Name = "Serpiente San Andrés", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/rep5.png?raw=true" } },
+        {ReptileType.TortugaCienegaCol, new Reptile { ID = 46, Name = "Tortuga Ciénega Col", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/rep9.png?raw=true" } },
+        {ReptileType.TortugaMorrocoy, new Reptile { ID = 47, Name = "Tortuga Morrocoy", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/rep10.png?raw=true" } },
+        {ReptileType.CamaleonCundimamarca, new Reptile { ID = 48, Name = "Camaleón Cundimamarca", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/rep2.png?raw=true" } },
+        {ReptileType.AnolisCalima, new Reptile { ID = 49, Name = "Anolis Calima", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/rep6.png?raw=true" } },
+        {ReptileType.LagartijaBogota, new Reptile { ID = 50, Name = "Lagartija Bogotá", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/rep1.png?raw=true" } }
     };
 
     private void Awake()
@@ -94,6 +94,7 @@ public class ReptileBehaviour : MonoBehaviour
             Dropdown.Instance.ChangeDropdownOptions(reptile.Name);
             GameObject.Destroy(this.gameObject);
             PlayerPrefs.SetString("reptile", reptile.Name);
+            PlayerPrefs.SetInt("reptileID", reptile.ID);
         }
     }
 

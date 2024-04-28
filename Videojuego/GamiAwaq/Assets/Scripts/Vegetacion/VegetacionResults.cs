@@ -16,12 +16,12 @@ public class VegetacionResults : MonoBehaviour
 
     public void updateResults()
     {
-        int score = PlayerPrefs.GetInt("Puntaje");
+        int score = PlayerPrefs.GetInt("PuntajeVegetacion");
         string correct = score.ToString();
-        int total = PlayerPrefs.GetInt("Registros");
+        int total = PlayerPrefs.GetInt("RegistrosVegetacion");
 
-        correctText.text = correct.ToString();
-        totalText.text = total.ToString();
+        correctText.text = correct.ToString() + "/" + total.ToString();
+        totalText.text = total.ToString() + "/15";
 
         resetScore();
     }

@@ -17,32 +17,32 @@ public class DropdownVegetacion : MonoBehaviour
     public string GetDropdownValue()
     {
         int pickedValue = dropdown.value;
-        string pickedReptile = dropdown.options[pickedValue].text;
-        Debug.Log(pickedReptile);
-        return pickedReptile;
+        string pickedVeg = dropdown.options[pickedValue].text;
+        Debug.Log(pickedVeg);
+        return pickedVeg;
     }
 
     public void ChangeDropdownOptions(string Name)
     {
         Debug.Log("El nombre correcto " + Name);
         dropdown.ClearOptions();
-        List<string> reptileNames = new List<string>();
+        List<string> vegeNames = new List<string>();
         int i = 0;
 
         while (i < 3)
         {
-            int randReptile = Random.Range(0, ReptileBehaviour.Instance.reptiles.Count);
-            string reptileName = ReptileBehaviour.Instance.reptiles[(ReptileBehaviour.ReptileType)randReptile].Name;
-            if (!reptileNames.Contains(reptileName) && reptileName != Name)
+            int randVege = Random.Range(0, VegetacionBehaviour.Instance.veges.Count);
+            string vegeName = VegetacionBehaviour.Instance.veges[(VegetacionBehaviour.VegeType)randVege].Name;
+            if (!vegeNames.Contains(vegeName) && vegeName != Name)
             {
-                reptileNames.Add(reptileName);
+                vegeNames.Add(vegeName);
                 i++;
             }
         }
 
-        int insertIndex = Random.Range(0, reptileNames.Count);
-        reptileNames.Insert(insertIndex, Name);
+        int insertIndex = Random.Range(0, vegeNames.Count);
+        vegeNames.Insert(insertIndex, Name);
 
-        dropdown.AddOptions(reptileNames);
+        dropdown.AddOptions(vegeNames);
     }
 }

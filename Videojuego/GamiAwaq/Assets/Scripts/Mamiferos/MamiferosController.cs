@@ -33,7 +33,7 @@ public class MamiferosController : MonoBehaviour
     private int currentAnimalIndex = 0;
     private List<Color> rarityColors = new List<Color>{
         Color.black,     // Common
-        Color.green,     // Uncommon
+        new Color(0f, 0.5f, 0f),      // Uncommon
         Color.blue,      // Rare
         Color.magenta    // VeryRare
     };

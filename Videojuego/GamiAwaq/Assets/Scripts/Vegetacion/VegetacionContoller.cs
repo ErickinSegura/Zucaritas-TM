@@ -15,14 +15,27 @@ public class VegetacionContoller : MonoBehaviour
 
     public Text incoText;
 
+    public Text time;
+
     Texture2D image;
     Sprite newSprite;
 
+    public int timeLeft = 60;
 
-    public void finish()
+
+    public void Start()
     {
-        SFXContoller.Instance.PlayClick();
+        StartCoroutine(timer());
+    }
+
+
+    public IEnumerator finish()
+    {
+        //SFXContoller.Instance.PlayClick();
         finishPopup.SetActive(true);
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene("FinalVegetacion");
+
     }
 
     public void exit()
@@ -36,15 +49,13 @@ public class VegetacionContoller : MonoBehaviour
         SceneManager.LoadScene("FinalReptile");
     }
 
-
-
     public void enter()
     {
-        SFXContoller.Instance.PlayClick();
-        PlayerPrefs.SetInt("Registros", PlayerPrefs.GetInt("Registros") + 1);
-        string val = Dropdown.Instance.GetDropdownValue();
+        //SFXContoller.Instance.PlayClick();
+        PlayerPrefs.SetInt("RegistrosVegetacion", PlayerPrefs.GetInt("RegistrosVegetacion") + 1);
+        string val = DropdownVegetacion.Instance.GetDropdownValue();
 
-        string correct = PlayerPrefs.GetString("reptile");
+        string correct = PlayerPrefs.GetString("vegetacion");
 
         Debug.Log("El valor del dropdown " + val);
 
@@ -53,7 +64,7 @@ public class VegetacionContoller : MonoBehaviour
             incoText.text = "Correcto";
             incoText.color = Color.green;
             Debug.Log("Correcto");
-            PlayerPrefs.SetInt("Puntaje", PlayerPrefs.GetInt("Puntaje") + 1);
+            PlayerPrefs.SetInt("PuntajeVegetacion", PlayerPrefs.GetInt("PuntajeVegetacion") + 1);
             StartCoroutine(hideText());
         }
         else
@@ -74,9 +85,26 @@ public class VegetacionContoller : MonoBehaviour
 
     }
 
+    IEnumerator timer()
+    {
+        while (timeLeft > 0)
+        {
+            yield return new WaitForSeconds(1);
+            timeLeft--;
+            time.text = "Tiempo Restante: "+timeLeft.ToString();
+            if (timeLeft <= 0)
+            {
+                StartCoroutine(finish());
+            }
+        }
+    }
+
+
+
+
     public void activatePopup(string url)
     {
-        SFXContoller.Instance.PlayClick();
+        //SFXContoller.Instance.PlayClick();
         registerPopup.SetActive(true);
         StartCoroutine(DownloadImageCoroutine(url));
         Time.timeScale = 0f;
@@ -84,10 +112,9 @@ public class VegetacionContoller : MonoBehaviour
 
     public void Awake()
     {
-
         Instance = this;
-        PlayerPrefs.SetInt("Puntaje", 0);
-        PlayerPrefs.SetInt("Registros", 0);
+        PlayerPrefs.SetInt("PuntajeVegetacion", 0);
+        PlayerPrefs.SetInt("RegistrosVegetacion", 0);
 
     }
 

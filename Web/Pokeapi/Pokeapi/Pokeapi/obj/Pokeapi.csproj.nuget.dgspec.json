@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Users\\conta\\Documents\\Tec\\Cuarto Semestre\\Construcción de Software y Toma de Decisiones\\Github\\Web\\Pokeapi\\Pokeapi\\Pokeapi\\Pokeapi.csproj": {}
+    "D:\\Users\\conta\\Documents\\Tec\\Cuarto Semestre\\Construccion de Software y Toma de Decisiones\\Github\\Web\\Pokeapi\\Pokeapi\\Pokeapi\\Pokeapi.csproj": {}
   },
   "projects": {
-    "D:\\Users\\conta\\Documents\\Tec\\Cuarto Semestre\\Construcción de Software y Toma de Decisiones\\Github\\Web\\Pokeapi\\Pokeapi\\Pokeapi\\Pokeapi.csproj": {
+    "D:\\Users\\conta\\Documents\\Tec\\Cuarto Semestre\\Construccion de Software y Toma de Decisiones\\Github\\Web\\Pokeapi\\Pokeapi\\Pokeapi\\Pokeapi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Users\\conta\\Documents\\Tec\\Cuarto Semestre\\Construcción de Software y Toma de Decisiones\\Github\\Web\\Pokeapi\\Pokeapi\\Pokeapi\\Pokeapi.csproj",
+        "projectUniqueName": "D:\\Users\\conta\\Documents\\Tec\\Cuarto Semestre\\Construccion de Software y Toma de Decisiones\\Github\\Web\\Pokeapi\\Pokeapi\\Pokeapi\\Pokeapi.csproj",
         "projectName": "Pokeapi",
-        "projectPath": "D:\\Users\\conta\\Documents\\Tec\\Cuarto Semestre\\Construcción de Software y Toma de Decisiones\\Github\\Web\\Pokeapi\\Pokeapi\\Pokeapi\\Pokeapi.csproj",
+        "projectPath": "D:\\Users\\conta\\Documents\\Tec\\Cuarto Semestre\\Construccion de Software y Toma de Decisiones\\Github\\Web\\Pokeapi\\Pokeapi\\Pokeapi\\Pokeapi.csproj",
         "packagesPath": "C:\\Users\\conta\\.nuget\\packages\\",
-        "outputPath": "D:\\Users\\conta\\Documents\\Tec\\Cuarto Semestre\\Construcción de Software y Toma de Decisiones\\Github\\Web\\Pokeapi\\Pokeapi\\Pokeapi\\obj\\",
+        "outputPath": "D:\\Users\\conta\\Documents\\Tec\\Cuarto Semestre\\Construccion de Software y Toma de Decisiones\\Github\\Web\\Pokeapi\\Pokeapi\\Pokeapi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\conta\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -69,7 +69,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -11,8 +11,8 @@ public class MainMenu : MonoBehaviour
 
     public void Awake()
     {
-        PlayerPrefs.SetString("username", "");
-        PlayerPrefs.SetString("password", "");
+        //PlayerPrefs.SetString("username", "");
+        //PlayerPrefs.SetString("password", "");
     }
 
     public void saveUser()

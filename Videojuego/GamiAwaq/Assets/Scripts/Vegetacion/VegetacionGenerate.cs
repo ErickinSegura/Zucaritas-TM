@@ -11,7 +11,7 @@ public class VegetacionGenerate : MonoBehaviour
     public Sprite[] variants;
 
 
-    public ReptileBehaviour.ReptileType[] availableTypes; // Array de tipos de reptiles disponibles
+    public VegetacionBehaviour.VegeType[] availableTypes; // Array de tipos de reptiles disponibles
 
     // Start is called before the first frame update
     public void Start()
@@ -56,49 +56,55 @@ public class VegetacionGenerate : MonoBehaviour
             Vector3 spawnPosition = tilemap.GetCellCenterWorld(availablePositions[randomIndex]);
 
             // Seleccionar un tipo aleatorio de reptil
-            ReptileBehaviour.ReptileType randomType = availableTypes[Random.Range(0, availableTypes.Length)];
+            VegetacionBehaviour.VegeType randomType = availableTypes[Random.Range(0, availableTypes.Length)];
 
             // Instanciar el prefab correspondiente al tipo aleatorio
-            GameObject reptilePrefab = Instantiate(prefab, spawnPosition, Quaternion.identity);
-            ReptileBehaviour reptileBehaviour = reptilePrefab.GetComponent<ReptileBehaviour>();
-            SpriteRenderer spriteRenderer = reptilePrefab.GetComponent<SpriteRenderer>(); // Obtener el SpriteRenderer del reptil
+            GameObject VegePrefab = Instantiate(prefab, spawnPosition, Quaternion.identity);
+            VegetacionBehaviour vegeBehaviour = VegePrefab.GetComponent<VegetacionBehaviour>();
+            SpriteRenderer spriteRenderer = VegePrefab.GetComponent<SpriteRenderer>(); // Obtener el SpriteRenderer del reptil
 
-            if (reptileBehaviour != null && spriteRenderer != null)
+            vegeBehaviour.vegeType = randomType;
+
+            if (vegeBehaviour != null && spriteRenderer != null)
             {
                 // Establecer el tipo aleatorio al comportamiento del reptil
-                reptileBehaviour.reptileType = randomType;
+                vegeBehaviour.vegeType = randomType;
 
                 // Asignar el sprite correspondiente al tipo de reptil
                 Sprite selectedSprite = null;
 
+
                 switch (randomType)
                 {
-                    case ReptileBehaviour.ReptileType.CaimanAguja:
-                    case ReptileBehaviour.ReptileType.CaimanLlanero:
+                    // Flores
+                    case VegetacionBehaviour.VegeType.Rosa:
+                    case VegetacionBehaviour.VegeType.Crisantemo:
+                    case VegetacionBehaviour.VegeType.Clavel:
+                    case VegetacionBehaviour.VegeType.Lirio:
+                    case VegetacionBehaviour.VegeType.Bromelia:
+                    case VegetacionBehaviour.VegeType.Orquidea:
+                    case VegetacionBehaviour.VegeType.Magnolia:
                         selectedSprite = variants[0];
                         break;
-                    case ReptileBehaviour.ReptileType.SerpienteSabanera:
-                    case ReptileBehaviour.ReptileType.SerpienteTerciopelo:
-                    case ReptileBehaviour.ReptileType.SerpienteSanAndres:
+
+                    // Otros tipos de vegetación
+                    case VegetacionBehaviour.VegeType.Frailejon:
+                    case VegetacionBehaviour.VegeType.Helecho:
+                    case VegetacionBehaviour.VegeType.Drosera:
                         selectedSprite = variants[1];
-                        break;
-                    case ReptileBehaviour.ReptileType.TortugaCienegaCol:
-                    case ReptileBehaviour.ReptileType.TortugaMorrocoy:
-                        selectedSprite = variants[2];
-                        break;
-                    case ReptileBehaviour.ReptileType.CamaleonCundimamarca:
-                    case ReptileBehaviour.ReptileType.AnolisCalima:
-                    case ReptileBehaviour.ReptileType.LagartijaBogota:
-                        selectedSprite = variants[3];
                         break;
 
                 }
-
-
-                spriteRenderer.sprite = selectedSprite; // Asignar el sprite seleccionado al SpriteRenderer del reptil
+                spriteRenderer.sprite = selectedSprite; // Asignar el sprite seleccionado al SpriteRenderer del reptil 
             }
+            
 
             availablePositions.RemoveAt(randomIndex); // Eliminar la posición utilizada para evitar la superposición de objetos
+
         }
+        
+    
+        
     }
 }
+

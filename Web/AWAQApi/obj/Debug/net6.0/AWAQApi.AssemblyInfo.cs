@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AWAQApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8dfe516d78aca7e5b44c4d376a421a5f20fc7ce3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+487ef85d9885c040b46aacef89d4979d7f1ffcb1")]
 [assembly: System.Reflection.AssemblyProductAttribute("AWAQApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AWAQApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

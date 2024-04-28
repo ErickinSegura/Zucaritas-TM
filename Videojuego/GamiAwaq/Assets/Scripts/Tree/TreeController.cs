@@ -16,6 +16,7 @@ public class TreeController : MonoBehaviour
         int randomDirectionIndex = Random.Range(0, 4);
         // Asigna la dirección correspondiente al número aleatorio generado
         currentDirection = (Direction)randomDirectionIndex;
+        PlayerPrefs.SetString("currentDirection", currentDirection.ToString());
         UpdateDirectionText();
     }
 

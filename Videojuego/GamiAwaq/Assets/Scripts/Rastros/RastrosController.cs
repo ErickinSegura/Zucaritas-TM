@@ -50,7 +50,7 @@ public class RastrosController : MonoBehaviour
         PlayerPrefs.SetInt("Registros", PlayerPrefs.GetInt("Registros") + 1);
         string val = DropdownRastros.Instance.GetDropdownValue();
 
-        string correct = PlayerPrefs.GetString("reptile");
+        string correct = PlayerPrefs.GetString("rastro");
 
         Debug.Log("El valor del dropdown " + val);
 

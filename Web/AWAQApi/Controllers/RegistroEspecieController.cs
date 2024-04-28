@@ -4,6 +4,15 @@ using System.Data;
 
 namespace AWAQApi.Controllers
 {
+
+    public class espe
+    {
+        public int Muestreo { get; set; }
+        public string Nombre { get; set; }
+        public string URL { get; set; }
+        public int Rareza { get; set; }
+    }
+
     [Route("api/[controller]")]
     [ApiController]
     public class RegistroEspecieController : ControllerBase
@@ -11,7 +20,7 @@ namespace AWAQApi.Controllers
         string connectionString = System.IO.File.ReadAllText(".connectionstring.txt");
 
         [HttpGet(Name = "GetRegistroEspecieByUserID")]
-        public IEnumerable<RegistroEspecie> GetRegistroEspecieByUserID(int id)
+        public IEnumerable<espe> GetRegistroEspecieByUserID(int id)
         {
             MySqlConnection conn = new MySqlConnection(connectionString);
             conn.Open();
@@ -24,15 +33,14 @@ namespace AWAQApi.Controllers
 
             MySqlDataReader rdr = cmd.ExecuteReader();
 
-            List<RegistroEspecie> registroEspecies = new List<RegistroEspecie>();
+            List<espe> registroEspecies = new List<espe>();
             while (rdr.Read())
             {
-                RegistroEspecie registroEspecie = new RegistroEspecie();
-                registroEspecie.ID_Registro = rdr.GetInt32("ID_Registro");
-                registroEspecie.ID_Especie = rdr.GetInt32("ID_Especie");
-                registroEspecie.ID_Usuario = rdr.GetInt32("ID_User");
-                registroEspecie.ID_Muestreo = rdr.GetInt32("ID_Muestreo");
-                registroEspecie.Fecha = rdr.GetDateTime("fecha");
+                espe registroEspecie = new espe();
+                registroEspecie.Muestreo = rdr.GetInt32("Muestreo");
+                registroEspecie.Nombre = rdr.GetString("Nombre");
+                registroEspecie.URL = rdr.GetString("URL");
+                registroEspecie.Rareza = rdr.GetInt32("Rareza");
                 registroEspecies.Add(registroEspecie);
             }
             conn.Close();
@@ -40,7 +48,7 @@ namespace AWAQApi.Controllers
         }
 
         [HttpPost(Name = "AddRegistroEspecie")]
-        public IActionResult AddRegistroEspecie([FromBody] RegistroEspecie registroEspecie)
+        public IActionResult AddRegistroEspecie(int idUser, int idEspecie, int idMuestreo )
         {
             MySqlConnection conn = new MySqlConnection(connectionString);
             conn.Open();
@@ -48,15 +56,18 @@ namespace AWAQApi.Controllers
             MySqlCommand cmd = new MySqlCommand();
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandText = "add_register";
-            cmd.Parameters.AddWithValue("@especieID", registroEspecie.ID_Especie);
-            cmd.Parameters.AddWithValue("@userID", registroEspecie.ID_Usuario);
-            cmd.Parameters.AddWithValue("@muestreoID", registroEspecie.ID_Muestreo);
+            cmd.Parameters.AddWithValue("@userID", idUser);
+            cmd.Parameters.AddWithValue("@especieID", idEspecie);
+            cmd.Parameters.AddWithValue("@muestreoID", idMuestreo);
             cmd.Connection = conn;
 
             cmd.ExecuteNonQuery();
             conn.Close();
             return Ok();
         }
+
+        
+
 
 
     }

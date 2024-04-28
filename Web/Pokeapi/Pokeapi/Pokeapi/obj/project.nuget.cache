@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ycnPGMAHHrktXvqKfGyfzBjzeIWBxD1cvdpVKEfznycAIeFcaqs2+IQKuVNMrdkpo87zg4EoKPAwcDUnY1P9QA==",
+  "dgSpecHash": "e7VcTjsYOAp+ARj6PbNshlEfV01F6Z0i7xUZSiezsTr6MHqpekXKN6VHNZLfE0uGx/IEJcYhfgR6HLBZU/1k2g==",
   "success": true,
-  "projectFilePath": "D:\\Users\\conta\\Documents\\Tec\\Cuarto Semestre\\Construcción de Software y Toma de Decisiones\\Github\\Web\\Pokeapi\\Pokeapi\\Pokeapi\\Pokeapi.csproj",
+  "projectFilePath": "D:\\Users\\conta\\Documents\\Tec\\Cuarto Semestre\\Construccion de Software y Toma de Decisiones\\Github\\Web\\Pokeapi\\Pokeapi\\Pokeapi\\Pokeapi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\conta\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\conta\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",

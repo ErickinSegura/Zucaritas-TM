@@ -18,6 +18,11 @@ public class Sesion : MonoBehaviour
         StartCoroutine(getID(user,pass));
     }
 
+    public int getID()
+    {
+        return id;
+    }
+
     public void Awake()
     {
         Instance = this;
