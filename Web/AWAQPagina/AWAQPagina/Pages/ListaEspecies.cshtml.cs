@@ -8,7 +8,6 @@ namespace AWAQPagina.Pages
     {
         public List<Especie>? listaEspecies { set; get; }
 
-
         public void OnGet()
         {
             string connectionString = System.IO.File.ReadAllText(".connectionstring.txt");

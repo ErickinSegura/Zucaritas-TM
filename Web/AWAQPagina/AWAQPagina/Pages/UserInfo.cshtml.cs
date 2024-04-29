@@ -114,7 +114,6 @@ namespace AWAQPagina.Pages
 
         }
 
-
         public async Task<IActionResult> OnPostAsync(IFormFile profilePicture)
         {
             string? userID = HttpContext.Request.Cookies["ID_USER"];
