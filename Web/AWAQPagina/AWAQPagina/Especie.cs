@@ -1,5 +1,4 @@
-﻿using System;
-namespace AWAQPagina
+﻿namespace AWAQPagina
 {
     public class Especie
     {

@@ -58,7 +58,6 @@ namespace AWAQPagina.Pages
                         usuario.userName = reader["Usuario"].ToString();
                         usuario.profilePicture = reader["Imagen_USUARIO"].ToString().Substring(1);
                         usuario.bio = reader["BIO"].ToString();
-
                     }
 
                     conexion.Close();
