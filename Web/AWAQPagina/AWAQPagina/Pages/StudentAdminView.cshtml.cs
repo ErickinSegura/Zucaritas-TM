@@ -25,23 +25,23 @@ namespace AWAQPagina.Pages
 
         public IActionResult OnGet(string id)
         {
-            //if (HttpContext.Session.GetString("Role") != "Student")
-            //{
-            //    if (HttpContext.Session.GetString("Role") != "Admin")
-            //    {
-            //        return RedirectToPage("Index");
-            //    }
+            if (HttpContext.Session.GetString("Role") != "Admin")
+            {
+                if (HttpContext.Session.GetString("Role") != "Student")
+                {
+                    return RedirectToPage("Index");
+                }
 
-            //    else
-            //    {
-            //        return RedirectToPage("/adminView");
-            //    }
-            //}
+                else
+                {
+                    return RedirectToPage("/studentView");
+                }
+            }
 
-            //else
-            //{              Rehacer logica para solo admin
-                string userID = id;  //userID es id del que se esta visualizando
-                string connectionString = System.IO.File.ReadAllText("../.connectionstring.txt");
+            else
+            {
+                string userID = id; //id que se esta buscando  
+                string connectionString = System.IO.File.ReadAllText(".connectionstring.txt");
                 MySqlConnection conexion = new MySqlConnection(connectionString);
 
                 conexion.Open();
@@ -70,7 +70,7 @@ namespace AWAQPagina.Pages
                 dashboardLink = String.Format("https://lookerstudio.google.com/embed/reporting/ed3ae5e0-9da6-401f-8fbb-f4fd23a6d451/page/E3ZwD?params=%7B%22ds21.iduser%22%3A{0}%2C%22ds5.iduserbar%22%3A{0}%7D", userID);
 
                 return Page();
-            //}
+            }
         }
     }
 }

@@ -1,24 +1,18 @@
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using System.IO;
-using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Data;
-using System.Windows.Input;
 
 namespace AWAQPagina.Pages
 {
     public class UserInfoModel : PageModel
     {
-        private readonly IHttpContextAccessor _httpContextAccessor;
 
         [BindProperty]
         public Usuario usuario { get; set; }
 
-        public UserInfoModel(IHttpContextAccessor httpContextAccessor)
+        public UserInfoModel()
         {
-            _httpContextAccessor = httpContextAccessor;
             usuario = new Usuario();
         }
 
@@ -26,8 +20,8 @@ namespace AWAQPagina.Pages
         {
             if(HttpContext.Session.GetString("Role") != null)
             {
-                string userID = _httpContextAccessor.HttpContext.Request.Cookies["ID_USER"];
-                string connectionString = System.IO.File.ReadAllText("../.connectionstring.txt");
+                string? userID = HttpContext.Request.Cookies["ID_USER"];
+                string connectionString = System.IO.File.ReadAllText(".connectionstring.txt");
 
                 using (MySqlConnection conexion = new MySqlConnection(connectionString))
                 {
@@ -82,9 +76,11 @@ namespace AWAQPagina.Pages
 
                     var admin = usuario.isAdmin;
                     ViewData["admin"] = admin;
-                }
 
-                return Page();
+                    conexion.Close();
+                    return Page();
+                }
+                
             }
 
             else
@@ -96,7 +92,7 @@ namespace AWAQPagina.Pages
 
         public IActionResult OnPostSaveBiography()
         {
-            string userID = _httpContextAccessor.HttpContext.Request.Cookies["ID_USER"];
+            string? userID = HttpContext.Request.Cookies["ID_USER"];
             string connectionString = System.IO.File.ReadAllText("../.connectionstring.txt");
 
             using (MySqlConnection conexion = new MySqlConnection(connectionString))
@@ -111,15 +107,17 @@ namespace AWAQPagina.Pages
                 cmd.Parameters.AddWithValue("@Biography", usuario.bio);
 
                 cmd.ExecuteNonQuery();
+
+                conexion.Close();
+                return RedirectToPage();
             }
 
-            return RedirectToPage();
         }
 
 
         public async Task<IActionResult> OnPostAsync(IFormFile profilePicture)
         {
-            string userID = _httpContextAccessor.HttpContext.Request.Cookies["ID_USER"];
+            string? userID = HttpContext.Request.Cookies["ID_USER"];
             string connectionString = System.IO.File.ReadAllText("../.connectionstring.txt");
 
             var uploadsDirectory = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "profilePics");
@@ -145,9 +143,10 @@ namespace AWAQPagina.Pages
                 cmd.Parameters.AddWithValue("@profilepic", $"~/profilePics/{fileName}");
                 cmd.ExecuteNonQuery();
 
-            }
+                conexion.Close();
+                return RedirectToPage();
 
-            return RedirectToPage();
+            }
         }
 
     }
