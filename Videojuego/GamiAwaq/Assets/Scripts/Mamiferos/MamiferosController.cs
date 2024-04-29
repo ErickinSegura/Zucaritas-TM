@@ -2,6 +2,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
+using System.Collections;
+using UnityEngine.Networking;
+using Newtonsoft.Json;
+
 
 public enum RarityLevel
 {
@@ -30,6 +34,62 @@ public class MamiferosController : MonoBehaviour
 
     private int numberOfAnimalsToShow;
     private List<AnimalInfo> selectedAnimals = new List<AnimalInfo>();
+
+    public class Specie
+    {
+        public int muestreo;
+        public string nombre;
+        public string url;
+        public int rareza;
+    }
+
+    List<Specie> especies = new List<Specie>();
+    List<Specie> registros = new List<Specie>();
+
+    public IEnumerator getConection()
+    {
+        string JSONurl = "https://localhost:7176/api/RegistroEspecie?id=" + Sesion.Instance.getID(); // URL para obtener los datos del libro
+        UnityWebRequest request = UnityWebRequest.Get(JSONurl); // Crea una solicitud web para obtener los datos
+        request.useHttpContinue = true; // Configura para usar la continuación HTTP
+
+        var cert = new ForceAcceptAll(); // Crea una instancia de la clase para aceptar todos los certificados SSL
+        request.certificateHandler = cert; // Asigna el manejador de certificados a la solicitud
+        cert?.Dispose(); // Libera la instancia de la clase ForceAceptAll
+
+        yield return request.SendWebRequest(); // Envía la solicitud web y espera la respuesta
+
+        if (request.result != UnityWebRequest.Result.Success)
+        {
+            Debug.Log("Error Downloading: " + request.error);
+        }
+        else
+        {
+            if ((request.downloadHandler.text) == "")
+            {
+                GameController.Instance.openPopupError();
+                Debug.Log("No hay registros");
+            }
+            else
+            {
+                especies = JsonConvert.DeserializeObject<List<Specie>>(request.downloadHandler.text);
+                Debug.Log(request.downloadHandler.text);
+                foreach (Specie especie in especies)
+                {
+                    if (especie.muestreo == 6)
+                    {
+                        registros.Add(especie);
+                    }
+                }
+
+                foreach (Specie especie in registros)
+                {
+                    Debug.Log(especie.nombre);
+                }
+
+            }
+        }
+    }
+
     private int currentAnimalIndex = 0;
     private List<Color> rarityColors = new List<Color>{
         Color.black,     // Common

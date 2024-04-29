@@ -1,4 +1,4 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -21,10 +21,12 @@ public class EncicloController : MonoBehaviour
         Reptiles,
         Mamiferos,
         Rastros,
-        Aves
+        Aves,
+        Vegetacion,
+        Insectos
     }
 
-    public SpecieType currentSpecieType = SpecieType.Reptiles;
+    public SpecieType currentSpecieType = SpecieType.Mamiferos;
 
     public int index = 1;
 
@@ -235,8 +237,12 @@ public class EncicloController : MonoBehaviour
                 return rastros;
             case SpecieType.Aves:
                 return aves;
+            case SpecieType.Insectos:
+                return insectos;
+            case SpecieType.Vegetacion:
+                return vegetacion;
             default:
-                return reptiles;
+                return mamiferos;
         }
         
     }
@@ -266,6 +272,7 @@ public class EncicloController : MonoBehaviour
     public void ChangeSpecieType(int type)
     {
         currentSpecieType = (SpecieType)type;
+        Debug.Log("Current Specie Type: " + currentSpecieType);
         SFXContoller.Instance.PlayClick();
         index = 0; // Reset index when changing specie type
         UpdateSpeciesDisplay();
