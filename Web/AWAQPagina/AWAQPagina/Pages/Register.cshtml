@@ -25,31 +25,31 @@
                     <div class="input-section">
                         <label style="color: white;">Nombre</label>
                         <input type="text" class="modern-input" id="floatingInput" placeholder="Nombre" asp-for="usuario.name">
-                        <span asp-validation-for="usuario.name" class="text-danger"></span>
+                        <span asp-validation-for="usuario.name" class="text-warning text-nowrap"></span>
                     </div>
 
                     <div class="input-section">
                         <label style="color: white;">Apellido Paterno</label>
                         <input type="text" class="modern-input" id="floatingInput" placeholder="Apellido Paterno" asp-for="usuario.firstLastname">
-                        <span asp-validation-for="usuario.firstLastname" class="text-danger"></span>
+                        <span asp-validation-for="usuario.firstLastname" class="text-warning text-nowrap"></span>
                     </div>
 
                     <div class="input-section">
                         <label style="color: white;">Apellido Materno</label>
                         <input type="text" class="modern-input" id="floatingInput" placeholder="Apellido Materno" asp-for="usuario.secondLastname">
-                        <span asp-validation-for="usuario.secondLastname" class="text-danger"></span>
+                        <span asp-validation-for="usuario.secondLastname" class="text-warning text-nowrap"></span>
                     </div>
 
                     <div class="input-section">
                         <label style="color: white;">Nombre de usuario</label>
                         <input type="text" class="modern-input" id="floatingInput" placeholder="Usuario" asp-for="usuario.userName">
-                        <span asp-validation-for="usuario.userName" class="text-danger"></span>
+                        <span asp-validation-for="usuario.userName" class="text-warning text-nowrap"></span>
                     </div>
 
                     <div class="input-section">
                         <label style="color: white;">Contraseña</label>
                         <input type="password" class="modern-input" id="floatingPassword" placeholder="Contraseña" asp-for="usuario.password">
-                        <span asp-validation-for="usuario.password" class="text-danger"></span>
+                        <span asp-validation-for="usuario.password" class="text-warning text-nowrap"></span>
                     </div>
                     <div class="buttonContainer">
                         <a asp-page="/adminView" class="navLink" style="width: fit-content; height: fit-content;">
