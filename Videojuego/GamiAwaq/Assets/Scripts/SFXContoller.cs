@@ -2,57 +2,70 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class SFXContoller : MonoBehaviour
 {
     public static SFXContoller Instance;
 
-    public AudioClip grillos;
-    public AudioClip pajaros;
-    public AudioClip lofi;
-    public AudioClip click;
+    public AudioSource Music;
+    public AudioSource SFX;
 
-    public AudioSource src;
+    // Music
+    public AudioClip Menu;
+    public AudioClip Lobby;
+    public AudioClip LobbyNight;
+    public AudioClip Reptiles;
+    public AudioClip Aves;
+    public AudioClip Mamiferos;
+    public AudioClip Rastros;
+    public AudioClip Insectos;
+    public AudioClip Vegetacion;
+    public AudioClip GameFinish;
+    public AudioClip Horizon;
+    public AudioClip Enciclopedia;
 
-    public void Start()
-    {
-        PlayLofi();
-    }
+    // SFX
+     public AudioClip click;
+    public AudioClip error;
+    public AudioClip correct;
+    public AudioClip register;
+    public AudioClip encounter;
+    public AudioClip countdownEnd;
+    public AudioClip countdownStart;
+    public AudioClip walk;
 
 
     private void Awake()
     {
-        DontDestroyOnLoad(this.gameObject);
         Instance = this;
+        DontDestroyOnLoad(gameObject);
     }
 
-    public void PlayGrillos()
+    private void Start()
     {
-        src.clip = grillos;
-        src.Play();
+        Music.clip = Menu;
+        Music.Play();
     }
 
-    public void PlayLofi()
+    public void PlayMusic(AudioClip clip)
     {
-        src.clip = lofi;
-        src.Play();
+        Music.clip = clip;
+        Music.Play();
     }
 
-    public void PlayPajaros()
+    public void PlaySFX(AudioClip clip)
     {
-        src.clip = pajaros;
-        src.Play();
-    }
-
-    public void PlayClick()
-    {
-        src.clip = click;
-        src.Play();
+        SFX.clip = clip;
+        SFX.Play();
     }
 
     public void Stop()
     {
-        src.Stop();
+        Music.Stop();
     }
+
+    
 
 
 

@@ -47,6 +47,7 @@ public class MamiferosController : MonoBehaviour
     List<Specie> especies = new List<Specie>();
     List<Specie> registros = new List<Specie>();
 
+
     public IEnumerator getConection()
     {
         Debug.Log("Llamando a la conexión");
@@ -113,6 +114,7 @@ public class MamiferosController : MonoBehaviour
     {
         if (PlayerPrefs.GetString("currentDirection") == "N")
         {
+            SFXContoller.Instance.PlayMusic(SFXContoller.Instance.Mamiferos);
             StartCoroutine(getConection());
             numberOfAnimalsToShow = Random.Range(3, 5);
 
@@ -120,7 +122,6 @@ public class MamiferosController : MonoBehaviour
             PlayerPrefs.Save();
 
             UpdateArrowButtons();
-            //rightArrowButton.onClick.AddListener(ChangeAnimal);
             if (PlayerPrefs.HasKey("LastAnimalIndex"))
             {
                 int lastIndex = PlayerPrefs.GetInt("LastAnimalIndex");
@@ -140,7 +141,6 @@ public class MamiferosController : MonoBehaviour
         for (int i = 0; i < numberOfAnimalsToShow; i++)
         {
             RarityLevel selectedRarity = GetRandomRarityLevel();
-
             List<AnimalInfo> filteredAnimals = new List<AnimalInfo>();
 
             foreach (AnimalInfo animal in animals)
@@ -151,47 +151,35 @@ public class MamiferosController : MonoBehaviour
                 }
             }
 
-
             AnimalInfo randomAnimal = filteredAnimals[Random.Range(0, filteredAnimals.Count)];
-            Debug.Log("Animal: " + randomAnimal.name + " Rarity: " + randomAnimal.rarity);
             selectedAnimals.Add(randomAnimal);
 
             PlayerPrefs.SetString("mamifero", randomAnimal.name);
             PlayerPrefs.SetInt("mamiferoID", randomAnimal.id);
-            Debug.Log("ID: " + randomAnimal.id);
 
-
-            bool especieRegistrada = false;
-            Debug.Log("Registros: " + registros.Count);
-            foreach (Specie especie in registros)
-            {
-                Debug.Log("Especie 1: " + especie.nombre);
-                Debug.Log("Especie 2: " + randomAnimal.name);
-
-                if (especie.nombre == randomAnimal.name)
-                {
-                    especieRegistrada = true;
-                    Debug.Log("Ya está registrado");
-                    break;
-                }
-            }
+            // Verificar si la especie ya está registrada
+            bool especieRegistrada = registros.Exists(especie => especie.nombre == randomAnimal.name);
 
             if (!especieRegistrada)
             {
                 StartCoroutine(registrarEspecie());
                 Debug.Log("Registrando");
             }
+            else
+            {
+                Debug.Log("La especie ya está registrada");
+            }
 
+            // Configuración de la interfaz de usuario
             if (i == 0)
             {
                 animalImageUI.sprite = randomAnimal.image;
                 animalNameUI.text = randomAnimal.name;
                 animalNameUI.color = rarityColors[(int)randomAnimal.rarity];
             }
-
-
         }
     }
+
 
 
 
@@ -227,7 +215,7 @@ public class MamiferosController : MonoBehaviour
         {
             // Si el registro es exitoso, agrega la especie registrada a la lista de registros
             Specie nuevaEspecie = new Specie();
-            nuevaEspecie.muestreo = 2;
+            nuevaEspecie.muestreo = 6;
             nuevaEspecie.nombre = PlayerPrefs.GetString("mamifero");
             nuevaEspecie.url = ""; // Asigna la URL adecuada si es necesario
             nuevaEspecie.rareza = 0; // Asigna la rareza adecuada si es necesario

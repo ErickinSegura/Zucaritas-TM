@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,7 +7,7 @@ public class Insecto : MonoBehaviour
     public Transform[] lamparas;
     public float velocidad = 3f; // velocidad de movimiento de los insectos
 
-    private Transform objetivo; // lampara objetivo hacia la que se moverá el insecto
+    private Transform objetivo; // lampara objetivo hacia la que se moverÃ¡ el insecto
 
     public static Insecto Instance;
 
@@ -37,16 +37,16 @@ public class Insecto : MonoBehaviour
 
     public Dictionary<InsectoType, Insectos> insectos = new Dictionary<InsectoType, Insectos>
     {
-        {InsectoType.Julia, new Insectos{ID = 31, Name = "Mariposa Julia", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/ras1.jpg?raw=true"}},
-        {InsectoType.EspinosaVerde, new Insectos{ID = 32, Name = "Rayadora Espinosa Verde", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/ras2.jpeg?raw=true"}},
-        {InsectoType.Esfinge, new Insectos{ID = 33, Name = "Polilla Esfinge Tersa", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/ras3.jpeg?raw=true"}},
-        {InsectoType.Morfo, new Insectos{ID = 34, Name = "Mariposa Morfo Azul", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/ras3.jpg?raw=true"}},
-        {InsectoType.Saltarina, new Insectos{ID = 35, Name = "Saltarina Blanca", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/ras4.jpg?raw=true"}},
-        {InsectoType.Purpura, new Insectos{ID = 36, Name = "Rayadora Púrpura", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/ras5.jpg?raw=true"}},
-        {InsectoType.Azul, new Insectos{ID = 37, Name = "Mariposa Azul", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/ras6.jpg?raw=true"}},
-        {InsectoType.Tigre, new Insectos{ID = 38, Name = "Mariposa Tigre", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/ras7.jpeg?raw=true"}},
-        {InsectoType.Manchada, new Insectos{ID = 39, Name = "Polilla Manchada", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/ras8.jpg?raw=true"}},
-        {InsectoType.Sedosa, new Insectos{ID = 40, Name = "Mariposa Sedosa", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/ras9.jpg?raw=true"}}
+        {InsectoType.Julia, new Insectos{ID = 31, Name = "Mariposa Julia", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/insecto1.png?raw=true"}},
+        {InsectoType.EspinosaVerde, new Insectos{ID = 32, Name = "Rayadora Espinosa Verde", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/insecto2.png?raw=true"}},
+        {InsectoType.Esfinge, new Insectos{ID = 33, Name = "Polilla Esfinge Tersa", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/insecto3.png?raw=true"}},
+        {InsectoType.Morfo, new Insectos{ID = 34, Name = "Mariposa Morfo Azul", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/insecto4.png?raw=true"}},
+        {InsectoType.Saltarina, new Insectos{ID = 35, Name = "Saltarina Blanca", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/insecto5.png?raw=true"}},
+        {InsectoType.Purpura, new Insectos{ID = 36, Name = "Rayadora Pï¿½rpura", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/insecto6.png?raw=true"}},
+        {InsectoType.Azul, new Insectos{ID = 37, Name = "Mariposa Azul", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/insecto7.png?raw=true"}},
+        {InsectoType.Tigre, new Insectos{ID = 38, Name = "Mariposa Tigre", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/insecto8.png?raw=true"}},
+        {InsectoType.Manchada, new Insectos{ID = 39, Name = "Polilla Manchada", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/insecto9.png?raw=true"}},
+        {InsectoType.Sedosa, new Insectos{ID = 40, Name = "Mariposa Sedosa", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/insecto10.png?raw=true"}}
     };
 
     private void Awake()
@@ -66,7 +66,7 @@ public class Insecto : MonoBehaviour
         // verificar si hay un objetivo asignado
         if (objetivo != null)
         {
-            // calcular la dirección hacia el objetivo
+            // calcular la direcciÃ³n hacia el objetivo
             Vector3 direccion = (objetivo.position - transform.position).normalized;
 
             // mover el insecto hacia el objetivo

@@ -97,6 +97,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        SFXContoller.Instance.PlayMusic(SFXContoller.Instance.Aves);
         PlayerPrefs.SetInt("avesPuntaje", 0);
         PlayerPrefs.SetInt("avesRegistros", 0);
         tiempoRestante = tiempoTotal;
@@ -125,6 +126,7 @@ public class GameManager : MonoBehaviour
     // Iniciar el temporizador
     public void StartTimer()
     {
+        SFXContoller.Instance.PlaySFX(SFXContoller.Instance.countdownStart);
         StartCoroutine(MatchTime());
     }
 
@@ -136,6 +138,7 @@ public class GameManager : MonoBehaviour
 
     public void continueToScore()
     {
+        SFXContoller.Instance.PlaySFX(SFXContoller.Instance.countdownEnd);
         SceneManager.LoadScene("FinalAves");
     }
 
@@ -143,7 +146,7 @@ public class GameManager : MonoBehaviour
 
     public void enter()
     {
-        SFXContoller.Instance.PlayClick();
+        SFXContoller.Instance.PlaySFX(SFXContoller.Instance.click);
         PlayerPrefs.SetInt("avesRegistros", PlayerPrefs.GetInt("avesRegistros") + 1);
         string val = DropdownAves.Instance.GetDropdownValue();
 
@@ -166,6 +169,7 @@ public class GameManager : MonoBehaviour
                 if (especie.nombre == correct)
                 {
                     especieRegistrada = true;
+                    SFXContoller.Instance.PlaySFX(SFXContoller.Instance.correct);
                     Debug.Log("Ya está registrado");
                     break;
                 }
@@ -173,6 +177,7 @@ public class GameManager : MonoBehaviour
 
             if (!especieRegistrada)
             {
+                SFXContoller.Instance.PlaySFX(SFXContoller.Instance.register);
                 StartCoroutine(registrarEspecie());
                 Debug.Log("Registrando");
             }
@@ -181,6 +186,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+            SFXContoller.Instance.PlaySFX(SFXContoller.Instance.error);
             incoText.text = "Incorrecto";
             incoText.color = Color.red;
             Debug.Log("Incorrecto");
@@ -242,7 +248,7 @@ public class GameManager : MonoBehaviour
 
     public void openPopup(string imgUrl)
     {
-        SFXContoller.Instance.PlayClick();
+        SFXContoller.Instance.PlaySFX(SFXContoller.Instance.encounter);
         popup.SetActive(true);
         Time.timeScale = 0f;
         StartCoroutine(DownloadImageCoroutine(imgUrl));
@@ -266,4 +272,6 @@ public class GameManager : MonoBehaviour
             }
         }
     }
+
+
 }

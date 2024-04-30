@@ -20,6 +20,8 @@ public class ReptilesController : MonoBehaviour
     public GameObject finishPopup;
     public GameObject registerPopup;
 
+    public GameObject joystick;
+
     public Image newImage;
 
     public Text incoText;
@@ -77,18 +79,21 @@ public class ReptilesController : MonoBehaviour
 
     public void finish()
     {
-        SFXContoller.Instance.PlayClick();
+        SFXContoller.Instance.PlaySFX(SFXContoller.Instance.click);
         finishPopup.SetActive(true);
+        joystick.SetActive(false);
     }
 
     public void exit()
     {
-        SFXContoller.Instance.PlayClick();
+        SFXContoller.Instance.PlaySFX(SFXContoller.Instance.click);
         finishPopup.SetActive(false);
+        joystick.SetActive(true);
     }
 
     public void continueToScore()
     {
+        SFXContoller.Instance.PlaySFX(SFXContoller.Instance.click);
         SceneManager.LoadScene("FinalReptile");
     }
 
@@ -96,7 +101,7 @@ public class ReptilesController : MonoBehaviour
 
     public void enter()
     {
-        SFXContoller.Instance.PlayClick();
+        SFXContoller.Instance.PlaySFX(SFXContoller.Instance.click);
         PlayerPrefs.SetInt("Registros", PlayerPrefs.GetInt("Registros")+1);
         string val = Dropdown.Instance.GetDropdownValue();
 
@@ -118,6 +123,7 @@ public class ReptilesController : MonoBehaviour
             {
                 if (especie.nombre == correct)
                 {
+                    SFXContoller.Instance.PlaySFX(SFXContoller.Instance.correct);
                     especieRegistrada = true;
                     Debug.Log("Ya está registrado");
                     break;
@@ -126,6 +132,7 @@ public class ReptilesController : MonoBehaviour
 
             if (!especieRegistrada)
             {
+                SFXContoller.Instance.PlaySFX(SFXContoller.Instance.register);
                 StartCoroutine(registrarEspecie());
                 Debug.Log("Registrando");
             }
@@ -134,6 +141,7 @@ public class ReptilesController : MonoBehaviour
         }
         else
         {
+            SFXContoller.Instance.PlaySFX(SFXContoller.Instance.error);
             incoText.text = "Incorrecto";
             incoText.color = Color.red;
             Debug.Log("Incorrecto");
@@ -141,6 +149,7 @@ public class ReptilesController : MonoBehaviour
         }
         registerPopup.SetActive(false);
         Time.timeScale = 1f;
+        joystick.SetActive(true);
     }
 
     IEnumerator registrarEspecie()
@@ -193,10 +202,11 @@ public class ReptilesController : MonoBehaviour
 
     public void activatePopup(string url)
     {
-        SFXContoller.Instance.PlayClick();
+        SFXContoller.Instance.PlaySFX(SFXContoller.Instance.encounter);
         registerPopup.SetActive(true);
         StartCoroutine(DownloadImageCoroutine(url));
         Time.timeScale = 0f;
+        joystick.SetActive(false);
     }
 
     public void Awake()
@@ -205,6 +215,11 @@ public class ReptilesController : MonoBehaviour
         PlayerPrefs.SetInt("Puntaje", 0);
         PlayerPrefs.SetInt("Registros", 0);
         StartCoroutine(getConection());
+    }
+
+    public void Start()
+    {
+        SFXContoller.Instance.PlayMusic(SFXContoller.Instance.Reptiles);
     }
 
     IEnumerator DownloadImageCoroutine(string MediaUrl)

@@ -1,4 +1,4 @@
-using System.Collections;
+    using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -21,6 +21,8 @@ public class VegetacionContoller : MonoBehaviour
     Texture2D image;
     Sprite newSprite;
 
+    public GameObject joystick;
+
     public int timeLeft = 60;
 
     public class Specie
@@ -30,6 +32,7 @@ public class VegetacionContoller : MonoBehaviour
         public string url;
         public int rareza;
     }
+
 
     List<Specie> especies = new List<Specie>();
     List<Specie> registros = new List<Specie>();
@@ -81,6 +84,8 @@ public class VegetacionContoller : MonoBehaviour
 
     public void Start()
     {
+        StartCoroutine(getConection());
+        SFXContoller.Instance.PlayMusic(SFXContoller.Instance.Vegetacion);
         StartCoroutine(timer());
     }
 
@@ -88,6 +93,7 @@ public class VegetacionContoller : MonoBehaviour
     public IEnumerator finish()
     {
         //SFXContoller.Instance.PlayClick();
+        joystick.SetActive(false);
         finishPopup.SetActive(true);
         yield return new WaitForSeconds(2);
         SceneManager.LoadScene("FinalVegetacion");
@@ -96,8 +102,10 @@ public class VegetacionContoller : MonoBehaviour
 
     public void exit()
     {
-        SFXContoller.Instance.PlayClick();
+        SFXContoller.Instance.PlaySFX(SFXContoller.Instance.countdownEnd);
         finishPopup.SetActive(false);
+        joystick.SetActive(true);
+
     }
 
 
@@ -148,6 +156,8 @@ public class VegetacionContoller : MonoBehaviour
         }
         registerPopup.SetActive(false);
         Time.timeScale = 1f;
+
+        joystick.SetActive(true);
     }
 
     IEnumerator registrarEspecie()
@@ -220,6 +230,7 @@ public class VegetacionContoller : MonoBehaviour
 
     public void activatePopup(string url)
     {
+        joystick.SetActive(false);
         //SFXContoller.Instance.PlayClick();
         registerPopup.SetActive(true);
         StartCoroutine(DownloadImageCoroutine(url));
