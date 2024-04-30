@@ -47,6 +47,7 @@ public class MamiferosController : MonoBehaviour
     List<Specie> especies = new List<Specie>();
     List<Specie> registros = new List<Specie>();
 
+
     public IEnumerator getConection()
     {
         Debug.Log("Llamando a la conexión");
@@ -113,6 +114,7 @@ public class MamiferosController : MonoBehaviour
     {
         if (PlayerPrefs.GetString("currentDirection") == "N")
         {
+            SFXContoller.Instance.PlayMusic(SFXContoller.Instance.Mamiferos);
             StartCoroutine(getConection());
             numberOfAnimalsToShow = Random.Range(3, 5);
 
@@ -120,7 +122,6 @@ public class MamiferosController : MonoBehaviour
             PlayerPrefs.Save();
 
             UpdateArrowButtons();
-            //rightArrowButton.onClick.AddListener(ChangeAnimal);
             if (PlayerPrefs.HasKey("LastAnimalIndex"))
             {
                 int lastIndex = PlayerPrefs.GetInt("LastAnimalIndex");
@@ -227,7 +228,7 @@ public class MamiferosController : MonoBehaviour
         {
             // Si el registro es exitoso, agrega la especie registrada a la lista de registros
             Specie nuevaEspecie = new Specie();
-            nuevaEspecie.muestreo = 2;
+            nuevaEspecie.muestreo = 6;
             nuevaEspecie.nombre = PlayerPrefs.GetString("mamifero");
             nuevaEspecie.url = ""; // Asigna la URL adecuada si es necesario
             nuevaEspecie.rareza = 0; // Asigna la rareza adecuada si es necesario

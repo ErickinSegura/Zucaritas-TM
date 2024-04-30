@@ -35,6 +35,11 @@ public class InsectoController : MonoBehaviour
     List<Specie> especies = new List<Specie>();
     List<Specie> registros = new List<Specie>();
 
+    public void Start()
+    {
+        SFXContoller.Instance.PlayMusic(SFXContoller.Instance.Insectos);
+    }
+
     public IEnumerator getConection()
     {
         string JSONurl = "https://localhost:7176/api/RegistroEspecie?id=" + Sesion.Instance.getID(); // URL para obtener los datos del libro

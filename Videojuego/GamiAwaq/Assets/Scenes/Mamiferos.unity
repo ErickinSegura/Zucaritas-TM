@@ -1809,7 +1809,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bcecf7c098d0e41478c6e06c0e61d27f, type: 3}
+  m_Sprite: {fileID: -1613577595, guid: d59f2cfab3ee31c4bb49a209167d5c00, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2174,7 +2174,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Perezoso did\xE1ctilo de Hoffmann"
+  m_Text: Cargando
 --- !u!222 &1933950726
 CanvasRenderer:
   m_ObjectHideFlags: 0

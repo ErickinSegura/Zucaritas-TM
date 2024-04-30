@@ -9546,6 +9546,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   popupError: {fileID: 1629392724}
   joystick: {fileID: 1870858253}
+  isDay: 0
 --- !u!4 &1174810189
 Transform:
   m_ObjectHideFlags: 0

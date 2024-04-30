@@ -20,6 +20,8 @@ public class ReptilesController : MonoBehaviour
     public GameObject finishPopup;
     public GameObject registerPopup;
 
+    public GameObject joystick;
+
     public Image newImage;
 
     public Text incoText;
@@ -79,12 +81,14 @@ public class ReptilesController : MonoBehaviour
     {
         SFXContoller.Instance.PlayClick();
         finishPopup.SetActive(true);
+        joystick.SetActive(false);
     }
 
     public void exit()
     {
         SFXContoller.Instance.PlayClick();
         finishPopup.SetActive(false);
+        joystick.SetActive(true);
     }
 
     public void continueToScore()
@@ -141,6 +145,7 @@ public class ReptilesController : MonoBehaviour
         }
         registerPopup.SetActive(false);
         Time.timeScale = 1f;
+        joystick.SetActive(true);
     }
 
     IEnumerator registrarEspecie()
@@ -197,6 +202,7 @@ public class ReptilesController : MonoBehaviour
         registerPopup.SetActive(true);
         StartCoroutine(DownloadImageCoroutine(url));
         Time.timeScale = 0f;
+        joystick.SetActive(false);
     }
 
     public void Awake()
@@ -205,6 +211,11 @@ public class ReptilesController : MonoBehaviour
         PlayerPrefs.SetInt("Puntaje", 0);
         PlayerPrefs.SetInt("Registros", 0);
         StartCoroutine(getConection());
+    }
+
+    public void Start()
+    {
+        SFXContoller.Instance.PlayMusic(SFXContoller.Instance.Reptiles);
     }
 
     IEnumerator DownloadImageCoroutine(string MediaUrl)

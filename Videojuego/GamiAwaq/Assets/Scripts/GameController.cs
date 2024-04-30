@@ -10,6 +10,17 @@ public class GameController : MonoBehaviour
 
     public GameObject joystick;
 
+    public bool isDay = true;
+
+    public void Start()
+    {
+        if (isDay)
+            SFXContoller.Instance.PlayMusic(SFXContoller.Instance.Lobby);
+        else
+            SFXContoller.Instance.PlayMusic(SFXContoller.Instance.LobbyNight);
+
+    }
+
     private void Awake()
     {
         Instance = this;;

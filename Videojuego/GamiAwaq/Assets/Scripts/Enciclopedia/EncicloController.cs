@@ -213,6 +213,7 @@ public class EncicloController : MonoBehaviour
     
     void Start()
     {
+        SFXContoller.Instance.PlayMusic(SFXContoller.Instance.Enciclopedia);
         UpdateSpeciesDisplay();
     }
 

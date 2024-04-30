@@ -97,6 +97,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        SFXContoller.Instance.PlayMusic(SFXContoller.Instance.Aves);
         PlayerPrefs.SetInt("avesPuntaje", 0);
         PlayerPrefs.SetInt("avesRegistros", 0);
         tiempoRestante = tiempoTotal;
@@ -266,4 +267,6 @@ public class GameManager : MonoBehaviour
             }
         }
     }
+
+
 }

@@ -21,6 +21,8 @@ public class RastrosController : MonoBehaviour
 
     public Text incoText;
 
+    public GameObject joystick;
+
     Texture2D image;
     Sprite newSprite;
 
@@ -81,6 +83,7 @@ public class RastrosController : MonoBehaviour
 
     IEnumerator finish()
     {
+        joystick.SetActive(false);
         SFXContoller.Instance.PlayClick();
         finishPopup.SetActive(true);
         yield return new WaitForSeconds(2);
@@ -92,6 +95,7 @@ public class RastrosController : MonoBehaviour
     {
         SFXContoller.Instance.PlayClick();
         finishPopup.SetActive(false);
+        joystick.SetActive(true);
     }
 
     public void continueToScore()
@@ -147,6 +151,7 @@ public class RastrosController : MonoBehaviour
         }
         registerPopup.SetActive(false);
         Time.timeScale = 1f;
+        joystick.SetActive(true);
     }
 
     IEnumerator registrarEspecie()
@@ -202,6 +207,7 @@ public class RastrosController : MonoBehaviour
 
     public void activatePopup(string url)
     {
+        joystick.SetActive(false);
         registerPopup.SetActive(true);
         StartCoroutine(DownloadImageCoroutine(url));
     }
@@ -251,6 +257,10 @@ public class RastrosController : MonoBehaviour
         timerText.text = "Tiempo Restante: " + time;
     }
 
+    public void Start()
+    {
+        SFXContoller.Instance.PlayMusic(SFXContoller.Instance.Rastros);
+    }
 
 
 }
