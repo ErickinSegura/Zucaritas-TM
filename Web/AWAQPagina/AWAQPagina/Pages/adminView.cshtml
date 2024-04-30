@@ -9,6 +9,7 @@
     <title>AWAQ</title>
     <link rel="stylesheet" href="~/css/studentView.css">
     <link rel="stylesheet" href="~/css/userInfoStyles.css">
+    <link rel="stylesheet" href="~/css/listaEspecies.css">
 </head>
 <body>
     <header>
@@ -63,7 +64,7 @@
                             <div class="colClass" style="flex: 1;">Nombre</div>
                             <div class="colClass" style="flex: 1;">Nombre de usuario</div>
                         </div>
-                        <div class="d-flex flex-column" style="gap: 8px; max-height: 400px; overflow-y: scroll;">
+                        <div class="d-flex flex-column" style="gap: 8px; max-height: 400px; overflow-y: scroll; padding: 0 4px">
                             @foreach (var usuario in Model.listaUsuario)
                             {
                                 <a href="@usuario.directory">
