@@ -1,4 +1,7 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+
 
 public class Insecto : MonoBehaviour
 {
@@ -7,10 +10,59 @@ public class Insecto : MonoBehaviour
 
     private Transform objetivo; // lampara objetivo hacia la que se moverá el insecto
 
+    public static Insecto Instance;
+
+    public InsectoType insectosType = InsectoType.Julia;
+
+
+    public enum InsectoType
+    {
+        Julia,
+        EspinosaVerde,
+        Esfinge,
+        Morfo,
+        Saltarina,
+        Purpura,
+        Azul,
+        Tigre,
+        Manchada,
+        Sedosa
+    }
+
+    [System.Serializable]
+    public class Insectos
+    {
+        public int ID;
+        public string Name;
+        public string Image;
+    }
+
+
+    public Dictionary<InsectoType, Insectos> insectos = new Dictionary<InsectoType, Insectos>
+    {
+        {InsectoType.Julia, new Insectos{ID = 31, Name = "Mariposa Julia", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/ras1.jpg?raw=true"}},
+        {InsectoType.EspinosaVerde, new Insectos{ID = 32, Name = "Rayadora Espinosa Verde", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/ras2.jpeg?raw=true"}},
+        {InsectoType.Esfinge, new Insectos{ID = 33, Name = "Polilla Esfinge Tersa", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/ras3.jpeg?raw=true"}},
+        {InsectoType.Morfo, new Insectos{ID = 34, Name = "Mariposa Morfo Azul", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/ras3.jpg?raw=true"}},
+        {InsectoType.Saltarina, new Insectos{ID = 35, Name = "Saltarina Blanca", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/ras4.jpg?raw=true"}},
+        {InsectoType.Purpura, new Insectos{ID = 36, Name = "Rayadora Púrpura", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/ras5.jpg?raw=true"}},
+        {InsectoType.Azul, new Insectos{ID = 37, Name = "Mariposa Azul", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/ras6.jpg?raw=true"}},
+        {InsectoType.Tigre, new Insectos{ID = 38, Name = "Mariposa Tigre", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/ras7.jpeg?raw=true"}},
+        {InsectoType.Manchada, new Insectos{ID = 39, Name = "Polilla Manchada", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/ras8.jpg?raw=true"}},
+        {InsectoType.Sedosa, new Insectos{ID = 40, Name = "Mariposa Sedosa", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/ras9.jpg?raw=true"}}
+    };
+
+    private void Awake()
+    {
+
+        Instance = this;
+    }
+
     void Start()
     {
         // encontrar la lampara mas cercana al insecto al inicio
         objetivo = EncontrarLamparaMasCercana();
+        StartCoroutine(killBugs());
     }
 
     void Update()
@@ -31,6 +83,12 @@ public class Insecto : MonoBehaviour
                 velocidad = 0f;
             }
         }
+    }
+
+    IEnumerator killBugs()
+    {
+        yield return new WaitForSeconds(2f);
+        Destroy(this.gameObject);
     }
 
     //encontrar la lampara mas cercana al insecto
@@ -54,10 +112,12 @@ public class Insecto : MonoBehaviour
 
     void OnMouseDown()
     {
-        // Hacer desaparecer el insecto al hacer clic
-        Destroy(gameObject);
-
-        // Mostrar el dropdown con los insectos:
-        DropdownManager.Instance.ShowDropdown();
+        Insectos insecto = insectos[insectosType];
+        InsectoController.Instance.activatePopup(insecto.Image);
+        Debug.Log(insecto.Name);
+        DropdownInsecto.Instance.ChangeDropdownOptions(insecto.Name);
+        GameObject.Destroy(this.gameObject);
+        PlayerPrefs.SetString("insecto", insecto.Name);
+        PlayerPrefs.SetInt("insectoID", insecto.ID);
     }
 }

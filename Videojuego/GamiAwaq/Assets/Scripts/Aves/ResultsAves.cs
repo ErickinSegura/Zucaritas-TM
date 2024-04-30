@@ -28,8 +28,8 @@ public class ResultsAves : MonoBehaviour
 
     public void resetScore()
     {
-        PlayerPrefs.SetInt("Puntaje", 0);
-        PlayerPrefs.SetInt("Registros", 0);
+        PlayerPrefs.SetInt("avesPuntaje", 0);
+        PlayerPrefs.SetInt("avesRegistros", 0);
     }
 
     public void Start()
