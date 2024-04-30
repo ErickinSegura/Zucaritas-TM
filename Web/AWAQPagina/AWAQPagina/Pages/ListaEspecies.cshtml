@@ -16,20 +16,15 @@
     </div>
 </header>
 <div class="centerClass container-fluid" style="padding:32px; overflow:scroll;">
-    <div class="tableClass">
+    <div class="cardContainer">
         @foreach (var especie in Model.listaEspecies)
-        {
-            <div class="rowClass">
-                <div class="colClass" style="flex: 1"><img src="@especie.img_web" /></div>
-                <div class="colClass" style="flex: 1">@especie.nombre_Especie</div>
-                <div class="colClass" style="flex: 1">@especie.nombre_cientifico</div>
-                <div class="colClass" style="flex: 2">@especie.descripcion</div>
-                <div class="colClass" style="flex: 1">
-                    <a href=@especie.directory style="width: fit-content; height: fit-content;">
-                        <button type="button" class="btn buttonClass bg-success">Ver Más</button>
-                    </a>
+         {
+            <a href="@especie.directory">
+                <div class="card">
+                    <div><img src="@especie.img_web" /></div>
+                    <div>@especie.nombre_Especie</div>
                 </div>
-            </div>
-        }
+            </a>
+         }
     </div>
 </div>

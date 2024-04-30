@@ -124,7 +124,6 @@ D:/Users/conta/Documents/Tec/Cuarto Semestre/Construcción de Software y Toma de
 =======
 >>>>>>> Stashed changes
 <<<<<<< HEAD
-=======
 /Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/bin/Debug/net6.0/appsettings.Development.json
 /Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/bin/Debug/net6.0/appsettings.json
 /Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/bin/Debug/net6.0/AWAQPagina.staticwebassets.runtime.json
@@ -186,9 +185,7 @@ D:/Users/conta/Documents/Tec/Cuarto Semestre/Construcción de Software y Toma de
 /Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/obj/Debug/net6.0/AWAQPagina.pdb
 /Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/obj/Debug/net6.0/AWAQPagina.genruntimeconfig.cache
 /Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/obj/Debug/net6.0/ref/AWAQPagina.dll
-/Users/adolfogonzalez/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/obj/Debug/net6.0/AWAQPagina.dll
-/Users/adolfogonzalez/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/obj/Debug/net6.0/refint/AWAQPagina.dll
-/Users/adolfogonzalez/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/obj/Debug/net6.0/AWAQPagina.pdb
+>>>>>>> 4e7783ae1b6d77c97401b7d3aff45c15db102788
 /Users/adolfogonzalez/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/bin/Debug/net6.0/appsettings.Development.json
 /Users/adolfogonzalez/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/bin/Debug/net6.0/appsettings.json
 /Users/adolfogonzalez/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/bin/Debug/net6.0/AWAQPagina.staticwebassets.runtime.json
@@ -245,6 +242,8 @@ D:/Users/conta/Documents/Tec/Cuarto Semestre/Construcción de Software y Toma de
 /Users/adolfogonzalez/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/obj/Debug/net6.0/scopedcss/bundle/AWAQPagina.styles.css
 /Users/adolfogonzalez/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/obj/Debug/net6.0/scopedcss/projectbundle/AWAQPagina.bundle.scp.css
 /Users/adolfogonzalez/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/obj/Debug/net6.0/AWAQPagina.csproj.CopyComplete
+/Users/adolfogonzalez/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/obj/Debug/net6.0/AWAQPagina.dll
+/Users/adolfogonzalez/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/obj/Debug/net6.0/refint/AWAQPagina.dll
+/Users/adolfogonzalez/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/obj/Debug/net6.0/AWAQPagina.pdb
 /Users/adolfogonzalez/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/obj/Debug/net6.0/AWAQPagina.genruntimeconfig.cache
 /Users/adolfogonzalez/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/obj/Debug/net6.0/ref/AWAQPagina.dll
->>>>>>> 4e7783ae1b6d77c97401b7d3aff45c15db102788
