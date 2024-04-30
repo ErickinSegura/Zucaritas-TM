@@ -6,7 +6,7 @@ public class Pajaro : MonoBehaviour
 {
     public static Pajaro Instance;
 
-    public TipoAve tipoAve = TipoAve.Cantil; 
+    public TipoAve tipoAve = TipoAve.Cantil;
 
     public enum TipoAve
     {
@@ -52,10 +52,10 @@ public class Pajaro : MonoBehaviour
 
     public void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
         {
-            Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero);
+            Vector2 touchPosition = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
+            RaycastHit2D hit = Physics2D.Raycast(touchPosition, Vector2.zero);
 
             if (hit.collider != null && hit.collider.CompareTag("Pajaro"))
             {
@@ -64,14 +64,11 @@ public class Pajaro : MonoBehaviour
                 PlayerPrefs.SetInt("aveID", ave.ID);
 
                 GameManager.instance.openPopup(ave.Imagen);
-                Debug.Log("Ave clickeada: " + ave.Name);
+                Debug.Log("Ave tocada: " + ave.Name);
                 DropdownAves.Instance.ChangeDropdownOptions(ave.Name);
 
                 GameObject.Destroy(this.gameObject);
-
             }
-
         }
     }
-
 }

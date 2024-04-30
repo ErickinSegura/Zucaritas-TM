@@ -57,7 +57,7 @@ namespace AWAQPagina.Pages
                 conexion.Close();
 
                 conexion.Open();
-
+              
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = "get_user_list";
                 cmd.Connection = conexion;

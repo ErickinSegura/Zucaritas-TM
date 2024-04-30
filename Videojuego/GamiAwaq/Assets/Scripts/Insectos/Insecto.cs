@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class Insecto : MonoBehaviour
 {
     public Transform[] lamparas;
@@ -13,7 +12,6 @@ public class Insecto : MonoBehaviour
     public static Insecto Instance;
 
     public InsectoType insectosType = InsectoType.Julia;
-
 
     public enum InsectoType
     {
@@ -37,7 +35,6 @@ public class Insecto : MonoBehaviour
         public string Image;
     }
 
-
     public Dictionary<InsectoType, Insectos> insectos = new Dictionary<InsectoType, Insectos>
     {
         {InsectoType.Julia, new Insectos{ID = 31, Name = "Mariposa Julia", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/ras1.jpg?raw=true"}},
@@ -54,7 +51,6 @@ public class Insecto : MonoBehaviour
 
     private void Awake()
     {
-
         Instance = this;
     }
 
@@ -83,7 +79,19 @@ public class Insecto : MonoBehaviour
                 velocidad = 0f;
             }
         }
+
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+        {
+            Vector2 touchPosition = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
+            RaycastHit2D hit = Physics2D.Raycast(touchPosition, Vector2.zero);
+
+            if (hit.collider != null && hit.collider.CompareTag("Pajaro"))
+            {
+                OnTouchDown();
+            }
+        }
     }
+
 
     IEnumerator killBugs()
     {
@@ -110,7 +118,7 @@ public class Insecto : MonoBehaviour
         return lamparaMasCercana;
     }
 
-    void OnMouseDown()
+    void OnTouchDown()
     {
         Insectos insecto = insectos[insectosType];
         InsectoController.Instance.activatePopup(insecto.Image);

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2370188055200441606}
   m_Layer: 0
   m_Name: Avispa
-  m_TagString: Untagged
+  m_TagString: Pajaro
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -102,6 +102,8 @@ MonoBehaviour:
   lamparas:
   - {fileID: 0}
   - {fileID: 0}
+  velocidad: 3
+  insectosType: 0
 --- !u!70 &3482719906735030309
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

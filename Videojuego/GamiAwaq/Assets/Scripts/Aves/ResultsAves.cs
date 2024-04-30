@@ -20,6 +20,7 @@ public class ResultsAves : MonoBehaviour
         string correct = score.ToString();
         int total = PlayerPrefs.GetInt("avesRegistros");
 
+
         correctText.text = correct.ToString();
         totalText.text = total.ToString();
 
