@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using MySql.Data.MySqlClient;
-using System;
 using System.Data;
 
 namespace AWAQPagina.Pages
@@ -18,7 +17,7 @@ namespace AWAQPagina.Pages
 
         public IActionResult OnPost()
         {
-            string connectionString = System.IO.File.ReadAllText("../.connectionstring.txt");
+            string connectionString = System.IO.File.ReadAllText(".connectionstring.txt");
             MySqlConnection conexion = new MySqlConnection(connectionString);
 
             conexion.Open();
@@ -31,6 +30,7 @@ namespace AWAQPagina.Pages
             cmd.Parameters.AddWithValue("@passcode", usuario.password);
 
             object result = cmd.ExecuteScalar();
+
             if (result != null)
             { 
                 int userID = Convert.ToInt32(result);
@@ -55,17 +55,20 @@ namespace AWAQPagina.Pages
                     if (usuario.isAdmin == true)
                     {
                         HttpContext.Session.SetString("Role", "Admin");
+                        conexion.Close();
                         return Redirect("/adminView");
                     }
                     else
                     {
                         HttpContext.Session.SetString("Role", "Student");
+                        conexion.Close();
                         return Redirect("/studentView");
 
                     }
                 }
                 else
                 {
+                    conexion.Close();
                     return RedirectToPage("/Index");
                 }
 

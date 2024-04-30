@@ -1,33 +1,45 @@
 ﻿<Properties StartupConfiguration="{65F54CFA-1526-497B-8D21-9B6426FF991C}|Default">
+  <MonoDevelop.Ide.ItemProperties.AWAQPagina PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.AWAQPagina PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="AWAQPagina/Pages/UserInfo.cshtml.cs">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="AWAQPagina/Pages/ListaEspecies.cshtml.cs">
     <Files>
-      <File FileName="AWAQPagina/Pages/Index.cshtml.cs" Line="86" Column="2" />
-      <File FileName="AWAQPagina/Pages/Register.cshtml.cs" Line="44" Column="44" />
-      <File FileName="AWAQPagina/Pages/studentView.cshtml.cs" Line="41" Column="17" />
-      <File FileName="AWAQPagina/Pages/UserInfo.cshtml.cs" Line="95" Column="10" />
+      <File FileName="AWAQPagina/Pages/Index.cshtml.cs" Line="33" Column="1" />
+      <File FileName="AWAQPagina/Pages/Register.cshtml.cs" Line="60" Column="48" />
+      <File FileName="AWAQPagina/Pages/studentView.cshtml.cs" Line="36" Column="14" />
+      <File FileName="AWAQPagina/Pages/UserInfo.cshtml.cs" Line="114" Column="1" />
       <File FileName="AWAQPagina/Program.cs" Line="19" Column="40" />
-      <File FileName="AWAQPagina/Pages/adminView.cshtml.cs" Line="35" Column="56" />
-      <File FileName="AWAQPagina/Pages/Register.cshtml" Line="1" Column="1" />
-      <File FileName="AWAQPagina/Usuario.cs" Line="26" Column="40" />
+      <File FileName="AWAQPagina/Pages/adminView.cshtml.cs" Line="63" Column="1" />
+      <File FileName="AWAQPagina/Pages/Register.cshtml" Line="25" Column="44" />
+      <File FileName="AWAQPagina/Usuario.cs" Line="1" Column="1" />
       <File FileName="AWAQPagina/Pages/studentView.cshtml" Line="1" Column="1" />
+      <File FileName="AWAQPagina/Pages/Especie.cshtml.cs" Line="34" Column="58" />
+      <File FileName="AWAQPagina/Pages/Especie.cshtml" Line="32" Column="41" />
+      <File FileName="AWAQPagina/Pages/StudentAdminView.cshtml.cs" Line="60" Column="64" />
+      <File FileName="AWAQPagina/Pages/ListaEspecies.cshtml.cs" Line="1" Column="1" />
+      <File FileName="AWAQPagina/Pages/ListaEspecies.cshtml" Line="30" Column="7" />
+      <File FileName="AWAQPagina/Pages/UserInfo.cshtml" Line="1" Column="1" />
+      <File FileName="AWAQPagina/Especie.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="AWAQPagina">
-            <Node name="AWAQPagina">
-              <Node name="Pages">
+          <Node name="AWAQPagina" expanded="True">
+            <Node name="AWAQPagina" expanded="True">
+              <Node name="Pages" expanded="True">
                 <Node name="adminView.cshtml" expanded="True" />
+                <Node name="Especie.cshtml" expanded="True" />
                 <Node name="Index.cshtml" expanded="True" />
-                <Node name="Register.cshtml" expanded="True" />
-                <Node name="studentView.cshtml" expanded="True" />
-                <Node name="UserInfo.cshtml" expanded="True">
-                  <Node name="UserInfo.cshtml.cs" selected="True" />
+                <Node name="ListaEspecies.cshtml" expanded="True">
+                  <Node name="ListaEspecies.cshtml.cs" selected="True" />
                 </Node>
+                <Node name="Register.cshtml" expanded="True" />
+                <Node name="StudentAdminView.cshtml" expanded="True" />
+                <Node name="studentView.cshtml" expanded="True" />
+                <Node name="UserInfo.cshtml" expanded="True" />
               </Node>
               <Node name="wwwroot" expanded="True">
                 <Node name="images" expanded="True" />
@@ -38,10 +50,8 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <Debugger.DebugSourceFolders>
     <String>/Users/adolfogonzalez</String>
   </Debugger.DebugSourceFolders>
-  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

@@ -1,0 +1,41 @@
+﻿@page
+@model AWAQPagina.Pages.EspecieModel
+@{
+}
+
+<link rel="stylesheet" href="~/css/userInfoStyles.css">
+<header>
+    <div class="headerClass bgGreen">
+        <img src="~/images/logoBlanco.png" style="height:100%" />
+        <div style="display: flex; flex-direction:row; gap:20px">
+            @*@if ((bool)ViewData["admin"])
+                {*@
+            <a asp-page="/adminView" class="navLink" style="width: fit-content; height: fit-content;">
+                <button type="button" class="btn buttonClass">AInicio</button>
+            </a>
+            @*}
+                else
+                {*@
+            <a asp-page="/studentView" class="navLink" style="width: fit-content; height: fit-content;">
+                <button type="button" class="btn buttonClass">SInicio</button>
+            </a>
+
+            @*}*@
+            <a asp-page="/Index" class="navLink" style="width: fit-content; height: fit-content;">
+                <button type="button" class="btn buttonClass">Cerrar Sesión</button>
+            </a>
+        </div>
+    </div>
+</header>
+<div class="centerClass container-fluid" style="padding:32px; overflow:scroll;">
+    <div class="centerClass containerUserClass">
+        <img src="@Model.especie.img_web" class="imgContainer" />
+        <div style="padding: 20px;" class="d=flex justify-content-center align-items-center">
+            <div class="d-flex flex-row justify-content-center gap-4 align-items-end mb-3">
+                <h2 style="font-size: 32px" class="text-center m-0">@Model.especie.nombre_Especie</h2>
+                <i style="font-size: 24px" class="font-italic text-center">@Model.especie.nombre_cientifico</i>
+            </div>
+            <p class="userBioClass">@Model.especie.descripcion</p>
+        </div>
+    </div>
+</div>

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "vuIlj8QxxXpsDCscAgMVD+Ee/mNa539cwSKzqFE6qcc=",
+  "Hash": "kpe1Q1qQHzetBl2Q6XHG7nXGy+a5mTPC4dTg2ogQQ94=",
   "Source": "AWAQPagina",
   "BasePath": "_content/AWAQPagina",
   "Mode": "Default",
@@ -51,12 +51,12 @@
       "OriginalItemSpec": "/Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/obj/Debug/net6.0/scopedcss/projectbundle/AWAQPagina.bundle.scp.css"
     },
     {
-      "Identity": "/Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/wwwroot/.DS_Store",
+      "Identity": "/Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/wwwroot/css/listaEspecies.css",
       "SourceId": "AWAQPagina",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/wwwroot/",
       "BasePath": "_content/AWAQPagina",
-      "RelativePath": ".DS_Store",
+      "RelativePath": "css/listaEspecies.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -65,7 +65,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/.DS_Store"
+      "OriginalItemSpec": "wwwroot/css/listaEspecies.css"
     },
     {
       "Identity": "/Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/wwwroot/css/site.css",

@@ -1,24 +1,17 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using MySql.Data.MySqlClient;
 using System.Data;
-using System.IO;
-using System.Threading.Tasks;
 
 namespace AWAQPagina.Pages
 {
     public class adminViewModel : PageModel
     {
-        private readonly IHttpContextAccessor _httpContextAccessor;
-
         public Usuario usuario { get; set; }
 
-        public adminViewModel(IHttpContextAccessor httpContextAccessor)
+        public adminViewModel()
         {
-            _httpContextAccessor = httpContextAccessor;
             usuario = new Usuario();
-
         }
 
         public IActionResult OnGet()
@@ -38,8 +31,8 @@ namespace AWAQPagina.Pages
 
             else
             {
-                string userID = _httpContextAccessor.HttpContext.Request.Cookies["ID_USER"];
-                string connectionString = System.IO.File.ReadAllText("../.connectionstring.txt");
+                string? userID = HttpContext.Request.Cookies["ID_USER"];
+                string connectionString = System.IO.File.ReadAllText(".connectionstring.txt");
                 MySqlConnection conexion = new MySqlConnection(connectionString);
 
                 conexion.Open();
@@ -60,7 +53,7 @@ namespace AWAQPagina.Pages
                         usuario.profilePicture = reader["Imagen_USUARIO"].ToString().Substring(1);
                     }
                 }
-
+                conexion.Close();
                 return Page();
             }
         }
