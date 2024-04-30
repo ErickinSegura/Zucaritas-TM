@@ -12,7 +12,6 @@ namespace AWAQPagina.Pages
         public adminViewModel()
         {
             usuario = new Usuario();
-
         }
 
         public IActionResult OnGet()
