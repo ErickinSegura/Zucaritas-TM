@@ -59,4 +59,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FinalScenes/FinalVegetacion.unity
     guid: 49abe9219aec5a1439c8607d5d8633d9
+  - enabled: 1
+    path: Assets/Scenes/FinalScenes/FinalInsectos.unity
+    guid: 2e288093a92b46f4897de49861414d86
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: c7cfb9213db4dc84b95ee87ddb528ea1
   m_configObjects: {}

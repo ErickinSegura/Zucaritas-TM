@@ -39,6 +39,8 @@ public class EncicloController : MonoBehaviour
     public Image image1;
     public Image image2;
 
+    public GameObject popup;
+
     List<Specie> especies = new List<Specie>();
 
     List<Specie> mamiferos = new List<Specie>();
@@ -57,6 +59,21 @@ public class EncicloController : MonoBehaviour
     };
 
     // Metodo para obtener las especies registradas por el usuario
+
+    public void openPopup()
+    {
+        popup.SetActive(true);
+    }
+
+    public void closePopup()
+    {
+        popup.SetActive(false);
+    }
+
+    public void tutorial()
+    {
+        SceneManager.LoadScene("Tutorial");
+    }
 
     IEnumerator getID()
     {

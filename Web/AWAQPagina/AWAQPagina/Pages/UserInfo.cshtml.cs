@@ -117,7 +117,7 @@ namespace AWAQPagina.Pages
         public async Task<IActionResult> OnPostAsync(IFormFile profilePicture)
         {
             string? userID = HttpContext.Request.Cookies["ID_USER"];
-            string connectionString = System.IO.File.ReadAllText("../.connectionstring.txt");
+            string connectionString = System.IO.File.ReadAllText(".connectionstring.txt");
 
             var uploadsDirectory = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "profilePics");
             Directory.CreateDirectory(uploadsDirectory);
