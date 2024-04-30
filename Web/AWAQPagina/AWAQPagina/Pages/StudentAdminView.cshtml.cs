@@ -100,5 +100,25 @@ namespace AWAQPagina.Pages
                 return Page();
             }
         }
+
+        public IActionResult OnPost(string idParam)
+        {
+            string userID = idParam;
+            string connectionString = System.IO.File.ReadAllText(".connectionstring.txt");
+            MySqlConnection conexion = new MySqlConnection(connectionString);
+
+            conexion.Open();
+            MySqlCommand cmd = new MySqlCommand();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "desactive_user";
+            cmd.Connection = conexion;
+
+            cmd.Parameters.AddWithValue("@userID", userID);
+
+            cmd.ExecuteNonQuery();
+
+            conexion.Close();
+            return RedirectToPage("/adminView");
+        }
     }
 }
