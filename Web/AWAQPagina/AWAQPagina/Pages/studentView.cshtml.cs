@@ -16,7 +16,6 @@ namespace AWAQPagina.Pages
         public studentViewModel()
         {
             usuario = new Usuario();
-
         }
 
         public IActionResult OnGet()
@@ -58,8 +57,6 @@ namespace AWAQPagina.Pages
                         usuario.firstLastname = reader["APELLIDO_PATERNO"].ToString();
                         usuario.userName = reader["Usuario"].ToString();
                         usuario.profilePicture = reader["Imagen_USUARIO"].ToString().Substring(1);
-
-
                     }
                 }
 
