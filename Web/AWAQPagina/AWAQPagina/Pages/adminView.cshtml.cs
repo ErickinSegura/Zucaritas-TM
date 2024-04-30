@@ -71,7 +71,7 @@ namespace AWAQPagina.Pages
                         Usuario us = new Usuario();
                         us.userName = Convert.ToString(reader["Usuario"]);
                         us.userID = Convert.ToInt32(reader["ID_USER"]);
-                        us.userName = Convert.ToString(reader["Nombre"]);
+                        us.name = Convert.ToString(reader["Nombre"]);
                         us.firstLastname = Convert.ToString(reader["APELLIDO_PATERNO"]);
                         listaUsuario.Add(us);
                     }
