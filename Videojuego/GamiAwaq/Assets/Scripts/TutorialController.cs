@@ -15,6 +15,7 @@ public class TutorialController : MonoBehaviour
 
     public void Start()
     {
+        SFXContoller.Instance.Music.Stop();
         videoPlayer.loopPointReached += EndReached;
         StartCoroutine(checkTutorial());
     }

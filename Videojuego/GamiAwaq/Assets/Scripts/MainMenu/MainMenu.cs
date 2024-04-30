@@ -15,6 +15,11 @@ public class MainMenu : MonoBehaviour
         PlayerPrefs.SetString("password", "");
     }
 
+    public void Start()
+    {
+        SFXContoller.Instance.PlayMusic(SFXContoller.Instance.Menu);
+    }
+
     public void saveUser()
     {
         PlayerPrefs.SetString("username", inputField.text);

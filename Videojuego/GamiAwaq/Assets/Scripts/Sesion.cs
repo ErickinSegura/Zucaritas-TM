@@ -36,6 +36,7 @@ public class Sesion : MonoBehaviour
 
     IEnumerator getID(string user, string pass)
     {
+        SFXContoller.Instance.PlaySFX(SFXContoller.Instance.click);
         popup.SetActive(true);
         string JSONurl = "https://localhost:7176/api/User?username="+user+"&password="+pass; // URL para obtener los datos del libro
         UnityWebRequest request = UnityWebRequest.Get(JSONurl); // Crea una solicitud web para obtener los datos
@@ -49,6 +50,7 @@ public class Sesion : MonoBehaviour
 
         if (request.result != UnityWebRequest.Result.Success)
         {
+            SFXContoller.Instance.PlaySFX(SFXContoller.Instance.error);
             Debug.Log("Error Downloading: " + request.error);
             textPopup.text = "Usuario o contraseña incorrectos";
             yield return new WaitForSeconds(2);
@@ -61,6 +63,7 @@ public class Sesion : MonoBehaviour
         {
             if (int.Parse(request.downloadHandler.text) == -1)
             {
+                SFXContoller.Instance.PlaySFX(SFXContoller.Instance.error);
                 textPopup.text = "Usuario o contraseña incorrectos";
                 yield return new WaitForSeconds(2);
                 textPopup.text = "Iniciando sesión";
@@ -69,6 +72,7 @@ public class Sesion : MonoBehaviour
             }
             else
             {
+                SFXContoller.Instance.PlaySFX(SFXContoller.Instance.correct);
                 id = int.Parse(request.downloadHandler.text);
                 Debug.Log("ID: " + id);
                 StartCoroutine(checkTutorial());
