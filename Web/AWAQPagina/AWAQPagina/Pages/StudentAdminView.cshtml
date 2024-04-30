@@ -18,14 +18,15 @@
     <header>
         <div class="headerClass bgGreen">
             <img src="~/images/logoBlanco.png" style="height:100%" />
-            <a asp-page="/adminView" class="navLink" style="width: 78px">
-                <button type="button" class="btn buttonClass">Regresar</button>
-            </a>
-            <form method="post" ></form>
+            <div style="display: flex; flex-direction: row; gap: 16px; align-items: center;">
+                
+                <a asp-page="/adminView" class="navLink" style="width: 78px">
+                    <button type="button" class="btn buttonClass">Regresar</button>
+                </a>
+
+            </div>
         </div>
     </header>
-
-
 
     <div class="general">
         <div class="profile">
@@ -40,7 +41,7 @@
             </div>
             <br />
             <br />
-            <div>@Model.usuario.bio</div>
+            <div style="padding: 0 16px;">@Model.usuario.bio</div>
             <br />
             <br />
             <div class="medals-user">
@@ -57,6 +58,11 @@
                 <p>@Model.medalla.plataCount</p>
                 <p>@Model.medalla.oroCount</p>
             </div>
+
+            <br />
+            <form method="post">
+                <button type="submit" style="border: none; padding: 4px 8px; border-radius: 8px;">Desactivar usuario</button>
+            </form>
 
         </div>
 

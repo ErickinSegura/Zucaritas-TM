@@ -7,7 +7,7 @@
     display: flex;
     height: 88vh;
     min-height:600px;
-    min-width: 1000px;
+    min-width: 1200px;
     justify-content: space-around;
 }
 
@@ -184,7 +184,7 @@
 /*    border: 2px solid lightgrey;*/
     border-radius: 20px;
     padding: 10px;
-    width: 90%;
+    width: 95%;
     height: 90%;
 /*    background-color: #e1ddcb;*/
 /*    box-shadow: 4px 8px lightgrey;*/

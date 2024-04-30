@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="~/css/styles.css">
 <div class="general">
     <div class="main-container">
-        <div class="img-container" style="height:735px;">
+        <div class="img-container" style="height:775px;">
             <div class="logo-container">
                 <a asp-page="/UserInfo" class="navLink" style="width: 78px">
                     <button type="button" class="btn buttonClass">Perfil</button>
@@ -22,12 +22,12 @@
             <div class="login-container">
                 @if (Model.hasError)
                 {
-                    <div class="p-2 rounded mb-2 bg-warning text-dark">Usuario Existente</div>
+                    <div class="p-2 text-warning h4">Usuario Existente</div>
                 }
 
                 @if (Model.userCreated)
                 {
-                    <div class="p-3 mb-2 bg-success text-dark">Usuario Creado</div>
+                    <div class="p-3 text-light h4 text-decoration-underline">Usuario Creado</div>
                 }
                 <h1 style="color: white;">Registro de Usuarios</h1>
 
@@ -62,7 +62,7 @@
                 </div>
                 <div class="buttonContainer">
                     <a asp-page="/adminView" class="navLink" style="width: fit-content; height: fit-content;">
-                        <button type="button" class="btn classButton">Inicio</button>
+                        <button type="button" class="btn classButton">Regresar</button>
                     </a>
                     <button class="modern-button" type="submit" style="margin:0;">Registrar</button>
                 </div>
