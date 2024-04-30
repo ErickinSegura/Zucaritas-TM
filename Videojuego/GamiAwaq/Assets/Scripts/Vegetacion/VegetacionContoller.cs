@@ -100,10 +100,6 @@ public class VegetacionContoller : MonoBehaviour
         finishPopup.SetActive(false);
     }
 
-    public void continueToScore()
-    {
-        SceneManager.LoadScene("FinalReptile");
-    }
 
     public void enter()
     {
@@ -121,7 +117,7 @@ public class VegetacionContoller : MonoBehaviour
             incoText.color = Color.green;
             Debug.Log("Correcto");
             Debug.Log("Puntaje: " + PlayerPrefs.GetInt("vegetacionID"));
-            PlayerPrefs.SetInt("Puntaje", PlayerPrefs.GetInt("Puntaje") + 1);
+            PlayerPrefs.SetInt("PuntajeVegetacion", PlayerPrefs.GetInt("PuntajeVegetacion") + 1);
 
             // Validar si ya está hecho el registro en la base de datos
             bool especieRegistrada = false;

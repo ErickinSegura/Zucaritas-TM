@@ -10,9 +10,11 @@ public class SelectionController : MonoBehaviour
     public GameObject popup;
 
 
+
     public void closePopup()
     {
         popup.SetActive(false);
+        GameController.Instance.openJoystick();
     }   
 
     public void loadScene1()
@@ -30,6 +32,7 @@ public class SelectionController : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             popup.SetActive(true);
+            GameController.Instance.closeJoystick();
         }
     }
 

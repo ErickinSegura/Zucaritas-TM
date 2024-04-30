@@ -81,7 +81,7 @@ public class Sesion : MonoBehaviour
 
     public IEnumerator checkTutorial()
     {
-        string JSONurl = "https://localhost:7176/api/Tutorial?id=" + 17;//Sesion.Instance.getID(); // URL para obtener los datos del libro
+        string JSONurl = "https://localhost:7176/api/Tutorial?id=" + getID(); // URL para obtener los datos del libro
         UnityWebRequest request = UnityWebRequest.Get(JSONurl); // Crea una solicitud web para obtener los datos
         request.useHttpContinue = true; // Configura para usar la continuación HTTP
 

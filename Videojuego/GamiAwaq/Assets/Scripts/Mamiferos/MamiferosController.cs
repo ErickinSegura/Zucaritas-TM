@@ -114,8 +114,7 @@ public class MamiferosController : MonoBehaviour
         if (PlayerPrefs.GetString("currentDirection") == "N")
         {
             StartCoroutine(getConection());
-            //numberOfAnimalsToShow = Random.Range(3, 5);
-            numberOfAnimalsToShow = 1;
+            numberOfAnimalsToShow = Random.Range(3, 5);
 
             PlayerPrefs.SetInt("NumberOfAnimalsToShow", numberOfAnimalsToShow);
             PlayerPrefs.Save();
