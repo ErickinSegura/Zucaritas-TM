@@ -84,7 +84,7 @@ public class RastrosController : MonoBehaviour
     IEnumerator finish()
     {
         joystick.SetActive(false);
-        SFXContoller.Instance.PlayClick();
+        SFXContoller.Instance.PlaySFX(SFXContoller.Instance.countdownEnd);
         finishPopup.SetActive(true);
         yield return new WaitForSeconds(2);
         SceneManager.LoadScene("FinalRastros");
@@ -93,20 +93,20 @@ public class RastrosController : MonoBehaviour
 
     public void exit()
     {
-        SFXContoller.Instance.PlayClick();
+        SFXContoller.Instance.PlaySFX(SFXContoller.Instance.click);
         finishPopup.SetActive(false);
         joystick.SetActive(true);
     }
 
     public void continueToScore()
     {
-        SFXContoller.Instance.PlayClick();
+        SFXContoller.Instance.PlaySFX(SFXContoller.Instance.click);
         SceneManager.LoadScene("FinalRastros");
     }
 
     public void enter()
     {
-        SFXContoller.Instance.PlayClick();
+        SFXContoller.Instance.PlaySFX(SFXContoller.Instance.click);
         PlayerPrefs.SetInt("Registros", PlayerPrefs.GetInt("Registros") + 1);
         string val = DropdownRastros.Instance.GetDropdownValue();
 
@@ -128,6 +128,7 @@ public class RastrosController : MonoBehaviour
             {
                 if (especie.nombre == correct)
                 {
+                    SFXContoller.Instance.PlaySFX(SFXContoller.Instance.correct);
                     especieRegistrada = true;
                     Debug.Log("Ya está registrado");
                     break;
@@ -136,6 +137,7 @@ public class RastrosController : MonoBehaviour
 
             if (!especieRegistrada)
             {
+                SFXContoller.Instance.PlaySFX(SFXContoller.Instance.register);
                 StartCoroutine(registrarEspecie());
                 Debug.Log("Registrando");
             }
@@ -144,6 +146,7 @@ public class RastrosController : MonoBehaviour
         }
         else
         {
+            SFXContoller.Instance.PlaySFX(SFXContoller.Instance.error);
             incoText.text = "Incorrecto";
             incoText.color = Color.red;
             Debug.Log("Incorrecto");
@@ -207,6 +210,7 @@ public class RastrosController : MonoBehaviour
 
     public void activatePopup(string url)
     {
+        SFXContoller.Instance.PlaySFX(SFXContoller.Instance.encounter);
         joystick.SetActive(false);
         registerPopup.SetActive(true);
         StartCoroutine(DownloadImageCoroutine(url));

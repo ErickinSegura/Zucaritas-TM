@@ -141,7 +141,6 @@ public class MamiferosController : MonoBehaviour
         for (int i = 0; i < numberOfAnimalsToShow; i++)
         {
             RarityLevel selectedRarity = GetRandomRarityLevel();
-
             List<AnimalInfo> filteredAnimals = new List<AnimalInfo>();
 
             foreach (AnimalInfo animal in animals)
@@ -152,47 +151,35 @@ public class MamiferosController : MonoBehaviour
                 }
             }
 
-
             AnimalInfo randomAnimal = filteredAnimals[Random.Range(0, filteredAnimals.Count)];
-            Debug.Log("Animal: " + randomAnimal.name + " Rarity: " + randomAnimal.rarity);
             selectedAnimals.Add(randomAnimal);
 
             PlayerPrefs.SetString("mamifero", randomAnimal.name);
             PlayerPrefs.SetInt("mamiferoID", randomAnimal.id);
-            Debug.Log("ID: " + randomAnimal.id);
 
-
-            bool especieRegistrada = false;
-            Debug.Log("Registros: " + registros.Count);
-            foreach (Specie especie in registros)
-            {
-                Debug.Log("Especie 1: " + especie.nombre);
-                Debug.Log("Especie 2: " + randomAnimal.name);
-
-                if (especie.nombre == randomAnimal.name)
-                {
-                    especieRegistrada = true;
-                    Debug.Log("Ya está registrado");
-                    break;
-                }
-            }
+            // Verificar si la especie ya está registrada
+            bool especieRegistrada = registros.Exists(especie => especie.nombre == randomAnimal.name);
 
             if (!especieRegistrada)
             {
                 StartCoroutine(registrarEspecie());
                 Debug.Log("Registrando");
             }
+            else
+            {
+                Debug.Log("La especie ya está registrada");
+            }
 
+            // Configuración de la interfaz de usuario
             if (i == 0)
             {
                 animalImageUI.sprite = randomAnimal.image;
                 animalNameUI.text = randomAnimal.name;
                 animalNameUI.color = rarityColors[(int)randomAnimal.rarity];
             }
-
-
         }
     }
+
 
 
 

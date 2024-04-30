@@ -62,11 +62,13 @@ public class EncicloController : MonoBehaviour
 
     public void openPopup()
     {
+        SFXContoller.Instance.PlaySFX(SFXContoller.Instance.click);
         popup.SetActive(true);
     }
 
     public void closePopup()
     {
+        SFXContoller.Instance.PlaySFX(SFXContoller.Instance.click);
         popup.SetActive(false);
     }
 
@@ -267,7 +269,7 @@ public class EncicloController : MonoBehaviour
     
     public void NextSpecies()
     {
-        SFXContoller.Instance.PlayClick();
+        SFXContoller.Instance.PlaySFX(SFXContoller.Instance.click);
         List<Specie> currentSpeciesList = GetCurrentSpeciesList();
 
         if (index + 2 < currentSpeciesList.Count)
@@ -279,7 +281,7 @@ public class EncicloController : MonoBehaviour
 
     public void PreviousSpecies()
     {
-        SFXContoller.Instance.PlayClick();
+        SFXContoller.Instance.PlaySFX(SFXContoller.Instance.click);
         if (index - 2 >= 0)
         {
             index -= 2;
@@ -291,7 +293,7 @@ public class EncicloController : MonoBehaviour
     {
         currentSpecieType = (SpecieType)type;
         Debug.Log("Current Specie Type: " + currentSpecieType);
-        SFXContoller.Instance.PlayClick();
+        SFXContoller.Instance.PlaySFX(SFXContoller.Instance.click);
         index = 0; // Reset index when changing specie type
         UpdateSpeciesDisplay();
     }

@@ -86,7 +86,7 @@ public class InsectoController : MonoBehaviour
 
     IEnumerator finish()
     {
-        //SFXContoller.Instance.PlayClick();
+        SFXContoller.Instance.PlaySFX(SFXContoller.Instance.countdownEnd);
         finishPopup.SetActive(true);
         yield return new WaitForSeconds(2);
         SceneManager.LoadScene("FinalInsectos");
@@ -94,19 +94,19 @@ public class InsectoController : MonoBehaviour
 
     public void exit()
     {
-        //SFXContoller.Instance.PlayClick();
+        SFXContoller.Instance.PlaySFX(SFXContoller.Instance.click);
         finishPopup.SetActive(false);
     }
 
     public void continueToScore()
     {
-        //SFXContoller.Instance.PlayClick();
+        SFXContoller.Instance.PlaySFX(SFXContoller.Instance.countdownEnd);
         SceneManager.LoadScene("FinalInsectos");
     }
 
     public void enter()
     {
-        SFXContoller.Instance.PlayClick();
+        SFXContoller.Instance.PlaySFX(SFXContoller.Instance.click);
         PlayerPrefs.SetInt("Registros", PlayerPrefs.GetInt("Registros") + 1);
         string val = DropdownInsecto.Instance.GetDropdownValue();
 
@@ -130,12 +130,14 @@ public class InsectoController : MonoBehaviour
                 {
                     especieRegistrada = true;
                     Debug.Log("Ya está registrado");
+                    SFXContoller.Instance.PlaySFX(SFXContoller.Instance.correct);
                     break;
                 }
             }
 
             if (!especieRegistrada)
             {
+                SFXContoller.Instance.PlaySFX(SFXContoller.Instance.register);
                 StartCoroutine(registrarEspecie());
                 Debug.Log("Registrando");
             }
@@ -144,6 +146,7 @@ public class InsectoController : MonoBehaviour
         }
         else
         {
+            SFXContoller.Instance.PlaySFX(SFXContoller.Instance.error);
             incoText.text = "Incorrecto";
             incoText.color = Color.red;
             Debug.Log("Incorrecto");
@@ -206,6 +209,7 @@ public class InsectoController : MonoBehaviour
 
     public void activatePopup(string url)
     {
+        SFXContoller.Instance.PlaySFX(SFXContoller.Instance.encounter);
         registerPopup.SetActive(true);
         StartCoroutine(DownloadImageCoroutine(url));
     }

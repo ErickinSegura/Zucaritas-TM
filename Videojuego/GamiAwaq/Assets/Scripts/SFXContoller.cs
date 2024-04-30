@@ -29,6 +29,7 @@ public class SFXContoller : MonoBehaviour
      public AudioClip click;
     public AudioClip error;
     public AudioClip correct;
+    public AudioClip register;
     public AudioClip encounter;
     public AudioClip countdownEnd;
     public AudioClip countdownStart;
@@ -40,13 +41,6 @@ public class SFXContoller : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
     }
-
-    public void PlayClick()
-    {
-        SFX.clip = click;
-        SFX.Play();
-    }
-
 
     private void Start()
     {

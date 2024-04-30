@@ -1161,12 +1161,13 @@ MonoBehaviour:
   GameFinish: {fileID: 8300000, guid: 0f070fea4d440cd489c466c8f0a7ae54, type: 3}
   Horizon: {fileID: 8300000, guid: 6757882ca7115ca4d98ee4148549c1a0, type: 3}
   Enciclopedia: {fileID: 8300000, guid: 946205c5609390a48b26f9d107310b44, type: 3}
-  click: {fileID: 0}
-  error: {fileID: 0}
-  correct: {fileID: 0}
-  encounter: {fileID: 0}
-  countdownEnd: {fileID: 0}
-  countdownStart: {fileID: 0}
+  click: {fileID: 8300000, guid: b9cc8e3476bec4744b864f6afa30de58, type: 3}
+  error: {fileID: 8300000, guid: 21d108876e24a274d9c8b3f94f03e6b3, type: 3}
+  correct: {fileID: 8300000, guid: e0eb1cec8b20a8f49b752d9c69da27e1, type: 3}
+  register: {fileID: 8300000, guid: 747952f9092d85442b299c415081de65, type: 3}
+  encounter: {fileID: 8300000, guid: fba93d1e65a43fb45887641d91e7374b, type: 3}
+  countdownEnd: {fileID: 8300000, guid: 15f355d1a60b64e448f66e1648b62687, type: 3}
+  countdownStart: {fileID: 8300000, guid: 08ab8ea7fdded3846b9f5ad2cca7b977, type: 3}
   walk: {fileID: 0}
 --- !u!4 &547618382
 Transform:

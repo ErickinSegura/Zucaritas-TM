@@ -1,4 +1,4 @@
-using System.Collections;
+    using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -102,7 +102,7 @@ public class VegetacionContoller : MonoBehaviour
 
     public void exit()
     {
-        SFXContoller.Instance.PlayClick();
+        SFXContoller.Instance.PlaySFX(SFXContoller.Instance.countdownEnd);
         finishPopup.SetActive(false);
         joystick.SetActive(true);
 
