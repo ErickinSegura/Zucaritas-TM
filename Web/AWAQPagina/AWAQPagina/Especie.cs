@@ -7,11 +7,6 @@
         public string? img_web { set; get; }
         public string? descripcion { set; get; }
         public string? nombre_cientifico { set; get; }
-        public string? directory { set; get; }
-
-        Especie(string idEspecie)
-        {
-            directory = "/Especie?idEspecieParam=" + idEspecie.ToString();
-        }
+        public string? directory { get; set; }
     }
 }

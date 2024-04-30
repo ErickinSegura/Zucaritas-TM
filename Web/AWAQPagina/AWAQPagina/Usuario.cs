@@ -24,6 +24,7 @@ namespace AWAQPagina
         public bool isAdmin { get; set; }
         public bool active { get; set; }
         public int userID { get; set; }
+        public string? directory { get; set; }
     }
 }
 

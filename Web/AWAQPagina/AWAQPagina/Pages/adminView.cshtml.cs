@@ -73,6 +73,7 @@ namespace AWAQPagina.Pages
                         us.userID = Convert.ToInt32(reader["ID_USER"]);
                         us.name = Convert.ToString(reader["Nombre"]);
                         us.firstLastname = Convert.ToString(reader["APELLIDO_PATERNO"]);
+                        us.directory = "/StudentAdminView?idParam=" + Convert.ToString(reader["ID_USER"]);
                         listaUsuario.Add(us);
                     }
                 }
