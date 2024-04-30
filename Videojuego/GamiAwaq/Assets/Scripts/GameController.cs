@@ -8,10 +8,11 @@ public class GameController : MonoBehaviour
 
     public GameObject popupError;
 
+    public GameObject joystick;
+
     private void Awake()
     {
-        Instance = this;
-        DontDestroyOnLoad(this.gameObject);
+        Instance = this;;
     }
     public void openPopupError()
     {
@@ -21,6 +22,16 @@ public class GameController : MonoBehaviour
     public void closePopupError()
     {
         popupError.SetActive(false);
+    }
+
+    public void closeJoystick()
+    {
+        joystick.SetActive(false);
+    }
+
+    public void openJoystick()
+    {
+        joystick.SetActive(true);
     }
 
 }

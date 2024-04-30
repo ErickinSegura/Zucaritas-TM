@@ -153,11 +153,7 @@ public class ReptilesController : MonoBehaviour
         form.AddField("idEspecie", PlayerPrefs.GetInt("reptileID")); // Agrega un campo al formulario
         form.AddField("idMuestreo", 4); // Agrega un campo al formulario
 
-
-
         UnityWebRequest request = UnityWebRequest.Post(JSONurl, form); // Crea una solicitud web para obtener los datos
-
-        Debug.Log(request);
 
         request.useHttpContinue = true; // Configura para usar la continuación HTTP
 

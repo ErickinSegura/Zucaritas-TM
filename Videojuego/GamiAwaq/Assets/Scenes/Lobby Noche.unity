@@ -9545,6 +9545,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   popupError: {fileID: 1629392724}
+  joystick: {fileID: 1870858253}
 --- !u!4 &1174810189
 Transform:
   m_ObjectHideFlags: 0
@@ -17583,6 +17584,11 @@ PrefabInstance:
 --- !u!224 &1870858252 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6905544821119238242, guid: 0f4e9c703c1704546a829caef1e2dc21, type: 3}
+  m_PrefabInstance: {fileID: 1870858251}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1870858253 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3115627708528567793, guid: 0f4e9c703c1704546a829caef1e2dc21, type: 3}
   m_PrefabInstance: {fileID: 1870858251}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1896911094
