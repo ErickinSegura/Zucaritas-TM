@@ -32,7 +32,7 @@
 
                 @if (ModelState.IsValid == false)
                 {
-                    <div class="text-danger" role="alert">
+                    <div class="text-warning" role="alert">
                         @foreach (var error in ModelState.Values.SelectMany(v => v.Errors))
                         {
                             <span>@error.ErrorMessage</span>
@@ -41,8 +41,6 @@
                         }
                     </div>
                 }
-
-               
 
                 <button class="modern-button" type="submit">Ingresar</button>
             </div>

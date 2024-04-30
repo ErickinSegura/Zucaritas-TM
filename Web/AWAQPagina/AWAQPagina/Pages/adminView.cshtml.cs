@@ -8,6 +8,7 @@ namespace AWAQPagina.Pages
     public class adminViewModel : PageModel
     {
         public Usuario usuario { get; set; }
+        public List<Usuario>? listaUsuario { get; set; }
 
         public adminViewModel()
         {
@@ -51,6 +52,29 @@ namespace AWAQPagina.Pages
                         usuario.firstLastname = reader["APELLIDO_PATERNO"].ToString();
                         usuario.userName = reader["Usuario"].ToString();
                         usuario.profilePicture = reader["Imagen_USUARIO"].ToString().Substring(1);
+                    }
+                }
+                conexion.Close();
+
+                conexion.Open();
+
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "get_user_list";
+                cmd.Connection = conexion;
+
+                listaUsuario = new List<Usuario>();
+
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Usuario us = new Usuario();
+                        us.userName = Convert.ToString(reader["Usuario"]);
+                        us.userID = Convert.ToInt32(reader["ID_USER"]);
+                        us.name = Convert.ToString(reader["Nombre"]);
+                        us.firstLastname = Convert.ToString(reader["APELLIDO_PATERNO"]);
+                        us.directory = "/StudentAdminView?idParam=" + Convert.ToString(reader["ID_USER"]);
+                        listaUsuario.Add(us);
                     }
                 }
                 conexion.Close();

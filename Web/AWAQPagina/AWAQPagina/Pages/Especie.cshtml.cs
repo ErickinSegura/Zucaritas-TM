@@ -1,5 +1,4 @@
 ﻿using System.Data;
-
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using MySql.Data.MySqlClient;
 
@@ -7,8 +6,6 @@ namespace AWAQPagina.Pages
 {
     public class EspecieModel : PageModel
     {
-        public string? IdEspecie { set; get; }
-
         public Especie? especie { set; get; }
 
         public void OnGet(string idEspecieParam)

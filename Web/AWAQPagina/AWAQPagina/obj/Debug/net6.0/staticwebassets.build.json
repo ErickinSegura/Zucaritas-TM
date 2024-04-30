@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "kpe1Q1qQHzetBl2Q6XHG7nXGy+a5mTPC4dTg2ogQQ94=",
+  "Hash": "NMG62aQPRWA4LMsXiHe4jranPK2bng2TDrRlnrLK814=",
   "Source": "AWAQPagina",
   "BasePath": "_content/AWAQPagina",
   "Mode": "Default",
@@ -1307,6 +1307,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/profilePics/1.jpg"
+    },
+    {
+      "Identity": "/Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/wwwroot/profilePics/10_20240429184035.jpg",
+      "SourceId": "AWAQPagina",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/wwwroot/",
+      "BasePath": "_content/AWAQPagina",
+      "RelativePath": "profilePics/10_20240429184035.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/profilePics/10_20240429184035.jpg"
     },
     {
       "Identity": "/Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/wwwroot/profilePics/12_20240412010507.jpg",

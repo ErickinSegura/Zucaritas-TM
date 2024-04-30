@@ -29,6 +29,7 @@ namespace AWAQPagina.Pages
                     ep.nombre_Especie = Convert.ToString(reader["nombre_Especie"]);
                     ep.img_web = Convert.ToString(reader["img_web"]);
                     ep.nombre_cientifico = Convert.ToString(reader["nombre_cientifico"]);
+                    ep.directory = "/Especie?idEspecieParam=" + Convert.ToString(reader["ID_Especie"]);
                     listaEspecies.Add(ep);
                 }
             }
