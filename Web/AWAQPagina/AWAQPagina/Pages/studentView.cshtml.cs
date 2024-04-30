@@ -82,11 +82,11 @@ namespace AWAQPagina.Pages
                     }
                     foreach (var me in listaCantidad)
                     {
-                        if (me.cantidad >= 5)
+                        if (me.cantidad > 4)
                         {
                             medalla.bronceCount++;
                         }
-                        if (me.cantidad > 5 && me.cantidad <= 9)
+                        if (me.cantidad > 7)
                         {
                             medalla.plataCount++;
                         }

@@ -123,6 +123,8 @@ D:/Users/conta/Documents/Tec/Cuarto Semestre/Construcción de Software y Toma de
 <<<<<<< Updated upstream
 =======
 >>>>>>> Stashed changes
+<<<<<<< HEAD
+=======
 /Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/bin/Debug/net6.0/appsettings.Development.json
 /Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/bin/Debug/net6.0/appsettings.json
 /Users/herveynavarro/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/bin/Debug/net6.0/AWAQPagina.staticwebassets.runtime.json
@@ -245,3 +247,4 @@ D:/Users/conta/Documents/Tec/Cuarto Semestre/Construcción de Software y Toma de
 /Users/adolfogonzalez/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/obj/Debug/net6.0/AWAQPagina.csproj.CopyComplete
 /Users/adolfogonzalez/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/obj/Debug/net6.0/AWAQPagina.genruntimeconfig.cache
 /Users/adolfogonzalez/Projects/Zucaritas-TM/Web/AWAQPagina/AWAQPagina/obj/Debug/net6.0/ref/AWAQPagina.dll
+>>>>>>> 4e7783ae1b6d77c97401b7d3aff45c15db102788
