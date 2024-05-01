@@ -2313,7 +2313,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animals:
   - id: 61
-    name: "Perezoso did\xE1ctilo de Hoffmann"
+    name: "Perezoso did\xE1ctilo"
     image: {fileID: 21300000, guid: 8ae1a4592fa47bf48bfc180bf860569f, type: 3}
     rarity: 0
   - id: 62
@@ -2329,7 +2329,7 @@ MonoBehaviour:
     image: {fileID: 21300000, guid: 839dc817a345e1743b7dbf965179821b, type: 3}
     rarity: 1
   - id: 65
-    name: Amadillo de nueve bandas
+    name: Armadillo de nueve bandas
     image: {fileID: 21300000, guid: 46bffc0174e076e4fb0ee6011e139f36, type: 3}
     rarity: 1
   - id: 66
