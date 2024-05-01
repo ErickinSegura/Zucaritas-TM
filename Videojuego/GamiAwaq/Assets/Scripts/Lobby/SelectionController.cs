@@ -10,21 +10,31 @@ public class SelectionController : MonoBehaviour
     public GameObject popup;
 
 
-
-    public void closePopup()
-    {
-        popup.SetActive(false);
-        GameController.Instance.openJoystick();
-    }   
-
     public void loadScene1()
     {
-        SceneManager.LoadScene(sceneName1);
+        if (PlayerPrefs.GetString("Scene") != sceneName1)
+        {
+            SceneManager.LoadScene(sceneName1);   
+            PlayerPrefs.SetString("Scene", sceneName1);
+        }
+        else
+        {
+            openPopupError();
+        }
+        
     }
 
     public void loadScene2()
     {
-        SceneManager.LoadScene(sceneName2);
+        if (PlayerPrefs.GetString("Scene") != sceneName2)
+        {
+            SceneManager.LoadScene(sceneName2);
+            PlayerPrefs.SetString("Scene", sceneName2);
+        }
+        else
+        {
+            openPopupError();
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -40,6 +50,8 @@ public class SelectionController : MonoBehaviour
     {
         popup.SetActive(false);
         GameController.Instance.openPopupError();
+        GameController.Instance.openJoystick();
+
     }
 
     public void closePopupError()

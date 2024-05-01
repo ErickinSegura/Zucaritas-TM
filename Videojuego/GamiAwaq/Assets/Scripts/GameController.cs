@@ -23,7 +23,7 @@ public class GameController : MonoBehaviour
 
     private void Awake()
     {
-        Instance = this;;
+        Instance = this;
     }
     public void openPopupError()
     {
@@ -42,6 +42,7 @@ public class GameController : MonoBehaviour
 
     public void openJoystick()
     {
+        Debug.Log("Joystick");
         joystick.SetActive(true);
     }
 

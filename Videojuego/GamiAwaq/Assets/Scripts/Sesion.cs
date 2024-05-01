@@ -32,6 +32,7 @@ public class Sesion : MonoBehaviour
     {
         Instance = this;
         DontDestroyOnLoad(this.gameObject);
+        PlayerPrefs.SetString("Scene", "");
     }
 
     IEnumerator getID(string user, string pass)
