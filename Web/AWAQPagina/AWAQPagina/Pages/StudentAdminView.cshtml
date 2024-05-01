@@ -44,19 +44,29 @@
             <div style="padding: 0 16px;">@Model.usuario.bio</div>
             <br />
             <br />
-            <div class="medals-user">
-                <div class="bronze-medal">
-                </div>
-                <div class="silver-medal">
-                </div>
-                <div class="gold-medal">
-                </div>
-            </div>
-
+            
             <div class="medals-user">
                 <p>@Model.medalla.bronceCount</p>
                 <p>@Model.medalla.plataCount</p>
                 <p>@Model.medalla.oroCount</p>
+            <div>
+                <div style="display: flex; justify-content: space-around;">
+                    <div>
+                        <div class="bronze-medal"></div>
+                        <br />
+                        <p>@Model.medalla.bronceCount</p>
+                    </div>
+                    <div>
+                        <div class="silver-medal"></div>
+                        <br />
+                        <p>@Model.medalla.bronceCount</p>
+                    </div>
+                    <div>
+                        <div class="gold-medal"></div>
+                        <br />
+                        <p>@Model.medalla.bronceCount</p>
+                    </div>
+                </div>
             </div>
 
             <br />
