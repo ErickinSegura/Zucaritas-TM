@@ -17,7 +17,7 @@
 
         <form method="post">
             <div class="login-container">
-                <h1 style="color: white;">Inicio de sesión</h1>
+                <h1 style="color: white; margin-top: 24px;">Inicio de sesión</h1>
                 <div class="input-section">
                     <label style="color: white;"><i class="bi bi-person-circle"></i> Nombre de usuario</label>
                     <input type="text" class="modern-input" placeholder="Usuario" asp-for="usuario.userName">
@@ -42,7 +42,10 @@
                     </div>
                 }
 
-                <button class="modern-button" type="submit">Ingresar</button>
+                 <div style="display:flex; vertical-align:middle; flex-direction: row; gap: 24px; justify-content: center; margin-top: 24px">
+                    <button class="modern-button m-0" type="submit">Ingresar</button>
+                    <a asp-page="/ListaEspecies" style="color: white; padding-top:7px; height: fit-content; width: fit-content;">Lista de Especies</a>
+                 </div>
             </div>
         </form>
     </div>

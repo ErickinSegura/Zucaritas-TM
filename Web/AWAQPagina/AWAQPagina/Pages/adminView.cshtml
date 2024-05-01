@@ -9,6 +9,7 @@
     <title>AWAQ</title>
     <link rel="stylesheet" href="~/css/studentView.css">
     <link rel="stylesheet" href="~/css/userInfoStyles.css">
+    <link rel="stylesheet" href="~/css/listaEspecies.css">
 </head>
 <body>
     <header>
@@ -53,14 +54,27 @@
         </div>
 
         <div class="dashboard">
-            <div class="dashContainer">
-                <iframe width="50%" height="100%" src="https://lookerstudio.google.com/embed/reporting/5ba127ec-6521-4953-9f31-a455d8630c3f/page/E3ZwD" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
-                <div>
-                    <div>
-                        @foreach (var usuario in Model.listaUsuario)
+            <div class="dashContainer d-flex" style="gap: 24px; justify-content:center; flex-direction:row">
+                <div class="d-flex align-items-center justify-content-center" style="width:55%;">
+                    <iframe width="480px" height="540px" src="https://lookerstudio.google.com/embed/reporting/5ba127ec-6521-4953-9f31-a455d8630c3f/page/E3ZwD" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+                </div>
+                <div style="width: 50%" class="d-flex align-items-center justify-content-center">
+                    <div class="d-flex flex-column" style="gap: 8px">
+                        <div class="rowClass" style="width: 380px; height: 60px; background-color: #29692b; color: white; padding: 8px; border-radius: 20px; ">
+                            <div class="colClass" style="flex: 1;">Nombre</div>
+                            <div class="colClass" style="flex: 1;">Nombre de usuario</div>
+                        </div>
+                        <div class="d-flex flex-column" style="gap: 8px; max-height: 400px; overflow-y: scroll; padding: 0 4px">
+                            @foreach (var usuario in Model.listaUsuario)
                             {
-                                <div>@usuario.name</div>
+                                <a href="@usuario.directory">
+                                    <div class="rowClass" style="width:380px; height: 50px; border-radius: 20px;">
+                                        <div class="colClass" style="flex: 1;">@usuario.name @usuario.firstLastname</div>
+                                        <div class="colClass" style="flex: 1;">@usuario.userName</div>
+                                    </div>
+                                </a>
                             }
+                        </div>
                     </div>
                 </div>
             </div>

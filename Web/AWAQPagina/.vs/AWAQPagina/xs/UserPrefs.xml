@@ -1,53 +1,44 @@
 ﻿<Properties StartupConfiguration="{65F54CFA-1526-497B-8D21-9B6426FF991C}|Default">
-  <MonoDevelop.Ide.ItemProperties.AWAQPagina PreferredExecutionTarget="/Applications/Arc.app" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="AWAQPagina/Pages/studentView.cshtml.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="AWAQPagina/Pages/StudentAdminView.cshtml">
     <Files>
-      <File FileName="AWAQPagina/Pages/Index.cshtml.cs" Line="37" Column="41" />
-      <File FileName="AWAQPagina/Pages/Register.cshtml.cs" Line="18" Column="9" />
-      <File FileName="AWAQPagina/Pages/studentView.cshtml.cs" Line="12" Column="29" />
-      <File FileName="AWAQPagina/Pages/UserInfo.cshtml.cs" Line="120" Column="67" />
+      <File FileName="AWAQPagina/Pages/Index.cshtml.cs" />
+      <File FileName="AWAQPagina/Pages/Register.cshtml.cs" />
+      <File FileName="AWAQPagina/Pages/studentView.cshtml.cs" />
+      <File FileName="AWAQPagina/Pages/UserInfo.cshtml.cs" />
       <File FileName="AWAQPagina/Program.cs" />
-      <File FileName="AWAQPagina/Pages/adminView.cshtml.cs" Line="16" Column="10" />
-      <File FileName="AWAQPagina/Pages/Register.cshtml" Line="15" Column="42" />
-      <File FileName="AWAQPagina/Usuario.cs" Line="27" Column="45" />
-      <File FileName="AWAQPagina/Pages/studentView.cshtml" Line="61" Column="19" />
-      <File FileName="AWAQPagina/Pages/Especie.cshtml.cs" Line="5" Column="27" />
-      <File FileName="AWAQPagina/Pages/Especie.cshtml" Line="32" Column="41" />
-      <File FileName="AWAQPagina/Pages/StudentAdminView.cshtml.cs" Line="20" Column="6" />
-      <File FileName="AWAQPagina/Pages/ListaEspecies.cshtml.cs" Line="32" Column="60" />
-      <File FileName="AWAQPagina/Pages/UserInfo.cshtml" Line="1" Column="1" />
-      <File FileName="AWAQPagina/Especie.cs" Line="10" Column="23" />
-      <File FileName="AWAQPagina/Pages/StudentAdminView.cshtml" Line="1" Column="1" />
-      <File FileName="AWAQPagina/Muestreo.cs" Line="5" Column="3" />
-      <File FileName="AWAQPagina/Medallas.cs" Line="8" Column="37" />
-      <File FileName="AWAQPagina/Pages/Index.cshtml" Line="44" Column="1" />
-      <File FileName="AWAQPagina/Pages/ListaEspecies.cshtml" Line="20" Column="43" />
-      <File FileName="AWAQPagina/Pages/Privacy.cshtml" Line="1" Column="1" />
-      <File FileName="AWAQPagina/Pages/adminView.cshtml" Line="12" Column="8" />
+      <File FileName="AWAQPagina/Pages/adminView.cshtml.cs" />
+      <File FileName="AWAQPagina/Pages/Register.cshtml" />
+      <File FileName="AWAQPagina/Usuario.cs" />
+      <File FileName="AWAQPagina/Pages/studentView.cshtml" Line="57" Column="36" />
+      <File FileName="AWAQPagina/Pages/Especie.cshtml.cs" />
+      <File FileName="AWAQPagina/Pages/Especie.cshtml" />
+      <File FileName="AWAQPagina/Pages/StudentAdminView.cshtml.cs" />
+      <File FileName="AWAQPagina/Pages/ListaEspecies.cshtml.cs" />
+      <File FileName="AWAQPagina/Pages/UserInfo.cshtml" />
+      <File FileName="AWAQPagina/Especie.cs" />
+      <File FileName="AWAQPagina/Pages/StudentAdminView.cshtml" Line="56" Column="36" />
+      <File FileName="AWAQPagina/Muestreo.cs" />
+      <File FileName="AWAQPagina/Medallas.cs" />
+      <File FileName="AWAQPagina/Pages/Index.cshtml" />
+      <File FileName="AWAQPagina/Pages/ListaEspecies.cshtml" />
+      <File FileName="AWAQPagina/Pages/Privacy.cshtml" />
+      <File FileName="AWAQPagina/Pages/adminView.cshtml" />
+      <File FileName="AWAQPagina/Properties/launchSettings.json" />
+      <File FileName="AWAQPagina/.connectionstring.txt" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="AWAQPagina" expanded="True">
             <Node name="AWAQPagina">
-              <Node name="Dependencies" expanded="True" />
               <Node name="Pages" expanded="True">
-                <Node name="adminView.cshtml" expanded="True" />
-                <Node name="Especie.cshtml" expanded="True" />
                 <Node name="Index.cshtml" expanded="True" />
-                <Node name="ListaEspecies.cshtml" expanded="True" />
-                <Node name="Register.cshtml" expanded="True" />
-                <Node name="StudentAdminView.cshtml" expanded="True" />
-                <Node name="studentView.cshtml" expanded="True" />
-                <Node name="UserInfo.cshtml" expanded="True" />
+                <Node name="StudentAdminView.cshtml" selected="True" />
               </Node>
+              <Node name="Properties" expanded="True" />
               <Node name="wwwroot" expanded="True">
-                <Node name="images" expanded="True" />
+                <Node name="css" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -55,6 +46,11 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.AWAQPagina PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <Debugger.DebugSourceFolders>
     <String>/Users/adolfogonzalez</String>
   </Debugger.DebugSourceFolders>
