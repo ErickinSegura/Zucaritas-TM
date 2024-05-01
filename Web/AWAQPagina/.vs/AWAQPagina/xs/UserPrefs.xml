@@ -1,33 +1,31 @@
 ﻿<Properties StartupConfiguration="{65F54CFA-1526-497B-8D21-9B6426FF991C}|Default">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.AWAQPagina PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="AWAQPagina/Pages/StudentAdminView.cshtml.cs">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="AWAQPagina/Pages/StudentAdminView.cshtml">
     <Files>
       <File FileName="AWAQPagina/Pages/Index.cshtml.cs" />
       <File FileName="AWAQPagina/Pages/Register.cshtml.cs" />
-      <File FileName="AWAQPagina/Pages/studentView.cshtml.cs" Line="50" Column="1" />
+      <File FileName="AWAQPagina/Pages/studentView.cshtml.cs" />
       <File FileName="AWAQPagina/Pages/UserInfo.cshtml.cs" />
       <File FileName="AWAQPagina/Program.cs" />
       <File FileName="AWAQPagina/Pages/adminView.cshtml.cs" />
       <File FileName="AWAQPagina/Pages/Register.cshtml" />
       <File FileName="AWAQPagina/Usuario.cs" />
-      <File FileName="AWAQPagina/Pages/studentView.cshtml" Line="58" Column="1" />
+      <File FileName="AWAQPagina/Pages/studentView.cshtml" Line="57" Column="36" />
       <File FileName="AWAQPagina/Pages/Especie.cshtml.cs" />
       <File FileName="AWAQPagina/Pages/Especie.cshtml" />
-      <File FileName="AWAQPagina/Pages/StudentAdminView.cshtml.cs" Line="49" Column="54" />
-      <File FileName="AWAQPagina/Pages/ListaEspecies.cshtml.cs" Line="33" Column="27" />
+      <File FileName="AWAQPagina/Pages/StudentAdminView.cshtml.cs" />
+      <File FileName="AWAQPagina/Pages/ListaEspecies.cshtml.cs" />
       <File FileName="AWAQPagina/Pages/UserInfo.cshtml" />
       <File FileName="AWAQPagina/Especie.cs" />
-      <File FileName="AWAQPagina/Pages/StudentAdminView.cshtml" Line="60" Column="1" />
+      <File FileName="AWAQPagina/Pages/StudentAdminView.cshtml" Line="56" Column="36" />
       <File FileName="AWAQPagina/Muestreo.cs" />
       <File FileName="AWAQPagina/Medallas.cs" />
       <File FileName="AWAQPagina/Pages/Index.cshtml" />
       <File FileName="AWAQPagina/Pages/ListaEspecies.cshtml" />
       <File FileName="AWAQPagina/Pages/Privacy.cshtml" />
       <File FileName="AWAQPagina/Pages/adminView.cshtml" />
+      <File FileName="AWAQPagina/Properties/launchSettings.json" />
+      <File FileName="AWAQPagina/.connectionstring.txt" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -36,11 +34,11 @@
             <Node name="AWAQPagina">
               <Node name="Pages" expanded="True">
                 <Node name="Index.cshtml" expanded="True" />
-                <Node name="ListaEspecies.cshtml" expanded="True" />
-                <Node name="StudentAdminView.cshtml">
-                  <Node name="StudentAdminView.cshtml.cs" selected="True" />
-                </Node>
-                <Node name="studentView.cshtml" expanded="True" />
+                <Node name="StudentAdminView.cshtml" selected="True" />
+              </Node>
+              <Node name="Properties" expanded="True" />
+              <Node name="wwwroot" expanded="True">
+                <Node name="css" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -48,9 +46,13 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.AWAQPagina PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <Debugger.DebugSourceFolders>
     <String>/Users/adolfogonzalez</String>
   </Debugger.DebugSourceFolders>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>
