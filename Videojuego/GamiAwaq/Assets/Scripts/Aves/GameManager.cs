@@ -85,6 +85,8 @@ public class GameManager : MonoBehaviour
     {
         StartCoroutine(getConection());
         instance = this;
+        PlayerPrefs.SetInt("avesPuntaje", 0);
+        PlayerPrefs.SetInt("avesRegistros", 0);
     }
 
     public void IncrementarContadorPajarosClicados()
@@ -98,8 +100,6 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         SFXContoller.Instance.PlayMusic(SFXContoller.Instance.Aves);
-        PlayerPrefs.SetInt("avesPuntaje", 0);
-        PlayerPrefs.SetInt("avesRegistros", 0);
         tiempoRestante = tiempoTotal;
         StartTimer(); // Iniciar el temporizador al inicio
         ActualizarContadorPajarosUI();
@@ -248,6 +248,7 @@ public class GameManager : MonoBehaviour
 
     public void openPopup(string imgUrl)
     {
+        IncrementarContadorPajarosClicados();
         SFXContoller.Instance.PlaySFX(SFXContoller.Instance.encounter);
         popup.SetActive(true);
         Time.timeScale = 0f;

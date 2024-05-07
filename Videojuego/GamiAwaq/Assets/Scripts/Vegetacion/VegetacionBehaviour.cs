@@ -38,8 +38,8 @@ public class VegetacionBehaviour : MonoBehaviour
         {VegeType.Clavel, new Vegetacion { ID = 53, Name = "Clavel", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/pla3.png?raw=true" } },
         {VegeType.Lirio, new Vegetacion { ID = 54, Name = "Lirio", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/pla4.png?raw=true" } },
         {VegeType.Bromelia, new Vegetacion { ID = 55, Name = "Bromelia", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/pla5.png?raw=true" } },
-        {VegeType.Orquidea, new Vegetacion { ID = 56, Name = "Orqu�dea", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/pla6.png?raw=true" } },
-        {VegeType.Frailejon, new Vegetacion { ID = 57, Name = "Frailej�n", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/pla7.png?raw=true" } },
+        {VegeType.Orquidea, new Vegetacion { ID = 56, Name = "Orquídea", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/pla6.png?raw=true" } },
+        {VegeType.Frailejon, new Vegetacion { ID = 57, Name = "Frailejón", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/pla7.png?raw=true" } },
         {VegeType.Magnolia, new Vegetacion { ID = 58, Name = "Magnolia", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/pla8.png?raw=true" } },
         {VegeType.Helecho, new Vegetacion { ID = 59, Name = "Helecho", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/pla9.png?raw=true" } },
         {VegeType.Drosera, new Vegetacion { ID = 60, Name = "Drosera", Image = "https://github.com/ErickinSegura/Zucaritas-TM/blob/main/Videojuego/Assets/pla10.png?raw=true" } }
